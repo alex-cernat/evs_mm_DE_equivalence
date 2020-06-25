@@ -1,0 +1,326 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+06/25/2020  11:55 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = cfa/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas caseno v1 v2 v3 v4 v5 v6 v32 v33 v34 v35 v36 v37 v46 v47 v48 v49
+       v50 v65 v66 v67 v68 v69 v70 v98 v99 v100 v101 v103 v104 v105 v106 v107 v115
+       v116 v117 v118 v119 v120 v121 v122 v123 v124 v125 v126 v127 v128 v129 v130 v131
+       v132 v133 v134 v135 v136 v137 v138 v139 v140 v141 v145 v146 v147 v148 v149 v150
+       v151 v152 v153 v154 v155 v156 v157 v158 v159 v160 v161 v162 v163 v164 v165 v166
+       v167 v168 v176 v177 v178 v179 v180 v181 v182 v183 v185 v186 v187 v188 v189 v190
+       v191 v192 v193 v194 v195 v196 v197 v199 v200 v201 v202 v203 v205 v206 v207 v208
+       v209 v210 v211 v212 v213 v214 v215 v216 v217 v218 v219 v220 v221 v222 v223 v224
+       v267 v268 v269 v270 v271 v272 v273 v274;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v185
+   v186
+   v187
+   v188;
+
+
+   Model:
+
+  f by v185
+   v186
+   v187
+   v188;
+
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  620
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       54656
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   V185        V186        V187        V188
+
+Continuous latent variables
+   F
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  cfa/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            15
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           0.977
+ V186           0.950         0.966
+ V187           0.949         0.945         0.965
+ V188           0.935         0.927         0.927         0.952
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+                5.846         4.672         4.501         5.745
+
+
+           Covariances
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           8.858
+ V186           4.003         8.036
+ V187           3.883         5.586         8.176
+ V188          -1.028        -1.824        -1.749         7.945
+
+
+           Correlations
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           1.000
+ V186           0.474         1.000
+ V187           0.456         0.689         1.000
+ V188          -0.123        -0.228        -0.217         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -496090.369
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V185                  5.851      -0.113       1.000   11.55%       3.000      5.000      6.000
+           53425.000       8.853      -1.179      10.000   17.29%       7.000      9.000
+     V186                  4.667       0.388       1.000   18.25%       2.000      4.000      4.000
+           52809.000       8.034      -0.933      10.000    8.42%       5.000      8.000
+     V187                  4.492       0.453       1.000   21.21%       1.000      3.000      4.000
+           52740.000       8.173      -0.897      10.000    8.21%       5.000      7.000
+     V188                  5.739      -0.097       1.000   11.60%       3.000      5.000      5.000
+           52056.000       7.942      -0.975      10.000   14.10%       7.000      8.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       12
+
+Loglikelihood
+
+          H0 Value                     -496117.413
+          H1 Value                     -496090.369
+
+Information Criteria
+
+          Akaike (AIC)                  992258.826
+          Bayesian (BIC)                992365.732
+          Sample-Size Adjusted BIC      992327.595
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             54.088
+          Degrees of Freedom                     2
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.022
+          90 Percent C.I.                    0.017  0.027
+          Probability RMSEA <= .05           1.000
+
+CFI/TLI
+
+          CFI                                0.999
+          TLI                                0.997
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          51906.941
+          Degrees of Freedom                     6
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.007
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V185               1.000      0.000    999.000    999.000
+    V186               1.446      0.012    116.640      0.000
+    V187               1.399      0.012    118.392      0.000
+    V188              -0.447      0.009    -51.845      0.000
+
+ Intercepts
+    V185               5.846      0.013    455.085      0.000
+    V186               4.672      0.012    381.203      0.000
+    V187               4.500      0.012    363.847      0.000
+    V188               5.746      0.012    465.638      0.000
+
+ Variances
+    F                  2.763      0.043     63.760      0.000
+
+ Residual Variances
+    V185               6.094      0.041    146.888      0.000
+    V186               2.255      0.038     58.774      0.000
+    V187               2.765      0.038     73.365      0.000
+    V188               7.394      0.047    158.704      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V185               0.559      0.003    159.592      0.000
+    V186               0.848      0.003    293.114      0.000
+    V187               0.814      0.003    278.195      0.000
+    V188              -0.264      0.005    -57.853      0.000
+
+ Intercepts
+    V185               1.964      0.007    265.299      0.000
+    V186               1.648      0.007    247.860      0.000
+    V187               1.574      0.006    242.924      0.000
+    V188               2.038      0.008    265.583      0.000
+
+ Variances
+    F                  1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V185               0.688      0.004    176.009      0.000
+    V186               0.281      0.005     57.173      0.000
+    V187               0.338      0.005     71.082      0.000
+    V188               0.931      0.002    387.478      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V185               0.312      0.004     79.796      0.000
+    V186               0.719      0.005    146.557      0.000
+    V187               0.662      0.005    139.098      0.000
+    V188               0.069      0.002     28.926      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.551E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+V187     WITH V186                53.087    -1.041     -1.041       -0.417
+V188     WITH V185                52.682     0.229      0.229        0.034
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v185
+
+     Beginning Time:  11:55:34
+        Ending Time:  11:55:36
+       Elapsed Time:  00:00:02
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

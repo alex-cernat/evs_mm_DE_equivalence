@@ -1,0 +1,365 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+06/25/2020  11:57 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = cfa/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas caseno v1 v2 v3 v4 v5 v6 v32 v33 v34 v35 v36 v37 v46 v47 v48 v49
+       v50 v65 v66 v67 v68 v69 v70 v98 v99 v100 v101 v103 v104 v105 v106 v107 v115
+       v116 v117 v118 v119 v120 v121 v122 v123 v124 v125 v126 v127 v128 v129 v130 v131
+       v132 v133 v134 v135 v136 v137 v138 v139 v140 v141 v145 v146 v147 v148 v149 v150
+       v151 v152 v153 v154 v155 v156 v157 v158 v159 v160 v161 v162 v163 v164 v165 v166
+       v167 v168 v176 v177 v178 v179 v180 v181 v182 v183 v185 v186 v187 v188 v189 v190
+       v191 v192 v193 v194 v195 v196 v197 v199 v200 v201 v202 v203 v205 v206 v207 v208
+       v209 v210 v211 v212 v213 v214 v215 v216 v217 v218 v219 v220 v221 v222 v223 v224
+       v267 v268 v269 v270 v271 v272 v273 v274;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v65
+   v66
+   v67
+   v68
+   v69
+   v70;
+
+   CATEGORICAL ARE
+   v65
+   v66
+   v67
+   v68
+   v69
+   v70;
+
+
+   Model:
+
+  f by v65
+   v66
+   v67
+   v68
+   v69
+   v70;
+
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  88
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       55188
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V65         V66         V67         V68         V69         V70
+
+Continuous latent variables
+   F
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  cfa/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            55
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65            0.996
+ V66            0.993         0.996
+ V67            0.993         0.994         0.997
+ V68            0.990         0.990         0.991         0.993
+ V69            0.986         0.986         0.987         0.983         0.989
+ V70            0.989         0.989         0.990         0.987         0.983
+
+
+           Covariance Coverage
+              V70
+              ________
+ V70            0.992
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    V65
+      Category 1    0.853        46919.000
+      Category 2    0.133         7304.000
+      Category 3    0.014          767.000
+    V66
+      Category 1    0.393        21574.000
+      Category 2    0.466        25611.000
+      Category 3    0.141         7769.000
+    V67
+      Category 1    0.429        23602.000
+      Category 2    0.487        26810.000
+      Category 3    0.083         4592.000
+    V68
+      Category 1    0.421        23083.000
+      Category 2    0.439        24055.000
+      Category 3    0.140         7645.000
+    V69
+      Category 1    0.631        34427.000
+      Category 2    0.240        13102.000
+      Category 3    0.129         7041.000
+    V70
+      Category 1    0.429        23473.000
+      Category 2    0.468        25614.000
+      Category 3    0.103         5666.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                1.050         2.199        -0.273         1.074        -0.179
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                1.382        -0.198         1.082         0.334         1.131
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V70$1         V70$2
+              ________      ________
+               -0.180         1.262
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65
+ V66            0.174
+ V67            0.221         0.737
+ V68            0.276         0.270         0.377
+ V69            0.300         0.421         0.390         0.203
+ V70            0.139         0.131         0.248         0.371         0.026
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V70
+              ________
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       18
+
+Chi-Square Test of Model Fit
+
+          Value                           6769.852*
+          Degrees of Freedom                     9
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.117
+          90 Percent C.I.                    0.114  0.119
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.940
+          TLI                                0.899
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                         111844.082
+          Degrees of Freedom                    15
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                             13.863
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V65                1.000      0.000    999.000    999.000
+    V66                2.397      0.050     48.224      0.000
+    V67                2.735      0.057     47.946      0.000
+    V68                1.350      0.029     45.894      0.000
+    V69                1.421      0.031     45.945      0.000
+    V70                0.899      0.023     39.149      0.000
+
+ Thresholds
+    V65$1              1.050      0.007    159.943      0.000
+    V65$2              2.199      0.014    156.396      0.000
+    V66$1             -0.273      0.005    -50.301      0.000
+    V66$2              1.074      0.007    161.936      0.000
+    V67$1             -0.179      0.005    -33.242      0.000
+    V67$2              1.382      0.008    179.889      0.000
+    V68$1             -0.198      0.005    -36.793      0.000
+    V68$2              1.082      0.007    162.364      0.000
+    V69$1              0.334      0.005     61.032      0.000
+    V69$2              1.131      0.007    165.860      0.000
+    V70$1             -0.180      0.005    -33.347      0.000
+    V70$2              1.262      0.007    174.434      0.000
+
+ Variances
+    F                  0.110      0.004     24.507      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V65                0.332      0.007     49.015      0.000
+    V66                0.795      0.004    225.442      0.000
+    V67                0.907      0.004    256.519      0.000
+    V68                0.447      0.004    100.876      0.000
+    V69                0.471      0.005     99.799      0.000
+    V70                0.298      0.005     59.608      0.000
+
+ Thresholds
+    V65$1              1.050      0.007    159.943      0.000
+    V65$2              2.199      0.014    156.396      0.000
+    V66$1             -0.273      0.005    -50.301      0.000
+    V66$2              1.074      0.007    161.936      0.000
+    V67$1             -0.179      0.005    -33.242      0.000
+    V67$2              1.382      0.008    179.889      0.000
+    V68$1             -0.198      0.005    -36.793      0.000
+    V68$2              1.082      0.007    162.364      0.000
+    V69$1              0.334      0.005     61.032      0.000
+    V69$2              1.131      0.007    165.860      0.000
+    V70$1             -0.180      0.005    -33.347      0.000
+    V70$2              1.262      0.007    174.434      0.000
+
+ Variances
+    F                  1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    V65                0.110      0.004     24.507      0.000      0.890
+    V66                0.632      0.006    112.721      0.000      0.368
+    V67                0.822      0.006    128.259      0.000      0.178
+    V68                0.200      0.004     50.438      0.000      0.800
+    V69                0.222      0.004     49.899      0.000      0.778
+    V70                0.089      0.003     29.804      0.000      0.911
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.293E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v65_
+
+     Beginning Time:  11:57:16
+        Ending Time:  11:57:20
+       Elapsed Time:  00:00:04
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

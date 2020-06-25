@@ -1,0 +1,488 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+06/25/2020  12:26 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = cfa/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas caseno v1 v2 v3 v4 v5 v6 v32 v33 v34 v35 v36 v37 v46 v47 v48 v49
+       v50 v65 v66 v67 v68 v69 v70 v98 v99 v100 v101 v103 v104 v105 v106 v107 v115
+       v116 v117 v118 v119 v120 v121 v122 v123 v124 v125 v126 v127 v128 v129 v130 v131
+       v132 v133 v134 v135 v136 v137 v138 v139 v140 v141 v145 v146 v147 v148 v149 v150
+       v151 v152 v153 v154 v155 v156 v157 v158 v159 v160 v161 v162 v163 v164 v165 v166
+       v167 v168 v176 v177 v178 v179 v180 v181 v182 v183 v185 v186 v187 v188 v189 v190
+       v191 v192 v193 v194 v195 v196 v197 v199 v200 v201 v202 v203 v205 v206 v207 v208
+       v209 v210 v211 v212 v213 v214 v215 v216 v217 v218 v219 v220 v221 v222 v223 v224
+       v267 v268 v269 v270 v271 v272 v273 v274;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v133
+   v134
+   v135
+   v136
+   v137
+   v138
+   v139
+   v140
+   v141;
+
+
+   Model:
+
+
+  f1 by v133
+   v135
+   v136
+   v138
+   v139
+   v141;
+
+  f2 by v134
+   v137
+   v140;
+
+
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  4340
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       50936
+
+Number of dependent variables                                    9
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   V133        V134        V135        V136        V137        V138
+   V139        V140        V141
+
+Continuous latent variables
+   F1          F2
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  cfa/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns           365
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              V133          V134          V135          V136          V137
+              ________      ________      ________      ________      ________
+ V133           0.964
+ V134           0.930         0.947
+ V135           0.955         0.940         0.983
+ V136           0.955         0.938         0.971         0.982
+ V137           0.925         0.915         0.938         0.938         0.946
+ V138           0.935         0.923         0.949         0.947         0.924
+ V139           0.943         0.928         0.956         0.957         0.928
+ V140           0.941         0.928         0.956         0.956         0.928
+ V141           0.958         0.942         0.976         0.975         0.941
+
+
+           Covariance Coverage
+              V138          V139          V140          V141
+              ________      ________      ________      ________
+ V138           0.957
+ V139           0.940         0.966
+ V140           0.938         0.948         0.966
+ V141           0.953         0.962         0.962         0.990
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              V133          V134          V135          V136          V137
+              ________      ________      ________      ________      ________
+                6.413         2.861         8.544         7.402         3.639
+
+
+           Means
+              V138          V139          V140          V141
+              ________      ________      ________      ________
+                7.942         5.841         4.772         8.717
+
+
+           Covariances
+              V133          V134          V135          V136          V137
+              ________      ________      ________      ________      ________
+ V133           8.762
+ V134           0.575         6.837
+ V135           1.541        -1.267         5.502
+ V136           2.481        -0.252         2.298         6.678
+ V137           0.284         2.796        -1.079         0.105         9.801
+ V138           1.906        -1.056         2.763         2.259        -0.538
+ V139           3.050         0.919         0.936         2.378         1.391
+ V140           0.941         1.936        -0.149         0.607         2.332
+ V141           1.441        -1.162         2.536         1.811        -0.793
+
+
+           Covariances
+              V138          V139          V140          V141
+              ________      ________      ________      ________
+ V138           6.504
+ V139           1.710         9.464
+ V140           0.153         2.007         9.551
+ V141           2.570         1.193         0.082         5.393
+
+
+           Correlations
+              V133          V134          V135          V136          V137
+              ________      ________      ________      ________      ________
+ V133           1.000
+ V134           0.074         1.000
+ V135           0.222        -0.207         1.000
+ V136           0.324        -0.037         0.379         1.000
+ V137           0.031         0.341        -0.147         0.013         1.000
+ V138           0.252        -0.158         0.462         0.343        -0.067
+ V139           0.335         0.114         0.130         0.299         0.144
+ V140           0.103         0.240        -0.021         0.076         0.241
+ V141           0.210        -0.191         0.466         0.302        -0.109
+
+
+           Correlations
+              V138          V139          V140          V141
+              ________      ________      ________      ________
+ V138           1.000
+ V139           0.218         1.000
+ V140           0.019         0.211         1.000
+ V141           0.434         0.167         0.011         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -1036949.924
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V133                  6.414      -0.484       0.000    1.26%       4.000      6.000      7.000
+           49126.000       8.748      -0.863      10.000   21.31%       8.000     10.000
+     V134                  2.849       1.205       0.000    5.43%       1.000      1.000      1.000
+           48237.000       6.834       0.485      10.000    3.65%       2.000      5.000
+     V135                  8.549      -1.805       0.000    0.46%       7.000      9.000     10.000
+           50079.000       5.491       2.558      10.000   58.62%      10.000     10.000
+     V136                  7.407      -0.882       0.000    0.46%       5.000      7.000      8.000
+           50003.000       6.667      -0.021      10.000   31.58%       9.000     10.000
+     V137                  3.631       0.749       0.000    6.31%       1.000      1.000      2.000
+           48183.000       9.797      -0.753      10.000    8.31%       4.000      7.000
+     V138                  7.952      -1.263       0.000    0.64%       6.000      8.000      9.000
+           48734.000       6.484       0.778      10.000   43.60%      10.000     10.000
+     V139                  5.843      -0.197       0.000    1.06%       3.000      5.000      6.000
+           49204.000       9.451      -1.173      10.000   18.04%       7.000      9.000
+     V140                  4.772       0.169       0.000    3.02%       1.000      4.000      5.000
+           49209.000       9.546      -1.191      10.000   10.01%       6.000      8.000
+     V141                  8.719      -2.017       0.000    0.60%       8.000     10.000     10.000
+           50425.000       5.387       3.333      10.000   65.06%      10.000     10.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       28
+
+Loglikelihood
+
+          H0 Value                    -1043383.034
+          H1 Value                    -1036949.924
+
+Information Criteria
+
+          Akaike (AIC)                 2086822.068
+          Bayesian (BIC)               2087069.541
+          Sample-Size Adjusted BIC     2086980.557
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                          12866.220
+          Degrees of Freedom                    26
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.098
+          90 Percent C.I.                    0.097  0.100
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.818
+          TLI                                0.749
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          70763.744
+          Degrees of Freedom                    36
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.075
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F1       BY
+    V133               1.000      0.000    999.000    999.000
+    V135               1.356      0.020     69.447      0.000
+    V136               1.205      0.017     69.882      0.000
+    V138               1.433      0.020     70.734      0.000
+    V139               0.837      0.016     52.878      0.000
+    V141               1.236      0.018     68.626      0.000
+
+ F2       BY
+    V134               1.000      0.000    999.000    999.000
+    V137               1.018      0.026     39.072      0.000
+    V140               0.689      0.017     40.013      0.000
+
+ F2       WITH
+    F1                -0.410      0.017    -23.771      0.000
+
+ Intercepts
+    V133               6.412      0.013    481.247      0.000
+    V134               2.857      0.012    240.611      0.000
+    V135               8.545      0.010    816.997      0.000
+    V136               7.403      0.012    641.706      0.000
+    V137               3.635      0.014    255.532      0.000
+    V138               7.943      0.011    691.639      0.000
+    V139               5.843      0.014    421.934      0.000
+    V140               4.771      0.014    342.738      0.000
+    V141               8.717      0.010    843.766      0.000
+
+ Variances
+    F1                 1.405      0.036     39.037      0.000
+    F2                 2.854      0.080     35.457      0.000
+
+ Residual Variances
+    V133               7.350      0.051    145.120      0.000
+    V134               3.989      0.076     52.162      0.000
+    V135               2.919      0.027    108.668      0.000
+    V136               4.637      0.035    132.358      0.000
+    V137               6.843      0.087     78.548      0.000
+    V138               3.619      0.032    114.074      0.000
+    V139               8.471      0.057    149.432      0.000
+    V140               8.196      0.062    131.330      0.000
+    V141               3.249      0.027    122.015      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F1       BY
+    V133               0.401      0.005     85.572      0.000
+    V135               0.685      0.004    194.883      0.000
+    V136               0.553      0.004    136.221      0.000
+    V138               0.666      0.004    187.113      0.000
+    V139               0.323      0.005     65.321      0.000
+    V141               0.631      0.004    171.588      0.000
+
+ F2       BY
+    V134               0.646      0.009     75.320      0.000
+    V137               0.550      0.008     71.618      0.000
+    V140               0.376      0.006     61.374      0.000
+
+ F2       WITH
+    F1                -0.205      0.007    -28.234      0.000
+
+ Intercepts
+    V133               2.167      0.008    262.461      0.000
+    V134               1.092      0.006    190.521      0.000
+    V135               3.643      0.012    294.713      0.000
+    V136               2.865      0.010    283.248      0.000
+    V137               1.161      0.006    197.434      0.000
+    V138               3.114      0.011    284.006      0.000
+    V139               1.900      0.008    251.638      0.000
+    V140               1.544      0.007    231.328      0.000
+    V141               3.753      0.013    296.918      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+    F2                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V133               0.840      0.004    223.876      0.000
+    V134               0.583      0.011     52.635      0.000
+    V135               0.530      0.005    110.076      0.000
+    V136               0.694      0.004    154.828      0.000
+    V137               0.698      0.008     82.778      0.000
+    V138               0.556      0.005    117.347      0.000
+    V139               0.896      0.003    280.786      0.000
+    V140               0.858      0.005    185.840      0.000
+    V141               0.602      0.005    129.972      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V133               0.160      0.004     42.786      0.000
+    V134               0.417      0.011     37.660      0.000
+    V135               0.470      0.005     97.442      0.000
+    V136               0.306      0.004     68.110      0.000
+    V137               0.302      0.008     35.809      0.000
+    V138               0.444      0.005     93.556      0.000
+    V139               0.104      0.003     32.660      0.000
+    V140               0.142      0.005     30.687      0.000
+    V141               0.398      0.005     85.794      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.601E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+BY Statements
+
+F1       BY V134                 702.482    -0.393     -0.465       -0.178
+F1       BY V137                  13.685     0.058      0.069        0.022
+F1       BY V140                1016.977     0.452      0.535        0.173
+F2       BY V133                1375.744     0.386      0.653        0.221
+F2       BY V135                1239.156    -0.265     -0.447       -0.191
+F2       BY V136                 635.591     0.217      0.367        0.142
+F2       BY V138                  63.496    -0.066     -0.111       -0.044
+F2       BY V139                3302.759     0.634      1.070        0.348
+F2       BY V141                 513.381    -0.171     -0.288       -0.124
+
+WITH Statements
+
+V134     WITH V133               843.127     0.893      0.893        0.165
+V135     WITH V133               496.383    -0.603     -0.603       -0.130
+V135     WITH V134               400.308    -0.434     -0.434       -0.127
+V136     WITH V133              1114.737     1.007      1.007        0.172
+V136     WITH V134                92.187     0.243      0.243        0.056
+V137     WITH V133                15.736     0.148      0.148        0.021
+V137     WITH V134              1015.476    -6.254     -6.254       -1.197
+V137     WITH V135               286.627    -0.440     -0.440       -0.098
+V137     WITH V136               166.814     0.393      0.393        0.070
+V138     WITH V133                34.448    -0.173     -0.173       -0.034
+V138     WITH V134               191.527    -0.331     -0.331       -0.087
+V138     WITH V135                18.344     0.114      0.114        0.035
+V138     WITH V136               150.904    -0.323     -0.323       -0.079
+V138     WITH V137                19.705     0.127      0.127        0.026
+V139     WITH V133              2948.446     2.067      2.067        0.262
+V139     WITH V134               461.141     0.702      0.702        0.121
+V139     WITH V135              1329.929    -1.022     -1.022       -0.206
+V139     WITH V136              1401.677     1.185      1.185        0.189
+V139     WITH V137               610.146     0.975      0.975        0.128
+V140     WITH V133               187.486     0.517      0.517        0.067
+V140     WITH V134                13.597    -0.368     -0.368       -0.064
+V140     WITH V135                23.029    -0.125     -0.125       -0.026
+V140     WITH V136               134.022     0.356      0.356        0.058
+V140     WITH V137               702.473     2.579      2.579        0.344
+V140     WITH V139              1259.372     1.418      1.418        0.170
+V141     WITH V133               260.418    -0.431     -0.431       -0.088
+V141     WITH V134               453.629    -0.467     -0.467       -0.130
+V141     WITH V135               484.885     0.511      0.511        0.166
+V141     WITH V136               454.826    -0.499     -0.499       -0.129
+V141     WITH V137                42.575    -0.172     -0.172       -0.036
+V141     WITH V138                70.317     0.208      0.208        0.061
+V141     WITH V139               166.331    -0.359     -0.359       -0.068
+V141     WITH V140                22.283     0.125      0.125        0.024
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v133
+
+     Beginning Time:  12:26:05
+        Ending Time:  12:26:09
+       Elapsed Time:  00:00:04
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen
