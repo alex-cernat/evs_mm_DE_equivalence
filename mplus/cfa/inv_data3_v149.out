@@ -1,0 +1,348 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+06/26/2020   9:43 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = cfa/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas caseno v1 v2 v3 v4 v5 v6 v32 v33 v34 v35 v36 v37 v46 v47 v48 v49
+       v50 v65 v66 v67 v68 v69 v70 v98 v99 v100 v101 v103 v104 v105 v106 v107 v115
+       v116 v117 v118 v119 v120 v121 v122 v123 v124 v125 v126 v127 v128 v129 v130 v131
+       v132 v133 v134 v135 v136 v137 v138 v139 v140 v141 v145 v146 v147 v148 v149 v150
+       v151 v152 v153 v154 v155 v156 v157 v158 v159 v160 v161 v162 v163 v164 v165 v166
+       v167 v168 v176 v177 v178 v179 v180 v181 v182 v183 v185 v186 v187 v188 v189 v190
+       v191 v192 v193 v194 v195 v196 v197 v199 v200 v201 v202 v203 v205 v206 v207 v208
+       v209 v210 v211 v212 v213 v214 v215 v216 v217 v218 v219 v220 v221 v222 v223 v224
+       v267 v268 v269 v270 v271 v272 v273 v274;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v149
+   v150
+   v152
+   v159
+   v162;
+
+
+   Model:
+
+  f by v149
+   v150
+   v152
+   v159
+   v162;
+
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  221
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       55055
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   V149        V150        V152        V159        V162
+
+Continuous latent variables
+   F
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  cfa/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            31
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           0.985
+ V150           0.979         0.990
+ V152           0.980         0.985         0.992
+ V159           0.977         0.981         0.984         0.990
+ V162           0.968         0.973         0.975         0.974         0.981
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+                2.142         2.102         1.584         2.659         1.649
+
+
+           Covariances
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           4.117
+ V150           1.956         4.160
+ V152           1.185         1.364         2.221
+ V159           1.619         1.944         1.254         5.801
+ V162           0.943         0.909         0.941         1.104         2.483
+
+
+           Correlations
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           1.000
+ V150           0.473         1.000
+ V152           0.392         0.449         1.000
+ V159           0.331         0.396         0.350         1.000
+ V162           0.295         0.283         0.401         0.291         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -530377.373
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V149                  2.137       2.084       1.000   63.60%       1.000      1.000      1.000
+           54212.000       4.106       3.906      10.000    1.66%       1.000      3.000
+     V150                  2.098       2.205       1.000   64.87%       1.000      1.000      1.000
+           54480.000       4.151       4.412      10.000    1.88%       1.000      3.000
+     V152                  1.581       3.347       1.000   78.65%       1.000      1.000      1.000
+           54639.000       2.216      12.144      10.000    0.79%       1.000      2.000
+     V159                  2.656       1.514       1.000   53.17%       1.000      1.000      1.000
+           54499.000       5.788       1.424      10.000    3.05%       2.000      5.000
+     V162                  1.645       3.117       1.000   77.08%       1.000      1.000      1.000
+           53995.000       2.478      10.307      10.000    0.88%       1.000      2.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       15
+
+Loglikelihood
+
+          H0 Value                     -531189.833
+          H1 Value                     -530377.373
+
+Information Criteria
+
+          Akaike (AIC)                 1062409.666
+          Bayesian (BIC)               1062543.408
+          Sample-Size Adjusted BIC     1062495.737
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                           1624.920
+          Degrees of Freedom                     5
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.077
+          90 Percent C.I.                    0.074  0.080
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.969
+          TLI                                0.939
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          52922.706
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.025
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V149               1.000      0.000    999.000    999.000
+    V150               1.108      0.010    114.907      0.000
+    V152               0.773      0.007    106.034      0.000
+    V159               1.039      0.011     95.811      0.000
+    V162               0.615      0.007     87.272      0.000
+
+ Intercepts
+    V149               2.142      0.009    246.265      0.000
+    V150               2.102      0.009    240.899      0.000
+    V152               1.584      0.006    248.692      0.000
+    V159               2.659      0.010    258.011      0.000
+    V162               1.649      0.007    243.567      0.000
+
+ Variances
+    F                  1.625      0.023     69.262      0.000
+
+ Residual Variances
+    V149               2.492      0.019    127.977      0.000
+    V150               2.166      0.019    112.317      0.000
+    V152               1.249      0.010    119.533      0.000
+    V159               4.046      0.029    140.870      0.000
+    V162               1.869      0.013    144.842      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V149               0.628      0.004    178.101      0.000
+    V150               0.692      0.003    208.406      0.000
+    V152               0.661      0.003    191.832      0.000
+    V159               0.550      0.004    144.249      0.000
+    V162               0.498      0.004    121.715      0.000
+
+ Intercepts
+    V149               1.056      0.005    197.337      0.000
+    V150               1.031      0.005    194.711      0.000
+    V152               1.063      0.005    198.860      0.000
+    V159               1.104      0.005    203.337      0.000
+    V162               1.046      0.005    195.863      0.000
+
+ Variances
+    F                  1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V149               0.605      0.004    136.569      0.000
+    V150               0.521      0.005    113.191      0.000
+    V152               0.563      0.005    123.380      0.000
+    V159               0.698      0.004    166.316      0.000
+    V162               0.752      0.004    185.018      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V149               0.395      0.004     89.050      0.000
+    V150               0.479      0.005    104.203      0.000
+    V152               0.437      0.005     95.916      0.000
+    V159               0.302      0.004     72.124      0.000
+    V162               0.248      0.004     60.857      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.264E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+V150     WITH V149               664.607     0.438      0.438        0.189
+V152     WITH V149               207.247    -0.173     -0.173       -0.098
+V152     WITH V150                47.502    -0.089     -0.089       -0.054
+V159     WITH V149                45.075    -0.122     -0.122       -0.038
+V159     WITH V150                71.906     0.160      0.160        0.054
+V159     WITH V152                53.580    -0.099     -0.099       -0.044
+V162     WITH V149                51.584    -0.085     -0.085       -0.039
+V162     WITH V150               963.199    -0.376     -0.376       -0.187
+V162     WITH V152              1116.688     0.293      0.293        0.191
+V162     WITH V159                43.988     0.093      0.093        0.034
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v149
+
+     Beginning Time:  09:43:19
+        Ending Time:  09:43:22
+       Elapsed Time:  00:00:03
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen
