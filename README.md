@@ -2,7 +2,7 @@
 
 Using an experiment in the European Value Study Germany we do the following comparisons:
 - compare single- vs. mixed-mode designs (full length FTF vs. full length mixed-mode)
-- compare short vs. long questionnaire (matrix vs. full length)
+- compare short vs. long questionnaire mixed modes (matrix vs. full length)
 
 
 # To do
@@ -10,7 +10,7 @@ Using an experiment in the European Value Study Germany we do the following comp
 - [x] set-up GitHub (Alex)
 - [x] provide data (Tobias/Pablo)
 - [x] alternative quality indicators (Tobias/Pablo)
-- [ ] create weights?
+- [ ] create weights (Tobias will do the weights)
 - [ ] check scales fit and choose for invariance (Alex)
 - [ ] do invariance testing (Alex)
 - [ ] write intro and lit review (Joe)
@@ -22,9 +22,13 @@ Using an experiment in the European Value Study Germany we do the following comp
 
 
 
+
+
+
 # To discuss
 
 - results from Pablo and Tobias
+        
 - scales with 0 in the excel
 - what scales to use and the changes made
 - agree on groups, sequance of models and weighting`
