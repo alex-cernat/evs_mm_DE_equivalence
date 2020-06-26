@@ -56,13 +56,11 @@ unzip("./data/raw/ZA7502_v1-0-0.dta.zip",
 # read data ---------------------------------------------------------------
 
 
-meta_data <- readxl::read_xlsx("./data/clean/EVS_Data_Quality_Overview.xlsx")
+meta_data <- readxl::read_xlsx(
+  "./data/clean/EVS_Data_Quality_Overview_v2.xlsx")
 
 za7500 <- read_dta("./data/raw/ZA7500_v3-0-0.dta")
 za7502 <- read_dta("./data/raw/ZA7502_v1-0-0.dta")
-
-za7500
-
 
 
 vars_scales <- filter(meta_data, `Measurement Invariance` == "1") %>%
@@ -81,7 +79,7 @@ for (i in 1:ncol(inv_data)) {
 }
 
 # look at data
-scales <- unique(vars_scales$Topic)
+scales <- unique(vars_scales$Topic[!is.na(vars_scales$Topic)])
 
 # function to do fast desccriptives by scale
 scale_explore <- function(scale) {
@@ -96,7 +94,7 @@ scale_explore <- function(scale) {
 inv_data3 <- mutate_all(inv_data2, ~as.numeric(.))
 
 make_cfa <- function(scale) {
-  vars_explore <- vars_scales$variables[vars_scales$Topic == scale]
+  vars_explore <- vars_scales$variables[vars_scales$Topic %in% scale]
   cat <- vars_scales$scale[vars_scales$variables == vars_explore[1]] %>%
     as.numeric() < 5
   mplus_cfa(inv_data3, vars_explore, categorical = cat)
@@ -105,22 +103,8 @@ make_cfa <- function(scale) {
 # make models
 map(scales, make_cfa)
 
-# run models
-MplusAutomation::runModels("./mplus/cfa/", showOutput = T, local_tmpdir = T)
 
-# read models
-cfa_models <- MplusAutomation::readModels(
-  list.files("./mplus/cfa/", pattern = "out", full.names = T)
-)
-
-cfa_models$inv_data3_v1_.out
-
-# import fit
-fit_cfa <- map_df(cfa_models, read_fit_mlr)
-
-View(fit_cfa)
-
-read_fit_mlr(cfa_models[[1]])
+# changes to original models ----------------------------------------------
 
 # based on the fit redo the norms scale in 2:
 #   f1 by v149 v150 v152 v159 v162;
@@ -130,3 +114,58 @@ read_fit_mlr(cfa_models[[1]])
 # split demography in two groups:
 # f1 by v133 v135 v136 v138 v139 v141;
 # f2 by v134 v137 v140;
+
+# exclude v168 due to low correlaiton with rest of models
+
+# from parents remove v270 and v274 (slightly different topic and worse fit)
+# add v212 WITH v213; and v215 WITH v216;
+# exclude v219 low loading, probably cpature issues around migration
+# exclude 190 due to low loadings
+
+
+# run models --------------------------------------------------------------
+
+
+# run models
+MplusAutomation::runModels("./mplus/cfa/", showOutput = T, local_tmpdir = T)
+
+# read models
+cfa_models <- MplusAutomation::readModels(
+  list.files("./mplus/cfa/", pattern = "out", full.names = T)
+)
+
+
+# Import ------------------------------------------------------------------
+
+
+# import fit
+fit_cfa <- map_df(cfa_models, read_fit_mlr)
+
+# put scale name
+fit_cfa <- fit_cfa %>%
+  mutate(name = str_remove_all(Filename, "inv_data3_|\\.out"))
+
+fit_cfa <- fit_cfa %>%
+  mutate(Topic = vars_scales$Topic[vars_scales$variables %in% fit_cfa$name]) %>%
+  select(Topic, everything(), -Filename, -name) %>%
+  rename_all(~ str_remove_all(., "M_|Value|_Estimate"))
+
+
+View(fit_cfa)
+
+# save fit
+
+write_csv(fit_cfa, "./data/clean/cfa_fit.csv")
+
+
+# make codebook
+
+labs <- inv_data2[, -c(1,2)] %>%
+  map(function(x) attributes(x)$label)
+
+codebook <- tibble(Code = names(labs),
+       Label = unlist(labs)) %>%
+  left_join(vars_scales, by = c("Code" = "variables"))
+
+# save codebook
+write_csv(codebook, "./data/clean/scales_codebook.csv")

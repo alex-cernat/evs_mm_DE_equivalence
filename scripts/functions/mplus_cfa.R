@@ -33,6 +33,13 @@ mplus_cfa <- function(df_use, vars_use,
     str_c("f by ", syn_use1)
 
 
+  # add correlated errors for v212
+  if ("v212" %in% vars_use) {
+    syn_model <- str_c(syn_model, "v212 WITH v213; \n v215 WITH v216;")
+  }
+
+
+
   syn_output <- str_c("\n \n OUTPUT: SAMPSTAT; \n
                                 MODINDICES; \n
                                 STDYX; \n")
@@ -48,7 +55,7 @@ mplus_cfa <- function(df_use, vars_use,
 
   # write .inp file
   write.table(out,
-              str_c("./mplus/cfa/", nm, "_", vars_use[1], "_", ".inp"),
+              str_c("./mplus/cfa/", nm, "_", vars_use[1], ".inp"),
               quote = F,
               row.names = F,
               col.names = F)
