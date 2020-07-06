@@ -1,26 +1,139 @@
-Topic,ChiSq,ChiSqDF,ChiSqP,CFI,RMSEA,scale
-policy,9.188,5,0.1018,0.995,0.015,10
-trust,4598.416,135,0,0.926,0.079,4
-democracy1,150.354,5,0,0.944,0.089,10
-democracy2,5.116,2,0.0775,0.996,0.021,10
-pol_system,10.55,2,0.0051,0.995,0.034,4
-norms1,82.427,5,0,0.969,0.064,10
-norms2,1210.687,35,0,0.88,0.083,10
-belong,629.444,2,0,0.917,0.288,4
-elections,985.032,20,0,0.928,0.116,4
-immigration,5.411,2,0.0668,0.999,0.021,10
-national,199.024,2,0,0.978,0.161,4
-european,96.519,2,0,0.994,0.112,4
-environment,134.018,5,0,0.955,0.083,5
-importance,0,0,0,1,0,4
-surveillance,0,0,0,1,0,4
-pol_watch,34.083,2,0,0.979,0.066,5
-concern,29.03,3,0,0.998,0.048,5
-concern_grp,0,0,0,1,0,5
-society,80.727,2,0,0.924,0.103,4
-childhood,1089.16,9,0,0.893,0.18,4
-trust_pl,1021.584,9,0,0.991,0.173,4
-work,34.719,5,0,0.987,0.035,5
-marriage,226.016,9,0,0.967,0.08,3
-traditional_family,0,0,0,1,0,5
-action,72.525,2,0,0.989,0.098,3
+Topic,group,model,ChiSq,ChiSqDF,ChiSqP,CFI,RMSEA,var,scale,CFI_dif,sig_CFI
+action,Length,config,59.465,5,0,0.986,0.1,v98,3,NA,NA
+action,Length,metric,45.255,8,0,0.991,0.065,v98,3,0.0050000000000000044,FALSE
+action,Length,scalar,41.128,11,0,0.992,0.05,v98,3,0.0010000000000000009,FALSE
+action,Mode design,config,44.133,5,0,0.989,0.086,v98,3,NA,NA
+action,Mode design,metric,43.047,8,0,0.991,0.064,v98,3,0.0020000000000000018,FALSE
+action,Mode design,scalar,67.515,11,0,0.985,0.069,v98,3,-0.006000000000000005,FALSE
+belong,Length,config,332.41,6,0,0.926,0.218,v164,4,NA,NA
+belong,Length,metric,274.853,9,0,0.939,0.161,v164,4,0.0129999999999999,TRUE
+belong,Length,scalar,256.56,15,0,0.945,0.119,v164,4,0.006000000000000005,FALSE
+belong,Mode design,config,363.253,6,0,0.923,0.235,v164,4,NA,NA
+belong,Mode design,metric,317.384,9,0,0.934,0.178,v164,4,0.01100000000000001,TRUE
+belong,Mode design,scalar,322.717,15,0,0.934,0.138,v164,4,0,FALSE
+childhood,Length,config,446.059,20,0,0.917,0.139,v267,4,NA,NA
+childhood,Length,metric,410.943,25,0,0.924,0.118,v267,4,0.007000000000000006,FALSE
+childhood,Length,scalar,345.036,35,0,0.939,0.089,v267,4,0.014999999999999902,TRUE
+childhood,Mode design,config,434.391,20,0,0.91,0.14,v267,4,NA,NA
+childhood,Mode design,metric,408.863,25,0,0.916,0.121,v267,4,0.006000000000000005,FALSE
+childhood,Mode design,scalar,353.014,35,0,0.931,0.093,v267,4,0.015000000000000013,TRUE
+concern,Length,config,890.977,10,0,0.852,0.28,v212,5,NA,NA
+concern,Length,metric,894.331,14,0,0.852,0.237,v212,5,0,FALSE
+concern,Length,scalar,935.352,19,0,0.846,0.207,v212,5,-0.006000000000000005,FALSE
+concern,Mode design,config,836.834,10,0,0.877,0.277,v212,5,NA,NA
+concern,Mode design,metric,843.174,14,0,0.877,0.235,v212,5,0,FALSE
+concern,Mode design,scalar,849.394,19,0,0.877,0.202,v212,5,0,FALSE
+concern_grp,Length,config,0,0,0,1,0,v217,5,NA,NA
+concern_grp,Length,metric,7.4,2,0.0247,0.998,0.049,v217,5,-0.0020000000000000018,FALSE
+concern_grp,Length,scalar,19.59,5,0.0015,0.993,0.051,v217,5,-0.0050000000000000044,FALSE
+concern_grp,Mode design,config,0,0,0,1,0,v217,5,NA,NA
+concern_grp,Mode design,metric,8.16,2,0.0169,0.997,0.053,v217,5,-0.0030000000000000027,FALSE
+concern_grp,Mode design,scalar,26.823,5,1e-4,0.989,0.064,v217,5,-0.008000000000000007,FALSE
+democracy1,Length,config,127.298,10,0,0.935,0.103,v133,10,NA,NA
+democracy1,Length,metric,129.211,14,0,0.936,0.087,v133,10,0.0010000000000000009,FALSE
+democracy1,Length,scalar,152.024,19,0,0.927,0.08,v133,10,-0.009000000000000008,FALSE
+democracy1,Mode design,config,117.755,10,0,0.925,0.1,v133,10,NA,NA
+democracy1,Mode design,metric,124.34,14,0,0.924,0.086,v133,10,-0.0010000000000000009,FALSE
+democracy1,Mode design,scalar,170.914,19,0,0.895,0.086,v133,10,-0.029000000000000026,FALSE
+democracy2,Length,config,8.497,4,0.075,0.991,0.032,v134,10,NA,NA
+democracy2,Length,metric,11.502,7,0.1182,0.991,0.024,v134,10,0,FALSE
+democracy2,Length,scalar,18.597,11,0.0687,0.985,0.025,v134,10,-0.006000000000000005,FALSE
+democracy2,Mode design,config,12.321,4,0.0151,0.984,0.044,v134,10,NA,NA
+democracy2,Mode design,metric,17.268,7,0.0157,0.98,0.037,v134,10,-0.0040000000000000036,FALSE
+democracy2,Mode design,scalar,27.141,11,0.0044,0.969,0.037,v134,10,-0.01100000000000001,FALSE
+elections,Length,config,648.664,42,0,0.938,0.117,v176,4,NA,NA
+elections,Length,metric,540.988,49,0,0.95,0.097,v176,4,0.01200000000000001,TRUE
+elections,Length,scalar,481.762,63,0,0.957,0.079,v176,4,0.007000000000000006,FALSE
+elections,Mode design,config,675.523,42,0,0.91,0.12,v176,4,NA,NA
+elections,Mode design,metric,597.956,49,0,0.922,0.103,v176,4,0.01200000000000001,TRUE
+elections,Mode design,scalar,545.311,63,0,0.932,0.085,v176,4,0.010000000000000009,TRUE
+environment,Length,config,76.974,10,0,0.965,0.078,v199,5,NA,NA
+environment,Length,metric,80.623,14,0,0.965,0.066,v199,5,0,FALSE
+environment,Length,scalar,85.885,19,0,0.965,0.056,v199,5,0,FALSE
+environment,Mode design,config,93.415,10,0,0.947,0.088,v199,5,NA,NA
+environment,Mode design,metric,103.38,14,0,0.943,0.077,v199,5,-0.0040000000000000036,FALSE
+environment,Mode design,scalar,127.326,19,0,0.931,0.073,v199,5,-0.0119999999999999,FALSE
+european,Length,config,50.528,6,0,0.995,0.081,v194,4,NA,NA
+european,Length,metric,52.341,9,0,0.996,0.065,v194,4,0.0010000000000000009,FALSE
+european,Length,scalar,49.171,15,0,0.997,0.045,v194,4,0.0010000000000000009,FALSE
+european,Mode design,config,67.134,6,0,0.994,0.098,v194,4,NA,NA
+european,Mode design,metric,73.437,9,0,0.994,0.082,v194,4,0,FALSE
+european,Mode design,scalar,91.946,15,0,0.993,0.069,v194,4,-0.0010000000000000009,FALSE
+immigration,Length,config,11.002,4,0.0265,0.997,0.039,v185,10,NA,NA
+immigration,Length,metric,17.3,7,0.0156,0.996,0.036,v185,10,-0.0010000000000000009,FALSE
+immigration,Length,scalar,25.631,11,0.0074,0.995,0.034,v185,10,-0.0010000000000000009,FALSE
+immigration,Mode design,config,5.365,4,0.2519,0.999,0.018,v185,10,NA,NA
+immigration,Mode design,metric,10.816,7,0.1468,0.998,0.022,v185,10,-0.0010000000000000009,FALSE
+immigration,Mode design,scalar,24.199,11,0.0119,0.993,0.033,v185,10,-0.0050000000000000044,FALSE
+national,Length,config,85.851,6,0,0.987,0.108,v189,4,NA,NA
+national,Length,metric,87.01,9,0,0.987,0.087,v189,4,0,FALSE
+national,Length,scalar,82.663,15,0,0.989,0.063,v189,4,0.0020000000000000018,FALSE
+national,Mode design,config,79.428,6,0,0.984,0.106,v189,4,NA,NA
+national,Mode design,metric,84.522,9,0,0.983,0.088,v189,4,-0.0010000000000000009,FALSE
+national,Mode design,scalar,81.802,15,0,0.985,0.064,v189,4,0.0020000000000000018,FALSE
+norms1,Length,config,101.508,10,0,0.95,0.09,v149,10,NA,NA
+norms1,Length,metric,123.346,14,0,0.94,0.083,v149,10,-0.010000000000000009,FALSE
+norms1,Length,scalar,135.641,19,0,0.936,0.074,v149,10,-0.0039999999999998925,FALSE
+norms1,Mode design,config,68.616,10,0,0.948,0.074,v149,10,NA,NA
+norms1,Mode design,metric,90.148,14,0,0.933,0.071,v149,10,-0.014999999999999902,FALSE
+norms1,Mode design,scalar,92.266,19,0,0.935,0.06,v149,10,0.0020000000000000018,FALSE
+norms2,Length,config,917.285,70,0,0.852,0.085,v151,10,NA,NA
+norms2,Length,metric,931.705,79,0,0.851,0.081,v151,10,-0.0010000000000000009,FALSE
+norms2,Length,scalar,958.733,89,0,0.848,0.077,v151,10,-0.0030000000000000027,FALSE
+norms2,Mode design,config,824.43,70,0,0.876,0.1,v151,10,NA,NA
+norms2,Mode design,metric,841.744,79,0,0.875,0.095,v151,10,-0.0010000000000000009,FALSE
+norms2,Mode design,scalar,902.302,89,0,0.866,0.092,v151,10,-0.009000000000000008,FALSE
+pol_system,Length,config,7.809,6,0.2524,0.998,0.017,v145,4,NA,NA
+pol_system,Length,metric,13.705,9,0.1332,0.996,0.022,v145,4,-0.0020000000000000018,FALSE
+pol_system,Length,scalar,26.839,15,0.0301,0.989,0.027,v145,4,-0.007000000000000006,FALSE
+pol_system,Mode design,config,15.564,6,0.0163,0.99,0.039,v145,4,NA,NA
+pol_system,Mode design,metric,14.279,9,0.1127,0.995,0.023,v145,4,0.0050000000000000044,FALSE
+pol_system,Mode design,scalar,28.424,15,0.0191,0.986,0.029,v145,4,-0.009000000000000008,FALSE
+pol_watch,Length,config,24.147,4,1e-4,0.98,0.067,v208,5,NA,NA
+pol_watch,Length,metric,32.662,7,0,0.975,0.057,v208,5,-0.0050000000000000044,FALSE
+pol_watch,Length,scalar,45.393,11,0,0.966,0.053,v208,5,-0.009000000000000008,FALSE
+pol_watch,Mode design,config,18.927,4,8e-4,0.982,0.059,v208,5,NA,NA
+pol_watch,Mode design,metric,40.565,7,0,0.961,0.067,v208,5,-0.02100000000000002,FALSE
+pol_watch,Mode design,scalar,120.927,11,0,0.871,0.096,v208,5,-0.08999999999999997,FALSE
+policy,Length,config,31.633,10,5e-4,0.967,0.044,v103,10,NA,NA
+policy,Length,metric,43.554,14,1e-4,0.955,0.043,v103,10,-0.01200000000000001,FALSE
+policy,Length,scalar,54.016,19,0,0.947,0.04,v103,10,-0.008000000000000007,FALSE
+policy,Mode design,config,13.716,10,0.1863,0.992,0.019,v103,10,NA,NA
+policy,Mode design,metric,19.208,14,0.1572,0.988,0.019,v103,10,-0.0040000000000000036,FALSE
+policy,Mode design,scalar,57.226,19,0,0.915,0.043,v103,10,-0.07299999999999995,FALSE
+society,Length,config,55.938,6,0,0.909,0.087,v221,4,NA,NA
+society,Length,metric,54.978,9,0,0.916,0.068,v221,4,0.007000000000000006,FALSE
+society,Length,scalar,61.342,15,0,0.915,0.053,v221,4,-0.0010000000000000009,FALSE
+society,Mode design,config,42.66,6,0,0.949,0.075,v221,4,NA,NA
+society,Mode design,metric,45.275,9,0,0.949,0.061,v221,4,0,FALSE
+society,Mode design,scalar,51.101,15,0,0.95,0.047,v221,4,0.0010000000000000009,FALSE
+surveillance,Length,config,1.528,2,0.4658,1,0,v205,4,NA,NA
+surveillance,Length,metric,3.613,4,0.4609,1,0,v205,4,0,FALSE
+surveillance,Length,scalar,11.056,8,0.1985,0.999,0.019,v205,4,-0.0010000000000000009,FALSE
+surveillance,Mode design,config,2.862,2,0.239,1,0.02,v205,4,NA,NA
+surveillance,Mode design,metric,4.315,4,0.365,1,0.009,v205,4,0,FALSE
+surveillance,Mode design,scalar,22.575,8,0.004,0.995,0.041,v205,4,-0.0050000000000000044,FALSE
+traditional_family,Length,config,0,0,0,1,0,v82,5,NA,NA
+traditional_family,Length,metric,6.908,2,0.0316,0.979,0.046,v82,5,-0.02100000000000002,FALSE
+traditional_family,Length,scalar,8.737,5,0.12,0.984,0.026,v82,5,0.0050000000000000044,FALSE
+traditional_family,Mode design,config,0,0,0,1,0,v82,5,NA,NA
+traditional_family,Mode design,metric,4.656,2,0.0975,0.985,0.035,v82,5,-0.015000000000000013,FALSE
+traditional_family,Mode design,scalar,17.36,5,0.0039,0.932,0.048,v82,5,-0.052999999999999936,FALSE
+trust,Length,config,2486.644,272,0,0.935,0.065,v115,4,NA,NA
+trust,Length,metric,2283.142,289,0,0.942,0.06,v115,4,0.006999999999999895,FALSE
+trust,Length,scalar,2098.909,323,0,0.948,0.053,v115,4,0.006000000000000005,FALSE
+trust,Mode design,config,3159.739,272,0,0.908,0.099,v115,4,NA,NA
+trust,Mode design,metric,2852.548,289,0,0.918,0.091,v115,4,0.010000000000000009,TRUE
+trust,Mode design,scalar,2691.297,323,0,0.924,0.082,v115,4,0.006000000000000005,FALSE
+trust_pl,Length,config,596.614,20,0,0.986,0.159,v32,4,NA,NA
+trust_pl,Length,metric,497.47,25,0,0.989,0.129,v32,4,0.0030000000000000027,FALSE
+trust_pl,Length,scalar,443.301,35,0,0.99,0.101,v32,4,0.0010000000000000009,FALSE
+trust_pl,Mode design,config,643.141,20,0,0.987,0.17,v32,4,NA,NA
+trust_pl,Mode design,metric,541.292,25,0,0.989,0.138,v32,4,0.0020000000000000018,FALSE
+trust_pl,Mode design,scalar,672.201,35,0,0.986,0.13,v32,4,-0.0030000000000000027,FALSE
+work,Length,config,45.881,10,0,0.976,0.046,v46,5,NA,NA
+work,Length,metric,50.247,14,0,0.976,0.039,v46,5,0,FALSE
+work,Length,scalar,73.1,19,0,0.964,0.041,v46,5,-0.01200000000000001,FALSE
+work,Mode design,config,36.657,10,1e-4,0.982,0.05,v46,5,NA,NA
+work,Mode design,metric,44.787,14,0,0.979,0.045,v46,5,-0.0030000000000000027,FALSE
+work,Mode design,scalar,69.879,19,0,0.965,0.05,v46,5,-0.014000000000000012,FALSE
