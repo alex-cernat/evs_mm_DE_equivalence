@@ -10,7 +10,7 @@ Using an experiment in the European Value Study Germany we do the following comp
 - [x] set-up GitHub (Alex)
 - [x] provide data (Tobias/Pablo)
 - [x] alternative quality indicators (Tobias/Pablo)
-- [ ] create weights (Tobias will do the weights)
+- [x] create weights (Tobias will do the weights)
 - [ ] check scales fit and choose for invariance (Alex)
 - [ ] do invariance testing (Alex)
 - [ ] write intro and lit review (Joe)
