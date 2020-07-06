@@ -1,0 +1,507 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   2:05 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v185
+   v186
+   v187
+   v188;
+
+   GROUPING IS comp_mode (0=sm 1=mm);
+
+  Model:
+
+
+  f1 BY v185@1
+  v186 (L2_sm)
+  v187 (L3_sm)
+  v188 (L4_sm)
+  ;
+
+  [v185] (i1_sm);
+  [v186] (i2_sm);
+  [v187] (i3_sm);
+  [v188] (i4_sm);
+
+   [f1@0];
+
+  Model mm:
+
+  f1 BY v185@1
+  v186 (L2_mm)
+  v187 (L3_mm)
+  v188 (L4_mm)
+  ;
+
+  [v185] (i1_mm);
+  [v186] (i2_mm);
+  [v187] (i3_mm);
+  [v188] (i4_mm);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v185_config.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING in SAVEDATA command
+  The DIFFTEST option is available only for the estimators MLMV, WLSMV and ULSMV.
+  Request for DIFFTEST will be ignored.
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  3244
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  14
+   3 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group SM                                                   1491
+   Group MM                                                    667
+   Total sample size                                          2158
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   V185        V186        V187        V188
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_MOD
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group SM
+     Number of missing data patterns             8
+
+   Group MM
+     Number of missing data patterns            14
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR SM
+
+
+           Covariance Coverage
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           0.990
+ V186           0.983         0.993
+ V187           0.986         0.987         0.995
+ V188           0.975         0.978         0.983         0.985
+
+
+     PROPORTION OF DATA PRESENT FOR MM
+
+
+           Covariance Coverage
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           0.955
+ V186           0.949         0.984
+ V187           0.942         0.970         0.976
+ V188           0.916         0.939         0.933         0.952
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SM
+
+
+           Means
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+                7.462         4.430         4.176         5.509
+
+
+           Covariances
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           6.375
+ V186           2.302         6.872
+ V187           2.249         4.386         6.727
+ V188          -0.876        -1.609        -1.690         5.916
+
+
+           Correlations
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           1.000
+ V186           0.348         1.000
+ V187           0.343         0.645         1.000
+ V188          -0.143        -0.252        -0.268         1.000
+
+
+     ESTIMATED SAMPLE STATISTICS FOR MM
+
+
+           Means
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+                7.397         4.330         3.995         5.918
+
+
+           Covariances
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           6.579
+ V186           3.275         7.477
+ V187           2.991         5.420         7.016
+ V188          -1.639        -2.570        -2.019         6.126
+
+
+           Correlations
+              V185          V186          V187          V188
+              ________      ________      ________      ________
+ V185           1.000
+ V186           0.467         1.000
+ V187           0.440         0.748         1.000
+ V188          -0.258        -0.380        -0.308         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -19045.070
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR SM
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V185                  7.461      -0.830       1.000    2.85%       5.000      8.000      8.000
+            1476.000       6.372      -0.280      10.000   30.28%       9.000     10.000
+     V186                  4.420       0.527       1.000   15.95%       2.000      3.000      4.000
+            1480.000       6.853      -0.657      10.000    5.47%       5.000      7.000
+     V187                  4.175       0.588       1.000   19.89%       2.000      3.000      4.000
+            1483.000       6.715      -0.555      10.000    4.45%       5.000      7.000
+     V188                  5.507       0.081       1.000    6.88%       3.000      5.000      5.000
+            1469.000       5.915      -0.574      10.000    8.71%       6.000      8.000
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR MM
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V185                  7.402      -0.809       1.000    2.98%       5.000      7.000      8.000
+             637.000       6.601      -0.353      10.000   30.14%       9.000     10.000
+     V186                  4.316       0.551       1.000   19.05%       2.000      3.000      4.000
+             656.000       7.463      -0.784      10.000    5.49%       5.000      7.000
+     V187                  3.978       0.691       1.000   22.58%       1.000      3.000      3.000
+             651.000       7.016      -0.566      10.000    4.15%       4.000      7.000
+     V188                  5.942      -0.081       1.000    5.83%       4.000      5.000      6.000
+             635.000       6.115      -0.684      10.000   11.02%       7.000      8.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       24
+
+Loglikelihood
+
+          H0 Value                      -19047.752
+          H1 Value                      -19045.070
+
+Information Criteria
+
+          Akaike (AIC)                   38143.504
+          Bayesian (BIC)                 38279.750
+          Sample-Size Adjusted BIC       38203.499
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              5.365
+          Degrees of Freedom                     4
+          P-Value                           0.2519
+
+Chi-Square Contribution From Each Group
+
+          SM                                 0.549
+          MM                                 4.815
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.018
+          90 Percent C.I.                    0.000  0.052
+          Probability RMSEA <= .05           0.936
+
+CFI/TLI
+
+          CFI                                0.999
+          TLI                                0.998
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1950.993
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.008
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F1       BY
+    V185               1.000      0.000    999.000    999.000
+    V186               1.926      0.134     14.388      0.000
+    V187               1.928      0.136     14.131      0.000
+    V188              -0.726      0.077     -9.451      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V185               7.462      0.066    113.622      0.000
+    V186               4.430      0.068     65.118      0.000
+    V187               4.176      0.067     62.081      0.000
+    V188               5.509      0.063     86.868      0.000
+
+ Variances
+    F1                 1.181      0.153      7.732      0.000
+
+ Residual Variances
+    V185               5.193      0.203     25.551      0.000
+    V186               2.491      0.233     10.699      0.000
+    V187               2.337      0.231     10.130      0.000
+    V188               5.293      0.201     26.282      0.000
+
+Group MM
+
+ F1       BY
+    V185               1.000      0.000    999.000    999.000
+    V186               1.853      0.147     12.595      0.000
+    V187               1.622      0.123     13.243      0.000
+    V188              -0.756      0.089     -8.488      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V185               7.398      0.101     73.140      0.000
+    V186               4.331      0.106     40.679      0.000
+    V187               3.995      0.103     38.661      0.000
+    V188               5.918      0.098     60.426      0.000
+
+ Variances
+    F1                 1.801      0.271      6.652      0.000
+
+ Residual Variances
+    V185               4.777      0.286     16.689      0.000
+    V186               1.294      0.284      4.560      0.000
+    V187               2.278      0.245      9.289      0.000
+    V188               5.099      0.295     17.289      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F1       BY
+    V185               0.430      0.025     17.438      0.000
+    V186               0.798      0.022     36.822      0.000
+    V187               0.808      0.022     37.278      0.000
+    V188              -0.325      0.027    -12.186      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V185               2.955      0.060     49.009      0.000
+    V186               1.690      0.040     41.792      0.000
+    V187               1.610      0.039     40.935      0.000
+    V188               2.265      0.049     46.007      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V185               0.815      0.021     38.338      0.000
+    V186               0.362      0.035     10.468      0.000
+    V187               0.347      0.035      9.921      0.000
+    V188               0.895      0.017     51.745      0.000
+
+Group MM
+
+ F1       BY
+    V185               0.523      0.032     16.295      0.000
+    V186               0.909      0.021     42.694      0.000
+    V187               0.822      0.022     36.991      0.000
+    V188              -0.410      0.036    -11.346      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V185               2.884      0.090     32.155      0.000
+    V186               1.584      0.058     27.123      0.000
+    V187               1.508      0.057     26.481      0.000
+    V188               2.390      0.078     30.503      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V185               0.726      0.034     21.616      0.000
+    V186               0.173      0.039      4.469      0.000
+    V187               0.325      0.037      8.889      0.000
+    V188               0.832      0.030     28.080      0.000
+
+
+R-SQUARE
+
+Group SM
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V185               0.185      0.021      8.719      0.000
+    V186               0.638      0.035     18.411      0.000
+    V187               0.653      0.035     18.639      0.000
+    V188               0.105      0.017      6.093      0.000
+
+Group MM
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V185               0.274      0.034      8.148      0.000
+    V186               0.827      0.039     21.347      0.000
+    V187               0.675      0.037     18.495      0.000
+    V188               0.168      0.030      5.673      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.200E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group SM
+
+
+No modification indices above the minimum value.
+
+Group MM
+
+
+No modification indices above the minimum value.
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v185_
+
+     Beginning Time:  14:05:18
+        Ending Time:  14:05:19
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

@@ -1,0 +1,641 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   9:01 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = cfa/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v32
+   v33
+   v34
+   v35
+   v36
+   v37;
+
+   CATEGORICAL ARE
+   v32
+   v33
+   v34
+   v35
+   v36
+   v37;
+
+      GROUPING IS comp_mode(0=sm 1=mm);
+
+
+   Model:
+
+  f by v32
+   v33
+   v34
+   v35
+   v36
+   v37;
+
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  3244
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  4
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group SM                                                   1494
+   Group MM                                                    674
+   Total sample size                                          2168
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V32         V33         V34         V35         V36         V37
+
+Continuous latent variables
+   F
+
+Variables with special functions
+
+  Grouping variable     COMP_MOD
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  cfa/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group SM
+     Number of missing data patterns            20
+
+   Group MM
+     Number of missing data patterns            24
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR SM
+
+
+           Covariance Coverage
+              V32           V33           V34           V35           V36
+              ________      ________      ________      ________      ________
+ V32            0.997
+ V33            0.985         0.988
+ V34            0.990         0.981         0.992
+ V35            0.971         0.963         0.968         0.973
+ V36            0.898         0.893         0.898         0.888         0.900
+ V37            0.908         0.902         0.908         0.898         0.893
+
+
+           Covariance Coverage
+              V37
+              ________
+ V37            0.910
+
+
+     PROPORTION OF DATA PRESENT FOR MM
+
+
+           Covariance Coverage
+              V32           V33           V34           V35           V36
+              ________      ________      ________      ________      ________
+ V32            0.996
+ V33            0.945         0.947
+ V34            0.975         0.933         0.978
+ V35            0.871         0.846         0.859         0.874
+ V36            0.680         0.669         0.672         0.636         0.680
+ V37            0.693         0.684         0.684         0.648         0.651
+
+
+           Covariance Coverage
+              V37
+              ________
+ V37            0.693
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+  Group SM
+    V32
+      Category 1    0.875         1303.000
+      Category 2    0.109          163.000
+      Category 3    0.012           18.000
+      Category 4    0.003            5.000
+    V33
+      Category 1    0.182          269.000
+      Category 2    0.656          968.000
+      Category 3    0.144          213.000
+      Category 4    0.018           26.000
+    V34
+      Category 1    0.311          461.000
+      Category 2    0.645          956.000
+      Category 3    0.041           61.000
+      Category 4    0.003            4.000
+    V35
+      Category 1    0.012           17.000
+      Category 2    0.345          501.000
+      Category 3    0.513          746.000
+      Category 4    0.131          190.000
+    V36
+      Category 1    0.065           87.000
+      Category 2    0.607          816.000
+      Category 3    0.284          382.000
+      Category 4    0.045           60.000
+    V37
+      Category 1    0.071           97.000
+      Category 2    0.606          823.000
+      Category 3    0.286          388.000
+      Category 4    0.038           51.000
+
+  Group MM
+    V32
+      Category 1    0.811          544.000
+      Category 2    0.170          114.000
+      Category 3    0.016           11.000
+      Category 4    0.003            2.000
+    V33
+      Category 1    0.069           44.000
+      Category 2    0.718          458.000
+      Category 3    0.179          114.000
+      Category 4    0.034           22.000
+    V34
+      Category 1    0.178          117.000
+      Category 2    0.750          494.000
+      Category 3    0.070           46.000
+      Category 4    0.003            2.000
+    V35
+      Category 1    0.005            3.000
+      Category 2    0.219          129.000
+      Category 3    0.537          316.000
+      Category 4    0.239          141.000
+    V36
+      Category 1    0.031           14.000
+      Category 2    0.546          250.000
+      Category 3    0.325          149.000
+      Category 4    0.098           45.000
+    V37
+      Category 1    0.039           18.000
+      Category 2    0.544          254.000
+      Category 3    0.323          151.000
+      Category 4    0.094           44.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SM
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V32$1         V32$2         V32$3         V33$1         V33$2
+              ________      ________      ________      ________      ________
+                1.151         2.158         2.711        -0.907         0.987
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V33$3         V34$1         V34$2         V34$3         V35$1
+              ________      ________      ________      ________      ________
+                2.106        -0.493         1.708         2.782        -2.267
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V35$2         V35$3         V36$1         V36$2         V36$3
+              ________      ________      ________      ________      ________
+               -0.368         1.123        -1.517         0.444         1.700
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V37$1         V37$2         V37$3
+              ________      ________      ________
+               -1.466         0.459         1.780
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V32           V33           V34           V35           V36
+              ________      ________      ________      ________      ________
+ V32
+ V33            0.398
+ V34            0.386         0.579
+ V35            0.046         0.450         0.333
+ V36            0.196         0.413         0.380         0.617
+ V37            0.201         0.417         0.394         0.568         0.931
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V37
+              ________
+
+
+     ESTIMATED SAMPLE STATISTICS FOR MM
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V32$1         V32$2         V32$3         V33$1         V33$2
+              ________      ________      ________      ________      ________
+                0.881         2.067         2.750        -1.484         0.795
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V33$3         V34$1         V34$2         V34$3         V35$1
+              ________      ________      ________      ________      ________
+                1.819        -0.925         1.455         2.744        -2.569
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V35$2         V35$3         V36$1         V36$2         V36$3
+              ________      ________      ________      ________      ________
+               -0.758         0.708        -1.873         0.193         1.292
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V37$1         V37$2         V37$3
+              ________      ________      ________
+               -1.768         0.208         1.315
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V32           V33           V34           V35           V36
+              ________      ________      ________      ________      ________
+ V32
+ V33            0.407
+ V34            0.310         0.620
+ V35            0.069         0.489         0.477
+ V36            0.113         0.418         0.436         0.674
+ V37            0.107         0.395         0.487         0.686         0.977
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V37
+              ________
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       32
+
+Chi-Square Test of Model Fit
+
+          Value                            552.633*
+          Degrees of Freedom                    34
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          SM                               361.813
+          MM                               190.819
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.119
+          90 Percent C.I.                    0.110  0.127
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.989
+          TLI                                0.990
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          47094.993
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              3.945
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F        BY
+    V32                1.000      0.000    999.000    999.000
+    V33                1.907      0.241      7.917      0.000
+    V34                1.872      0.238      7.866      0.000
+    V35                2.184      0.281      7.767      0.000
+    V36                3.300      0.421      7.834      0.000
+    V37                3.238      0.413      7.837      0.000
+
+ Means
+    F                  0.000      0.000    999.000    999.000
+
+ Thresholds
+    V32$1              1.118      0.039     28.805      0.000
+    V32$2              2.204      0.077     28.532      0.000
+    V32$3              2.793      0.134     20.874      0.000
+    V33$1             -0.965      0.036    -26.928      0.000
+    V33$2              0.996      0.034     28.925      0.000
+    V33$3              2.059      0.065     31.434      0.000
+    V34$1             -0.529      0.031    -17.047      0.000
+    V34$2              1.662      0.050     33.088      0.000
+    V34$3              2.787      0.135     20.647      0.000
+    V35$1             -2.244      0.085    -26.525      0.000
+    V35$2             -0.386      0.031    -12.624      0.000
+    V35$3              1.060      0.036     29.289      0.000
+    V36$1             -1.504      0.052    -29.169      0.000
+    V36$2              0.491      0.034     14.497      0.000
+    V36$3              1.708      0.055     31.085      0.000
+    V37$1             -1.441      0.050    -29.029      0.000
+    V37$2              0.505      0.034     15.047      0.000
+    V37$3              1.760      0.057     30.905      0.000
+
+ Variances
+    F                  0.087      0.022      3.918      0.000
+
+ Scales
+    V32                1.000      0.000    999.000    999.000
+    V33                1.000      0.000    999.000    999.000
+    V34                1.000      0.000    999.000    999.000
+    V35                1.000      0.000    999.000    999.000
+    V36                1.000      0.000    999.000    999.000
+    V37                1.000      0.000    999.000    999.000
+
+Group MM
+
+ F        BY
+    V32                1.000      0.000    999.000    999.000
+    V33                1.907      0.241      7.917      0.000
+    V34                1.872      0.238      7.866      0.000
+    V35                2.184      0.281      7.767      0.000
+    V36                3.300      0.421      7.834      0.000
+    V37                3.238      0.413      7.837      0.000
+
+ Means
+    F                  0.130      0.023      5.736      0.000
+
+ Thresholds
+    V32$1              1.118      0.039     28.805      0.000
+    V32$2              2.204      0.077     28.532      0.000
+    V32$3              2.793      0.134     20.874      0.000
+    V33$1             -0.965      0.036    -26.928      0.000
+    V33$2              0.996      0.034     28.925      0.000
+    V33$3              2.059      0.065     31.434      0.000
+    V34$1             -0.529      0.031    -17.047      0.000
+    V34$2              1.662      0.050     33.088      0.000
+    V34$3              2.787      0.135     20.647      0.000
+    V35$1             -2.244      0.085    -26.525      0.000
+    V35$2             -0.386      0.031    -12.624      0.000
+    V35$3              1.060      0.036     29.289      0.000
+    V36$1             -1.504      0.052    -29.169      0.000
+    V36$2              0.491      0.034     14.497      0.000
+    V36$3              1.708      0.055     31.085      0.000
+    V37$1             -1.441      0.050    -29.029      0.000
+    V37$2              0.505      0.034     15.047      0.000
+    V37$3              1.760      0.057     30.905      0.000
+
+ Variances
+    F                  0.090      0.023      3.896      0.000
+
+ Scales
+    V32                0.954      0.051     18.591      0.000
+    V33                1.041      0.035     29.428      0.000
+    V34                1.075      0.040     26.998      0.000
+    V35                1.057      0.035     29.955      0.000
+    V36                0.999      0.046     21.878      0.000
+    V37                1.007      0.045     22.222      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F        BY
+    V32                0.294      0.038      7.835      0.000
+    V33                0.561      0.019     29.973      0.000
+    V34                0.551      0.020     26.936      0.000
+    V35                0.643      0.017     38.142      0.000
+    V36                0.971      0.007    130.273      0.000
+    V37                0.953      0.008    121.254      0.000
+
+ Means
+    F                  0.000      0.000    999.000    999.000
+
+ Thresholds
+    V32$1              1.118      0.039     28.805      0.000
+    V32$2              2.204      0.077     28.532      0.000
+    V32$3              2.793      0.134     20.874      0.000
+    V33$1             -0.965      0.036    -26.928      0.000
+    V33$2              0.996      0.034     28.925      0.000
+    V33$3              2.059      0.065     31.434      0.000
+    V34$1             -0.529      0.031    -17.047      0.000
+    V34$2              1.662      0.050     33.088      0.000
+    V34$3              2.787      0.135     20.647      0.000
+    V35$1             -2.244      0.085    -26.525      0.000
+    V35$2             -0.386      0.031    -12.624      0.000
+    V35$3              1.060      0.036     29.289      0.000
+    V36$1             -1.504      0.052    -29.169      0.000
+    V36$2              0.491      0.034     14.497      0.000
+    V36$3              1.708      0.055     31.085      0.000
+    V37$1             -1.441      0.050    -29.029      0.000
+    V37$2              0.505      0.034     15.047      0.000
+    V37$3              1.760      0.057     30.905      0.000
+
+ Variances
+    F                  1.000      0.000    999.000    999.000
+
+ Scales
+    V32                1.000      0.000      0.000      1.000
+    V33                1.000      0.000      0.000      1.000
+    V34                1.000      0.000      0.000      1.000
+    V35                1.000      0.000      0.000      1.000
+    V36                1.000      0.000      0.000      1.000
+    V37                1.000      0.000      0.000      1.000
+
+Group MM
+
+ F        BY
+    V32                0.287      0.041      7.060      0.000
+    V33                0.597      0.025     23.917      0.000
+    V34                0.605      0.025     23.819      0.000
+    V35                0.694      0.020     33.898      0.000
+    V36                0.991      0.011     87.697      0.000
+    V37                0.980      0.010     97.680      0.000
+
+ Means
+    F                  0.433      0.057      7.641      0.000
+
+ Thresholds
+    V32$1              1.066      0.052     20.408      0.000
+    V32$2              2.102      0.101     20.879      0.000
+    V32$3              2.664      0.157     16.966      0.000
+    V33$1             -1.004      0.045    -22.531      0.000
+    V33$2              1.036      0.043     24.130      0.000
+    V33$3              2.143      0.077     27.889      0.000
+    V34$1             -0.569      0.035    -16.123      0.000
+    V34$2              1.787      0.063     28.336      0.000
+    V34$3              2.997      0.156     19.193      0.000
+    V35$1             -2.372      0.109    -21.721      0.000
+    V35$2             -0.408      0.033    -12.293      0.000
+    V35$3              1.120      0.045     25.025      0.000
+    V36$1             -1.502      0.073    -20.454      0.000
+    V36$2              0.491      0.039     12.486      0.000
+    V36$3              1.706      0.076     22.344      0.000
+    V37$1             -1.450      0.070    -20.818      0.000
+    V37$2              0.508      0.039     12.874      0.000
+    V37$3              1.772      0.077     22.908      0.000
+
+ Variances
+    F                  1.000      0.000    999.000    999.000
+
+ Scales
+    V32                1.000      0.000      0.000      1.000
+    V33                1.000      0.000      0.000      1.000
+    V34                1.000      0.000      0.000      1.000
+    V35                1.000      0.000      0.000      1.000
+    V36                1.000      0.000      0.000      1.000
+    V37                1.000      0.000      0.000      1.000
+
+
+R-SQUARE
+
+Group SM
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    V32                0.087      0.022      3.918      0.000      0.913
+    V33                0.315      0.021     14.986      0.000      0.685
+    V34                0.303      0.023     13.468      0.000      0.697
+    V35                0.413      0.022     19.071      0.000      0.587
+    V36                0.943      0.014     65.136      0.000      0.057
+    V37                0.908      0.015     60.627      0.000      0.092
+
+Group MM
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    V32                0.082      0.023      3.530      0.000      1.009
+    V33                0.356      0.030     11.958      0.000      0.594
+    V34                0.367      0.031     11.909      0.000      0.548
+    V35                0.482      0.028     16.949      0.000      0.464
+    V36                0.983      0.022     43.849      0.000      0.017
+    V37                0.961      0.020     48.840      0.000      0.038
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.157E-05
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group SM
+
+
+No modification indices above the minimum value.
+
+Group MM
+
+
+No modification indices above the minimum value.
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\eq_ex\inv_data
+
+     Beginning Time:  09:01:59
+        Ending Time:  09:02:00
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

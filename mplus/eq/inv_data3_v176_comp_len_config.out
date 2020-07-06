@@ -1,0 +1,898 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   2:19 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v176
+   v177
+   v178
+   v179
+   v180
+   v181
+   v182
+   v183;
+
+   CATEGORICAL ARE
+   v176
+   v177
+   v178
+   v179
+   v180
+   v181
+   v182
+   v183;
+
+   GROUPING IS comp_len (0=full 1=short);
+
+
+   Analysis:
+
+                  ESTIMATOR = WLSMV;
+
+                  ITERATIONS = 100000;
+
+                  PARAMETERIZATION = THETA;
+
+  Model:
+
+
+  f1 BY v176@1
+  v177 (L2_full)
+  v178 (L3_full)
+  v179 (L4_full)
+  v180 (L5_full)
+  v181 (L6_full)
+  v182 (L7_full)
+  v183 (L8_full)
+  ;
+
+
+  [v176$1] (t_v176_1);
+  [v176$2] (t_v176_2);
+  [v176$3] (t_v176_3);
+
+   [f1@0];
+  [v177$1] (t_v177_1);
+  [v177$2] (t_v177_2_full);
+  [v177$3] (t_v177_3_full);
+
+   [f1@0];
+  [v178$1] (t_v178_1);
+  [v178$2] (t_v178_2_full);
+  [v178$3] (t_v178_3_full);
+
+   [f1@0];
+  [v179$1] (t_v179_1);
+  [v179$2] (t_v179_2_full);
+  [v179$3] (t_v179_3_full);
+
+   [f1@0];
+  [v180$1] (t_v180_1);
+  [v180$2] (t_v180_2_full);
+  [v180$3] (t_v180_3_full);
+
+   [f1@0];
+  [v181$1] (t_v181_1);
+  [v181$2] (t_v181_2_full);
+  [v181$3] (t_v181_3_full);
+
+   [f1@0];
+  [v182$1] (t_v182_1);
+  [v182$2] (t_v182_2_full);
+  [v182$3] (t_v182_3_full);
+
+   [f1@0];
+  [v183$1] (t_v183_1);
+  [v183$2] (t_v183_2_full);
+  [v183$3] (t_v183_3_full);
+
+   [f1@0];
+
+  Model short:
+
+  f1 BY v176@1
+  v177 (L2_short)
+  v178 (L3_short)
+  v179 (L4_short)
+  v180 (L5_short)
+  v181 (L6_short)
+  v182 (L7_short)
+  v183 (L8_short)
+  ;
+
+
+  [v176$1] (t_v176_1);
+  [v176$2] (t_v176_2);
+  [v176$3] (t_v176_3);
+
+   [f1@0];
+  [v177$1] (t_v177_1);
+  [v177$2] (t_v177_2_short);
+  [v177$3] (t_v177_3_short);
+
+   [f1@0];
+  [v178$1] (t_v178_1);
+  [v178$2] (t_v178_2_short);
+  [v178$3] (t_v178_3_short);
+
+   [f1@0];
+  [v179$1] (t_v179_1);
+  [v179$2] (t_v179_2_short);
+  [v179$3] (t_v179_3_short);
+
+   [f1@0];
+  [v180$1] (t_v180_1);
+  [v180$2] (t_v180_2_short);
+  [v180$3] (t_v180_3_short);
+
+   [f1@0];
+  [v181$1] (t_v181_1);
+  [v181$2] (t_v181_2_short);
+  [v181$3] (t_v181_3_short);
+
+   [f1@0];
+  [v182$1] (t_v182_1);
+  [v182$2] (t_v182_2_short);
+  [v182$3] (t_v182_3_short);
+
+   [f1@0];
+  [v183$1] (t_v183_1);
+  [v183$2] (t_v183_2_short);
+  [v183$3] (t_v183_3_short);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v176_config.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  1494
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1795
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group FULL                                                  639
+   Group SHORT                                                1488
+   Total sample size                                          2127
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V176        V177        V178        V179        V180        V181
+   V182        V183
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_LEN
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                100000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group FULL
+     Number of missing data patterns            96
+
+   Group SHORT
+     Number of missing data patterns           129
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR FULL
+
+
+           Covariance Coverage
+              V176          V177          V178          V179          V180
+              ________      ________      ________      ________      ________
+ V176           0.923
+ V177           0.710         0.725
+ V178           0.790         0.676         0.845
+ V179           0.721         0.635         0.682         0.743
+ V180           0.839         0.696         0.795         0.703         0.890
+ V181           0.822         0.685         0.761         0.707         0.801
+ V182           0.698         0.621         0.659         0.656         0.689
+ V183           0.836         0.682         0.768         0.710         0.812
+
+
+           Covariance Coverage
+              V181          V182          V183
+              ________      ________      ________
+ V181           0.854
+ V182           0.681         0.725
+ V183           0.795         0.700         0.879
+
+
+     PROPORTION OF DATA PRESENT FOR SHORT
+
+
+           Covariance Coverage
+              V176          V177          V178          V179          V180
+              ________      ________      ________      ________      ________
+ V176           0.912
+ V177           0.711         0.733
+ V178           0.803         0.694         0.858
+ V179           0.691         0.622         0.664         0.715
+ V180           0.864         0.712         0.830         0.690         0.932
+ V181           0.816         0.688         0.762         0.674         0.819
+ V182           0.674         0.608         0.654         0.624         0.679
+ V183           0.815         0.696         0.781         0.683         0.827
+
+
+           Covariance Coverage
+              V181          V182          V183
+              ________      ________      ________
+ V181           0.849
+ V182           0.655         0.700
+ V183           0.776         0.677         0.871
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+  Group FULL
+    V176
+      Category 1    0.622          367.000
+      Category 2    0.312          184.000
+      Category 3    0.044           26.000
+      Category 4    0.022           13.000
+    V177
+      Category 1    0.019            9.000
+      Category 2    0.117           54.000
+      Category 3    0.322          149.000
+      Category 4    0.542          251.000
+    V178
+      Category 1    0.130           70.000
+      Category 2    0.363          196.000
+      Category 3    0.298          161.000
+      Category 4    0.209          113.000
+    V179
+      Category 1    0.027           13.000
+      Category 2    0.097           46.000
+      Category 3    0.297          141.000
+      Category 4    0.579          275.000
+    V180
+      Category 1    0.197          112.000
+      Category 2    0.548          312.000
+      Category 3    0.181          103.000
+      Category 4    0.074           42.000
+    V181
+      Category 1    0.581          317.000
+      Category 2    0.375          205.000
+      Category 3    0.033           18.000
+      Category 4    0.011            6.000
+    V182
+      Category 1    0.054           25.000
+      Category 2    0.136           63.000
+      Category 3    0.274          127.000
+      Category 4    0.536          248.000
+    V183
+      Category 1    0.011            6.000
+      Category 2    0.011            6.000
+      Category 3    0.094           53.000
+      Category 4    0.884          497.000
+
+  Group SHORT
+    V176
+      Category 1    0.655          889.000
+      Category 2    0.279          378.000
+      Category 3    0.052           71.000
+      Category 4    0.014           19.000
+    V177
+      Category 1    0.019           21.000
+      Category 2    0.126          137.000
+      Category 3    0.314          343.000
+      Category 4    0.541          590.000
+    V178
+      Category 1    0.157          201.000
+      Category 2    0.371          474.000
+      Category 3    0.300          383.000
+      Category 4    0.171          219.000
+    V179
+      Category 1    0.025           27.000
+      Category 2    0.092           98.000
+      Category 3    0.282          300.000
+      Category 4    0.601          639.000
+    V180
+      Category 1    0.203          281.000
+      Category 2    0.524          727.000
+      Category 3    0.216          299.000
+      Category 4    0.058           80.000
+    V181
+      Category 1    0.617          780.000
+      Category 2    0.334          422.000
+      Category 3    0.040           50.000
+      Category 4    0.009           12.000
+    V182
+      Category 1    0.066           69.000
+      Category 2    0.131          136.000
+      Category 3    0.285          297.000
+      Category 4    0.518          540.000
+    V183
+      Category 1    0.003            4.000
+      Category 2    0.009           12.000
+      Category 3    0.053           69.000
+      Category 4    0.934         1211.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR FULL
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V176$1        V176$2        V176$3        V177$1        V177$2
+              ________      ________      ________      ________      ________
+                0.311         1.505         2.013        -2.065        -1.098
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V177$3        V178$1        V178$2        V178$3        V179$1
+              ________      ________      ________      ________      ________
+               -0.106        -1.128        -0.019         0.809        -1.921
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V179$2        V179$3        V180$1        V180$2        V180$3
+              ________      ________      ________      ________      ________
+               -1.154        -0.199        -0.853         0.659         1.448
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V181$1        V181$2        V181$3        V182$1        V182$2
+              ________      ________      ________      ________      ________
+                0.203         1.707         2.291        -1.607        -0.878
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V182$3        V183$1        V183$2        V183$3
+              ________      ________      ________      ________
+               -0.089        -2.302        -2.027        -1.197
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V176          V177          V178          V179          V180
+              ________      ________      ________      ________      ________
+ V176
+ V177          -0.552
+ V178          -0.284         0.554
+ V179          -0.498         0.746         0.555
+ V180           0.264        -0.295        -0.470        -0.203
+ V181           0.684        -0.577        -0.416        -0.476         0.408
+ V182          -0.435         0.641         0.490         0.768        -0.140
+ V183          -0.436         0.693         0.373         0.719        -0.064
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V181          V182          V183
+              ________      ________      ________
+ V182          -0.436
+ V183          -0.322         0.726
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SHORT
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V176$1        V176$2        V176$3        V177$1        V177$2
+              ________      ________      ________      ________      ________
+                0.399         1.504         2.197        -2.070        -1.059
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V177$3        V178$1        V178$2        V178$3        V179$1
+              ________      ________      ________      ________      ________
+               -0.102        -1.005         0.072         0.948        -1.954
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V179$2        V179$3        V180$1        V180$2        V180$3
+              ________      ________      ________      ________      ________
+               -1.188        -0.255        -0.832         0.603         1.575
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V181$1        V181$2        V181$3        V182$1        V182$2
+              ________      ________      ________      ________      ________
+                0.298         1.654         2.346        -1.505        -0.853
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V182$3        V183$1        V183$2        V183$3
+              ________      ________      ________      ________
+               -0.046        -2.738        -2.246        -1.509
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V176          V177          V178          V179          V180
+              ________      ________      ________      ________      ________
+ V176
+ V177          -0.549
+ V178          -0.413         0.548
+ V179          -0.605         0.701         0.461
+ V180           0.328        -0.251        -0.417        -0.259
+ V181           0.741        -0.552        -0.368        -0.578         0.436
+ V182          -0.551         0.584         0.440         0.731        -0.338
+ V183          -0.456         0.558         0.292         0.653        -0.128
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V181          V182          V183
+              ________      ________      ________
+ V182          -0.569
+ V183          -0.472         0.636
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       62
+
+Chi-Square Test of Model Fit
+
+          Value                            648.664*
+          Degrees of Freedom                    42
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          FULL                             293.689
+          SHORT                            354.974
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.117
+          90 Percent C.I.                    0.109  0.125
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.938
+          TLI                                0.917
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           9856.935
+          Degrees of Freedom                    56
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              2.889
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group FULL
+
+ F1       BY
+    V176               1.000      0.000    999.000    999.000
+    V177              -1.647      0.199     -8.282      0.000
+    V178              -0.895      0.110     -8.131      0.000
+    V179              -1.976      0.285     -6.927      0.000
+    V180               0.457      0.071      6.435      0.000
+    V181               1.065      0.127      8.418      0.000
+    V182              -1.421      0.170     -8.333      0.000
+    V183              -1.220      0.171     -7.138      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V176$1             0.490      0.047     10.377      0.000
+    V176$2             1.974      0.119     16.600      0.000
+    V176$3             2.806      0.167     16.767      0.000
+    V177$1            -3.764      0.257    -14.652      0.000
+    V177$2            -2.004      0.158    -12.675      0.000
+    V177$3            -0.193      0.109     -1.771      0.077
+    V178$1            -1.466      0.093    -15.692      0.000
+    V178$2            -0.024      0.070     -0.345      0.730
+    V178$3             1.051      0.081     12.920      0.000
+    V179$1            -4.015      0.350    -11.464      0.000
+    V179$2            -2.408      0.239    -10.093      0.000
+    V179$3            -0.416      0.130     -3.204      0.001
+    V180$1            -0.926      0.065    -14.176      0.000
+    V180$2             0.716      0.062     11.513      0.000
+    V180$3             1.572      0.086     18.373      0.000
+    V181$1             0.287      0.079      3.656      0.000
+    V181$2             2.398      0.153     15.669      0.000
+    V181$3             3.219      0.223     14.437      0.000
+    V182$1            -2.658      0.174    -15.283      0.000
+    V182$2            -1.451      0.127    -11.406      0.000
+    V182$3            -0.148      0.098     -1.515      0.130
+    V183$1            -3.474      0.252    -13.788      0.000
+    V183$2            -3.059      0.224    -13.659      0.000
+    V183$3            -1.807      0.154    -11.756      0.000
+
+ Variances
+    F1                 0.859      0.164      5.232      0.000
+
+ Residual Variances
+    V176               1.000      0.000    999.000    999.000
+    V177               1.000      0.000    999.000    999.000
+    V178               1.000      0.000    999.000    999.000
+    V179               1.000      0.000    999.000    999.000
+    V180               1.000      0.000    999.000    999.000
+    V181               1.000      0.000    999.000    999.000
+    V182               1.000      0.000    999.000    999.000
+    V183               1.000      0.000    999.000    999.000
+
+Group SHORT
+
+ F1       BY
+    V176               1.000      0.000    999.000    999.000
+    V177              -1.343      0.153     -8.780      0.000
+    V178              -0.842      0.093     -9.089      0.000
+    V179              -1.683      0.203     -8.276      0.000
+    V180               0.477      0.062      7.718      0.000
+    V181               0.758      0.224      3.381      0.001
+    V182              -1.342      0.143     -9.387      0.000
+    V183              -0.803      0.110     -7.308      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V176$1             0.490      0.047     10.377      0.000
+    V176$2             1.974      0.119     16.600      0.000
+    V176$3             2.806      0.167     16.767      0.000
+    V177$1            -3.764      0.257    -14.652      0.000
+    V177$2            -1.925      0.163    -11.819      0.000
+    V177$3            -0.187      0.070     -2.683      0.007
+    V178$1            -1.466      0.093    -15.692      0.000
+    V178$2             0.105      0.054      1.954      0.051
+    V178$3             1.382      0.127     10.866      0.000
+    V179$1            -4.015      0.350    -11.464      0.000
+    V179$2            -2.442      0.239    -10.221      0.000
+    V179$3            -0.524      0.091     -5.760      0.000
+    V180$1            -0.926      0.065    -14.176      0.000
+    V180$2             0.671      0.075      9.001      0.000
+    V180$3             1.752      0.163     10.741      0.000
+    V181$1             0.287      0.079      3.656      0.000
+    V181$2             1.598      0.474      3.369      0.001
+    V181$3             2.266      0.680      3.332      0.001
+    V182$1            -2.658      0.174    -15.283      0.000
+    V182$2            -1.508      0.120    -12.554      0.000
+    V182$3            -0.081      0.068     -1.185      0.236
+    V183$1            -3.474      0.252    -13.788      0.000
+    V183$2            -2.847      0.257    -11.094      0.000
+    V183$3            -1.913      0.184    -10.412      0.000
+
+ Variances
+    F1                 1.066      0.157      6.799      0.000
+
+ Residual Variances
+    V176               0.605      0.087      6.964      0.000
+    V177               1.385      0.226      6.122      0.000
+    V178               1.370      0.211      6.503      0.000
+    V179               1.209      0.243      4.974      0.000
+    V180               0.996      0.168      5.934      0.000
+    V181               0.321      0.195      1.647      0.100
+    V182               1.204      0.188      6.402      0.000
+    V183               0.920      0.175      5.257      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group FULL
+
+ F1       BY
+    V176               0.680      0.035     19.457      0.000
+    V177              -0.837      0.022    -38.254      0.000
+    V178              -0.639      0.033    -19.206      0.000
+    V179              -0.878      0.022    -39.289      0.000
+    V180               0.390      0.041      9.506      0.000
+    V181               0.703      0.032     21.994      0.000
+    V182              -0.796      0.025    -32.414      0.000
+    V183              -0.749      0.039    -19.281      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V176$1             0.359      0.032     11.275      0.000
+    V176$2             1.448      0.075     19.320      0.000
+    V176$3             2.058      0.107     19.189      0.000
+    V177$1            -2.062      0.136    -15.192      0.000
+    V177$2            -1.098      0.073    -15.045      0.000
+    V177$3            -0.106      0.058     -1.812      0.070
+    V178$1            -1.128      0.068    -16.471      0.000
+    V178$2            -0.019      0.054     -0.345      0.730
+    V178$3             0.809      0.061     13.290      0.000
+    V179$1            -1.924      0.119    -16.200      0.000
+    V179$2            -1.154      0.074    -15.629      0.000
+    V179$3            -0.199      0.058     -3.440      0.001
+    V180$1            -0.853      0.060    -14.190      0.000
+    V180$2             0.659      0.057     11.587      0.000
+    V180$3             1.448      0.078     18.472      0.000
+    V181$1             0.204      0.054      3.783      0.000
+    V181$2             1.706      0.094     18.086      0.000
+    V181$3             2.291      0.154     14.856      0.000
+    V182$1            -1.607      0.096    -16.777      0.000
+    V182$2            -0.877      0.067    -13.061      0.000
+    V182$3            -0.089      0.058     -1.533      0.125
+    V183$1            -2.301      0.154    -14.978      0.000
+    V183$2            -2.026      0.119    -17.007      0.000
+    V183$3            -1.197      0.069    -17.294      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V176               0.538      0.048     11.321      0.000
+    V177               0.300      0.037      8.204      0.000
+    V178               0.592      0.042     13.936      0.000
+    V179               0.230      0.039      5.856      0.000
+    V180               0.848      0.032     26.519      0.000
+    V181               0.506      0.045     11.276      0.000
+    V182               0.366      0.039      9.344      0.000
+    V183               0.439      0.058      7.537      0.000
+
+Group SHORT
+
+ F1       BY
+    V176               0.799      0.018     45.238      0.000
+    V177              -0.762      0.020    -37.595      0.000
+    V178              -0.596      0.022    -27.672      0.000
+    V179              -0.845      0.016    -52.214      0.000
+    V180               0.443      0.026     17.219      0.000
+    V181               0.810      0.017     47.921      0.000
+    V182              -0.784      0.018    -44.684      0.000
+    V183              -0.654      0.036    -17.966      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V176$1             0.379      0.030     12.493      0.000
+    V176$2             1.527      0.051     29.886      0.000
+    V176$3             2.172      0.083     26.215      0.000
+    V177$1            -2.070      0.089    -23.327      0.000
+    V177$2            -1.059      0.047    -22.629      0.000
+    V177$3            -0.103      0.038     -2.699      0.007
+    V178$1            -1.005      0.042    -23.747      0.000
+    V178$2             0.072      0.035      2.044      0.041
+    V178$3             0.948      0.041     22.875      0.000
+    V179$1            -1.953      0.081    -23.970      0.000
+    V179$2            -1.188      0.050    -23.715      0.000
+    V179$3            -0.255      0.039     -6.550      0.000
+    V180$1            -0.832      0.038    -21.760      0.000
+    V180$2             0.603      0.036     16.763      0.000
+    V180$3             1.575      0.054     29.049      0.000
+    V181$1             0.297      0.036      8.303      0.000
+    V181$2             1.654      0.060     27.657      0.000
+    V181$3             2.346      0.107     21.908      0.000
+    V182$1            -1.504      0.060    -25.120      0.000
+    V182$2            -0.854      0.044    -19.213      0.000
+    V182$3            -0.046      0.039     -1.174      0.240
+    V183$1            -2.741      0.164    -16.695      0.000
+    V183$2            -2.246      0.096    -23.441      0.000
+    V183$3            -1.509      0.054    -28.024      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V176               0.362      0.028     12.833      0.000
+    V177               0.419      0.031     13.555      0.000
+    V178               0.645      0.026     25.103      0.000
+    V179               0.286      0.027     10.463      0.000
+    V180               0.804      0.023     35.314      0.000
+    V181               0.344      0.027     12.555      0.000
+    V182               0.386      0.028     14.021      0.000
+    V183               0.573      0.048     12.047      0.000
+
+
+R-SQUARE
+
+Group FULL
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    V176               0.462      0.048      9.728      0.000      0.733
+    V177               0.700      0.037     19.127      0.000      0.548
+    V178               0.408      0.042      9.603      0.000      0.769
+    V179               0.770      0.039     19.644      0.000      0.479
+    V180               0.152      0.032      4.753      0.000      0.921
+    V181               0.494      0.045     10.997      0.000      0.712
+    V182               0.634      0.039     16.207      0.000      0.605
+    V183               0.561      0.058      9.641      0.000      0.662
+
+Group SHORT
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    V176               0.638      0.028     22.619      0.000      0.774
+    V177               0.581      0.031     18.798      0.000      0.550
+    V178               0.355      0.026     13.836      0.000      0.686
+    V179               0.714      0.027     26.107      0.000      0.486
+    V180               0.196      0.023      8.609      0.000      0.899
+    V181               0.656      0.027     23.960      0.000      1.035
+    V182               0.614      0.028     22.342      0.000      0.566
+    V183               0.427      0.048      8.983      0.000      0.789
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.363E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group FULL
+
+
+WITH Statements
+
+V178     WITH V176                18.886     0.338      0.338        0.338
+V179     WITH V176                10.298     0.406      0.406        0.406
+V180     WITH V178                81.947    -0.415     -0.415       -0.415
+V180     WITH V179                16.189     0.404      0.404        0.404
+V181     WITH V176               105.863     0.677      0.677        0.677
+V181     WITH V179                23.091     0.617      0.617        0.617
+V181     WITH V180                14.930     0.245      0.245        0.245
+V182     WITH V179                25.301     0.640      0.640        0.640
+V182     WITH V180                17.498     0.359      0.359        0.359
+V182     WITH V181                14.484     0.390      0.390        0.390
+V183     WITH V180                27.268     0.432      0.432        0.432
+V183     WITH V181                17.129     0.518      0.518        0.518
+V183     WITH V182                13.493     0.459      0.459        0.459
+
+Means/Intercepts/Thresholds
+
+[ V181$1   ]                     999.000     0.000      0.000        0.000
+
+Group SHORT
+
+
+WITH Statements
+
+V177     WITH V176                28.860     0.519      0.519        0.568
+V178     WITH V176                31.849     0.476      0.476        0.523
+V178     WITH V177                84.821     0.991      0.991        0.719
+V179     WITH V176                38.040     0.743      0.743        0.869
+V179     WITH V177                33.518     0.765      0.765        0.591
+V180     WITH V177                45.628     0.610      0.610        0.520
+V180     WITH V178               194.648    -0.733     -0.733       -0.627
+V180     WITH V179                48.411     0.703      0.703        0.641
+V181     WITH V176               432.283     0.993      0.993        2.256
+V181     WITH V177                26.214     0.362      0.362        0.544
+V181     WITH V178                64.736     0.511      0.511        0.770
+V181     WITH V179                81.080     0.798      0.798        1.281
+V181     WITH V180                34.670     0.272      0.272        0.481
+V182     WITH V176                36.324     0.646      0.646        0.758
+V182     WITH V179                81.670     1.169      1.169        0.969
+V182     WITH V181                29.375     0.418      0.418        0.673
+V183     WITH V179                16.137     0.476      0.476        0.451
+V183     WITH V180                29.693     0.385      0.385        0.402
+
+Means/Intercepts/Thresholds
+
+[ V181     ]                     999.000     0.000      0.000        0.000
+[ V181$1   ]                     999.000     0.000      0.000        0.000
+
+
+
+SAVEDATA INFORMATION
+
+
+  Difference testing
+
+  Save file
+    v176_config.dat
+  Save format      Free
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v176_
+
+     Beginning Time:  14:19:03
+        Ending Time:  14:19:04
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

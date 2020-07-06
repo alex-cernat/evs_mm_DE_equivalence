@@ -3,7 +3,7 @@ read_fit_mlr <- function(model) {
 
   fit <- model$summaries
 
-  indices <- c("Filename", "Observations",
+  indices <- c("Filename",
                "ChiSqM_Value", "ChiSqM_DF", "ChiSqM_PValue",
                "CFI", "RMSEA_Estimate")
 

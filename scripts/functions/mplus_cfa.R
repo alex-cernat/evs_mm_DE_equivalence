@@ -5,7 +5,8 @@ mplus_cfa <- function(df_use, vars_use,
 
 
   base_text <- MplusAutomation::prepareMplusData(df_use,
-                                                 filename = "./mplus/cfa/data.dta")
+                                                 filename =
+                                                   "./mplus/cfa/data.dta")
 
   base_text <- str_remove_all(base_text, '\\"') %>%
     str_c(collapse = " \n ") %>%

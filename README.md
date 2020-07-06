@@ -10,8 +10,8 @@ Using an experiment in the European Value Study Germany we do the following comp
 - [x] set-up GitHub (Alex)
 - [x] provide data (Tobias/Pablo)
 - [x] alternative quality indicators (Tobias/Pablo)
-- [ ] create weights (Tobias will do the weights)
-- [ ] check scales fit and choose for invariance (Alex)
+- [x] create weights (Tobias will do the weights)
+- [x] check scales fit and choose for invariance (Alex)
 - [ ] do invariance testing (Alex)
 - [ ] write intro and lit review (Joe)
 - [ ] write data section (Tobias/Pablo)
@@ -27,9 +27,8 @@ Using an experiment in the European Value Study Germany we do the following comp
 
 # To discuss
 
-- results from Pablo and Tobias
-        
-- scales with 0 in the excel
+- I excluded breakoffs but should we exclude partials?        
+
 - what scales to use and the changes made
 - agree on groups, sequance of models and weighting`
 

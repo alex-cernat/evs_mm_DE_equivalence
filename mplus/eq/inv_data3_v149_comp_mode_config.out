@@ -1,0 +1,541 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   1:51 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v149
+   v150
+   v152
+   v159
+   v162;
+
+   GROUPING IS comp_mode (0=sm 1=mm);
+
+  Model:
+
+
+  f1 BY v149@1
+  v150 (L2_sm)
+  v152 (L3_sm)
+  v159 (L4_sm)
+  v162 (L5_sm)
+  ;
+
+  [v149] (i1_sm);
+  [v150] (i2_sm);
+  [v152] (i3_sm);
+  [v159] (i4_sm);
+  [v162] (i5_sm);
+
+   [f1@0];
+
+  Model mm:
+
+  f1 BY v149@1
+  v150 (L2_mm)
+  v152 (L3_mm)
+  v159 (L4_mm)
+  v162 (L5_mm)
+  ;
+
+  [v149] (i1_mm);
+  [v150] (i2_mm);
+  [v152] (i3_mm);
+  [v159] (i4_mm);
+  [v162] (i5_mm);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v149_config.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING in SAVEDATA command
+  The DIFFTEST option is available only for the estimators MLMV, WLSMV and ULSMV.
+  Request for DIFFTEST will be ignored.
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  3244
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  10
+   3 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group SM                                                   1492
+   Group MM                                                    670
+   Total sample size                                          2162
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   V149        V150        V152        V159        V162
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_MOD
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group SM
+     Number of missing data patterns             8
+
+   Group MM
+     Number of missing data patterns            16
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR SM
+
+
+           Covariance Coverage
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           0.999
+ V150           0.997         0.998
+ V152           0.997         0.997         0.999
+ V159           0.997         0.996         0.997         0.998
+ V162           0.993         0.993         0.993         0.993         0.995
+
+
+     PROPORTION OF DATA PRESENT FOR MM
+
+
+           Covariance Coverage
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           0.967
+ V150           0.955         0.976
+ V152           0.954         0.964         0.982
+ V159           0.960         0.969         0.978         0.991
+ V162           0.945         0.949         0.952         0.960         0.969
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SM
+
+
+           Means
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+                1.577         1.602         1.359         2.131         1.477
+
+
+           Covariances
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           1.911
+ V150           0.618         2.121
+ V152           0.388         0.543         1.169
+ V159           0.728         0.764         0.461         3.638
+ V162           0.264         0.410         0.288         0.477         1.676
+
+
+           Correlations
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           1.000
+ V150           0.307         1.000
+ V152           0.260         0.345         1.000
+ V159           0.276         0.275         0.223         1.000
+ V162           0.147         0.217         0.206         0.193         1.000
+
+
+     ESTIMATED SAMPLE STATISTICS FOR MM
+
+
+           Means
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+                1.577         1.604         1.396         2.121         1.567
+
+
+           Covariances
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           2.062
+ V150           0.805         2.075
+ V152           0.520         0.595         1.438
+ V159           0.862         0.650         0.718         4.128
+ V162           0.440         0.430         0.682         1.347         2.797
+
+
+           Correlations
+              V149          V150          V152          V159          V162
+              ________      ________      ________      ________      ________
+ V149           1.000
+ V150           0.389         1.000
+ V152           0.302         0.344         1.000
+ V159           0.295         0.222         0.295         1.000
+ V162           0.183         0.179         0.340         0.396         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -18518.497
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR SM
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V149                  1.577       3.438       1.000   75.44%       1.000      1.000      1.000
+            1490.000       1.911      13.856      10.000    0.81%       1.000      2.000
+     V150                  1.602       3.314       1.000   76.09%       1.000      1.000      1.000
+            1489.000       2.121      12.307      10.000    0.81%       1.000      2.000
+     V152                  1.357       4.641       1.000   82.95%       1.000      1.000      1.000
+            1490.000       1.166      26.322      10.000    0.40%       1.000      1.000
+     V159                  2.128       2.035       1.000   61.05%       1.000      1.000      1.000
+            1489.000       3.632       3.979      10.000    1.28%       1.000      3.000
+     V162                  1.478       3.923       1.000   80.05%       1.000      1.000      1.000
+            1484.000       1.677      18.232      10.000    0.81%       1.000      1.000
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR MM
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V149                  1.571       3.621       1.000   76.39%       1.000      1.000      1.000
+             648.000       2.051      14.955      10.000    0.93%       1.000      2.000
+     V150                  1.599       3.430       1.000   74.01%       1.000      1.000      1.000
+             654.000       2.066      13.230      10.000    0.76%       1.000      2.000
+     V152                  1.394       4.485       1.000   82.67%       1.000      1.000      1.000
+             658.000       1.433      23.470      10.000    0.61%       1.000      1.000
+     V159                  2.119       2.287       1.000   62.50%       1.000      1.000      1.000
+             664.000       4.120       4.970      10.000    2.11%       1.000      3.000
+     V162                  1.558       3.839       1.000   81.66%       1.000      1.000      1.000
+             649.000       2.783      14.874      10.000    2.16%       1.000      1.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       30
+
+Loglikelihood
+
+          H0 Value                      -18552.805
+          H1 Value                      -18518.497
+
+Information Criteria
+
+          Akaike (AIC)                   37165.610
+          Bayesian (BIC)                 37335.973
+          Sample-Size Adjusted BIC       37240.659
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             68.616
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          SM                                12.223
+          MM                                56.393
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.074
+          90 Percent C.I.                    0.058  0.091
+          Probability RMSEA <= .05           0.008
+
+CFI/TLI
+
+          CFI                                0.948
+          TLI                                0.897
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1153.862
+          Degrees of Freedom                    20
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.030
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F1       BY
+    V149               1.000      0.000    999.000    999.000
+    V150               1.287      0.106     12.098      0.000
+    V152               0.828      0.071     11.601      0.000
+    V159               1.291      0.113     11.377      0.000
+    V162               0.667      0.073      9.164      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V149               1.577      0.036     44.042      0.000
+    V150               1.602      0.038     42.454      0.000
+    V152               1.359      0.028     48.519      0.000
+    V159               2.131      0.049     43.121      0.000
+    V162               1.477      0.034     43.962      0.000
+
+ Variances
+    F1                 0.484      0.061      7.911      0.000
+
+ Residual Variances
+    V149               1.426      0.066     21.717      0.000
+    V150               1.319      0.075     17.523      0.000
+    V152               0.837      0.040     20.921      0.000
+    V159               2.829      0.125     22.586      0.000
+    V162               1.461      0.059     24.914      0.000
+
+Group MM
+
+ F1       BY
+    V149               1.000      0.000    999.000    999.000
+    V150               0.963      0.109      8.809      0.000
+    V152               0.942      0.110      8.599      0.000
+    V159               1.453      0.181      8.027      0.000
+    V162               1.119      0.153      7.312      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V149               1.576      0.056     28.053      0.000
+    V150               1.603      0.056     28.537      0.000
+    V152               1.396      0.047     29.924      0.000
+    V159               2.119      0.079     26.927      0.000
+    V162               1.570      0.066     23.917      0.000
+
+ Variances
+    F1                 0.589      0.105      5.616      0.000
+
+ Residual Variances
+    V149               1.468      0.105     13.947      0.000
+    V150               1.523      0.107     14.245      0.000
+    V152               0.914      0.073     12.449      0.000
+    V159               2.873      0.212     13.530      0.000
+    V162               2.070      0.146     14.138      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F1       BY
+    V149               0.504      0.028     17.791      0.000
+    V150               0.615      0.027     22.487      0.000
+    V152               0.533      0.028     19.133      0.000
+    V159               0.471      0.029     16.330      0.000
+    V162               0.359      0.030     11.975      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V149               1.141      0.033     34.277      0.000
+    V150               1.100      0.033     33.514      0.000
+    V152               1.257      0.035     36.273      0.000
+    V159               1.117      0.033     33.847      0.000
+    V162               1.141      0.033     34.206      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V149               0.746      0.028     26.192      0.000
+    V150               0.622      0.034     18.479      0.000
+    V152               0.716      0.030     24.109      0.000
+    V159               0.778      0.027     28.602      0.000
+    V162               0.871      0.021     40.525      0.000
+
+Group MM
+
+ F1       BY
+    V149               0.535      0.041     12.902      0.000
+    V150               0.514      0.043     12.070      0.000
+    V152               0.603      0.040     15.183      0.000
+    V159               0.550      0.041     13.255      0.000
+    V162               0.513      0.044     11.787      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V149               1.099      0.050     22.157      0.000
+    V150               1.114      0.050     22.421      0.000
+    V152               1.165      0.050     23.094      0.000
+    V159               1.044      0.048     21.660      0.000
+    V162               0.937      0.047     19.962      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V149               0.713      0.044     16.064      0.000
+    V150               0.736      0.044     16.824      0.000
+    V152               0.636      0.048     13.265      0.000
+    V159               0.698      0.046     15.296      0.000
+    V162               0.737      0.045     16.522      0.000
+
+
+R-SQUARE
+
+Group SM
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V149               0.254      0.028      8.896      0.000
+    V150               0.378      0.034     11.243      0.000
+    V152               0.284      0.030      9.566      0.000
+    V159               0.222      0.027      8.165      0.000
+    V162               0.129      0.021      5.987      0.000
+
+Group MM
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V149               0.287      0.044      6.451      0.000
+    V150               0.264      0.044      6.035      0.000
+    V152               0.364      0.048      7.591      0.000
+    V159               0.302      0.046      6.627      0.000
+    V162               0.263      0.045      5.894      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.881E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group SM
+
+
+No modification indices above the minimum value.
+
+Group MM
+
+
+WITH Statements
+
+V150     WITH V149                25.013     0.397      0.397        0.266
+V162     WITH V149                14.489    -0.353     -0.353       -0.203
+V162     WITH V150                14.860    -0.355     -0.355       -0.200
+V162     WITH V159                28.596     0.704      0.704        0.289
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v149_
+
+     Beginning Time:  13:51:59
+        Ending Time:  13:52:00
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

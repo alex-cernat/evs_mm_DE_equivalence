@@ -1,0 +1,615 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   1:57 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v164
+   v165
+   v166
+   v167;
+
+   CATEGORICAL ARE
+   v164
+   v165
+   v166
+   v167;
+
+   GROUPING IS comp_len (0=full 1=short);
+
+
+   Analysis:
+
+                  ESTIMATOR = WLSMV;
+
+                  ITERATIONS = 100000;
+
+                  PARAMETERIZATION = THETA;
+
+  Model:
+
+
+  f1 BY v164@1
+  v165 (L2)
+  v166 (L3)
+  v167 (L4)
+  ;
+
+
+  [v164$1] (t_v164_1);
+  [v164$2] (t_v164_2);
+  [v164$3] (t_v164_3);
+
+   [f1@0];
+  [v165$1] (t_v165_1);
+  [v165$2] (t_v165_2_full);
+  [v165$3] (t_v165_3_full);
+
+   [f1@0];
+  [v166$1] (t_v166_1);
+  [v166$2] (t_v166_2_full);
+  [v166$3] (t_v166_3_full);
+
+   [f1@0];
+  [v167$1] (t_v167_1);
+  [v167$2] (t_v167_2_full);
+  [v167$3] (t_v167_3_full);
+
+   [f1@0];
+
+  Model short:
+
+  f1 BY v164@1
+  v165 (L2)
+  v166 (L3)
+  v167 (L4)
+  ;
+
+
+  [v164$1] (t_v164_1);
+  [v164$2] (t_v164_2);
+  [v164$3] (t_v164_3);
+
+   [f1@0];
+  [v165$1] (t_v165_1);
+  [v165$2] (t_v165_2_short);
+  [v165$3] (t_v165_3_short);
+
+   [f1@0];
+  [v166$1] (t_v166_1);
+  [v166$2] (t_v166_2_short);
+  [v166$3] (t_v166_3_short);
+
+   [f1@0];
+  [v167$1] (t_v167_1);
+  [v167$2] (t_v167_2_short);
+  [v167$3] (t_v167_3_short);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v164_metric.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  1494
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1635
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group FULL                                                  662
+   Group SHORT                                                1625
+   Total sample size                                          2287
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V164        V165        V166        V167
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_LEN
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                100000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group FULL
+     Number of missing data patterns            10
+
+   Group SHORT
+     Number of missing data patterns            11
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR FULL
+
+
+           Covariance Coverage
+              V164          V165          V166          V167
+              ________      ________      ________      ________
+ V164           0.994
+ V165           0.985         0.988
+ V166           0.976         0.970         0.980
+ V167           0.958         0.953         0.952         0.962
+
+
+     PROPORTION OF DATA PRESENT FOR SHORT
+
+
+           Covariance Coverage
+              V164          V165          V166          V167
+              ________      ________      ________      ________
+ V164           0.993
+ V165           0.978         0.982
+ V166           0.983         0.975         0.989
+ V167           0.961         0.954         0.963         0.967
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+  Group FULL
+    V164
+      Category 1    0.389          256.000
+      Category 2    0.488          321.000
+      Category 3    0.103           68.000
+      Category 4    0.020           13.000
+    V165
+      Category 1    0.298          195.000
+      Category 2    0.508          332.000
+      Category 3    0.138           90.000
+      Category 4    0.057           37.000
+    V166
+      Category 1    0.410          266.000
+      Category 2    0.502          326.000
+      Category 3    0.076           49.000
+      Category 4    0.012            8.000
+    V167
+      Category 1    0.242          154.000
+      Category 2    0.498          317.000
+      Category 3    0.220          140.000
+      Category 4    0.041           26.000
+
+  Group SHORT
+    V164
+      Category 1    0.365          589.000
+      Category 2    0.468          756.000
+      Category 3    0.149          241.000
+      Category 4    0.017           28.000
+    V165
+      Category 1    0.324          517.000
+      Category 2    0.485          774.000
+      Category 3    0.155          248.000
+      Category 4    0.036           57.000
+    V166
+      Category 1    0.431          693.000
+      Category 2    0.484          777.000
+      Category 3    0.076          122.000
+      Category 4    0.009           15.000
+    V167
+      Category 1    0.258          406.000
+      Category 2    0.501          787.000
+      Category 3    0.202          318.000
+      Category 4    0.038           60.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR FULL
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V164$1        V164$2        V164$3        V165$1        V165$2
+              ________      ________      ________      ________      ________
+               -0.282         1.160         2.059        -0.530         0.863
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V165$3        V166$1        V166$2        V166$3        V167$1
+              ________      ________      ________      ________      ________
+                1.584        -0.228         1.354         2.247        -0.701
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V167$2        V167$3
+              ________      ________
+                0.642         1.741
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V164          V165          V166          V167
+              ________      ________      ________      ________
+ V164
+ V165           0.697
+ V166           0.482         0.514
+ V167           0.205         0.209         0.488
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SHORT
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V164$1        V164$2        V164$3        V165$1        V165$2
+              ________      ________      ________      ________      ________
+               -0.345         0.967         2.112        -0.457         0.874
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V165$3        V166$1        V166$2        V166$3        V167$1
+              ________      ________      ________      ________      ________
+                1.803        -0.173         1.371         2.352        -0.648
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V167$2        V167$3
+              ________      ________
+                0.704         1.772
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V164          V165          V166          V167
+              ________      ________      ________      ________
+ V164
+ V165           0.681
+ V166           0.437         0.444
+ V167           0.156         0.223         0.477
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       27
+
+Chi-Square Test of Model Fit
+
+          Value                            274.853*
+          Degrees of Freedom                     9
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          FULL                              79.197
+          SHORT                            195.656
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.161
+          90 Percent C.I.                    0.145  0.177
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.939
+          TLI                                0.919
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           4400.288
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              3.783
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group FULL
+
+ F1       BY
+    V164               1.000      0.000    999.000    999.000
+    V165               1.177      0.202      5.841      0.000
+    V166               0.742      0.085      8.694      0.000
+    V167               0.361      0.041      8.744      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V164$1            -0.554      0.056     -9.880      0.000
+    V164$2             1.738      0.123     14.103      0.000
+    V164$3             3.559      0.248     14.363      0.000
+    V165$1            -0.922      0.108     -8.511      0.000
+    V165$2             1.563      0.127     12.348      0.000
+    V165$3             2.870      0.192     14.913      0.000
+    V166$1            -0.290      0.045     -6.460      0.000
+    V166$2             1.870      0.106     17.697      0.000
+    V166$3             3.103      0.197     15.758      0.000
+    V167$1            -0.772      0.056    -13.809      0.000
+    V167$2             0.707      0.058     12.104      0.000
+    V167$3             1.919      0.097     19.732      0.000
+
+ Variances
+    F1                 1.647      0.301      5.474      0.000
+
+ Residual Variances
+    V164               1.000      0.000    999.000    999.000
+    V165               1.000      0.000    999.000    999.000
+    V166               1.000      0.000    999.000    999.000
+    V167               1.000      0.000    999.000    999.000
+
+Group SHORT
+
+ F1       BY
+    V164               1.000      0.000    999.000    999.000
+    V165               1.177      0.202      5.841      0.000
+    V166               0.742      0.085      8.694      0.000
+    V167               0.361      0.041      8.744      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V164$1            -0.554      0.056     -9.880      0.000
+    V164$2             1.738      0.123     14.103      0.000
+    V164$3             3.559      0.248     14.363      0.000
+    V165$1            -0.922      0.108     -8.511      0.000
+    V165$2             1.730      0.237      7.298      0.000
+    V165$3             3.569      0.470      7.594      0.000
+    V166$1            -0.290      0.045     -6.460      0.000
+    V166$2             2.194      0.222      9.881      0.000
+    V166$3             3.765      0.390      9.661      0.000
+    V167$1            -0.772      0.056    -13.809      0.000
+    V167$2             0.839      0.086      9.777      0.000
+    V167$3             2.111      0.193     10.957      0.000
+
+ Variances
+    F1                 1.878      0.288      6.530      0.000
+
+ Residual Variances
+    V164               1.135      0.187      6.061      0.000
+    V165               1.318      0.374      3.519      0.000
+    V166               1.528      0.306      4.990      0.000
+    V167               1.174      0.200      5.873      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group FULL
+
+ F1       BY
+    V164               0.789      0.027     28.981      0.000
+    V165               0.834      0.026     31.607      0.000
+    V166               0.690      0.030     23.227      0.000
+    V167               0.420      0.030     13.992      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V164$1            -0.341      0.030    -11.377      0.000
+    V164$2             1.068      0.049     21.884      0.000
+    V164$3             2.188      0.095     23.090      0.000
+    V165$1            -0.509      0.039    -12.996      0.000
+    V165$2             0.863      0.056     15.336      0.000
+    V165$3             1.584      0.079     19.947      0.000
+    V166$1            -0.210      0.031     -6.766      0.000
+    V166$2             1.354      0.070     19.436      0.000
+    V166$3             2.247      0.135     16.585      0.000
+    V167$1            -0.701      0.047    -15.044      0.000
+    V167$2             0.642      0.054     11.979      0.000
+    V167$3             1.741      0.089     19.459      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V164               0.378      0.043      8.798      0.000
+    V165               0.305      0.044      6.925      0.000
+    V166               0.524      0.041     12.802      0.000
+    V167               0.823      0.025     32.611      0.000
+
+Group SHORT
+
+ F1       BY
+    V164               0.790      0.019     40.943      0.000
+    V165               0.815      0.019     42.107      0.000
+    V166               0.635      0.020     31.165      0.000
+    V167               0.415      0.023     18.091      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V164$1            -0.319      0.027    -11.965      0.000
+    V164$2             1.001      0.034     29.796      0.000
+    V164$3             2.051      0.068     30.171      0.000
+    V165$1            -0.466      0.029    -15.930      0.000
+    V165$2             0.874      0.036     24.181      0.000
+    V165$3             1.803      0.059     30.488      0.000
+    V166$1            -0.181      0.026     -7.072      0.000
+    V166$2             1.371      0.045     30.685      0.000
+    V166$3             2.352      0.096     24.606      0.000
+    V167$1            -0.648      0.032    -20.143      0.000
+    V167$2             0.704      0.035     20.331      0.000
+    V167$3             1.772      0.058     30.413      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V164               0.377      0.030     12.369      0.000
+    V165               0.336      0.032     10.661      0.000
+    V166               0.596      0.026     23.011      0.000
+    V167               0.828      0.019     43.419      0.000
+
+
+R-SQUARE
+
+Group FULL
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    V164               0.622      0.043     14.491      0.000      0.615
+    V165               0.695      0.044     15.803      0.000      0.552
+    V166               0.476      0.041     11.613      0.000      0.724
+    V167               0.177      0.025      6.996      0.000      0.907
+
+Group SHORT
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    V164               0.623      0.030     20.471      0.000      0.576
+    V165               0.664      0.032     21.054      0.000      0.505
+    V166               0.404      0.026     15.582      0.000      0.625
+    V167               0.172      0.019      9.045      0.000      0.840
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.426E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group FULL
+
+
+WITH Statements
+
+V165     WITH V164                53.861     1.729      1.729        1.729
+V166     WITH V164                12.764    -0.546     -0.546       -0.546
+V166     WITH V165                16.673    -0.756     -0.756       -0.756
+V167     WITH V164                15.595    -0.357     -0.357       -0.357
+V167     WITH V165                21.589    -0.461     -0.461       -0.461
+V167     WITH V166                66.067     0.496      0.496        0.496
+
+Group SHORT
+
+
+WITH Statements
+
+V165     WITH V164               273.464     4.604      4.604        3.765
+V166     WITH V164                61.153    -1.424     -1.424       -1.082
+V166     WITH V165                91.092    -2.092     -2.092       -1.475
+V167     WITH V164               146.753    -1.288     -1.288       -1.116
+V167     WITH V165                66.825    -0.958     -0.958       -0.770
+V167     WITH V166               389.545     1.474      1.474        1.101
+
+
+
+SAVEDATA INFORMATION
+
+
+  Difference testing
+
+  Save file
+    v164_metric.dat
+  Save format      Free
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v164_
+
+     Beginning Time:  13:57:35
+        Ending Time:  13:57:35
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

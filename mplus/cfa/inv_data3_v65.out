@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-06/26/2020   9:44 AM
+07/06/2020   8:27 AM
 
 INPUT INSTRUCTIONS
 
@@ -10,15 +10,15 @@ INPUT INSTRUCTIONS
 
    VARIABLE:
 
-   NAMES = id_cocas caseno v1 v2 v3 v4 v5 v6 v32 v33 v34 v35 v36 v37 v46 v47 v48 v49
-       v50 v65 v66 v67 v68 v69 v70 v98 v99 v100 v101 v103 v104 v105 v106 v107 v115
-       v116 v117 v118 v119 v120 v121 v122 v123 v124 v125 v126 v127 v128 v129 v130 v131
-       v132 v133 v134 v135 v136 v137 v138 v139 v140 v141 v145 v146 v147 v148 v149 v150
-       v151 v152 v153 v154 v155 v156 v157 v158 v159 v160 v161 v162 v163 v164 v165 v166
-       v167 v168 v176 v177 v178 v179 v180 v181 v182 v183 v185 v186 v187 v188 v189 v190
-       v191 v192 v193 v194 v195 v196 v197 v199 v200 v201 v202 v203 v205 v206 v207 v208
-       v209 v210 v211 v212 v213 v214 v215 v216 v217 v218 v219 v220 v221 v222 v223 v224
-       v267 v268 v269 v270 v271 v272 v273 v274;
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
 
    MISSING=.;
 
@@ -61,7 +61,7 @@ INPUT INSTRUCTIONS
 *** WARNING
   Data set contains cases with missing on all variables.
   These cases were not included in the analysis.
-  Number of cases with missing on all variables:  88
+  Number of cases with missing on all variables:  1626
    1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
 
 
@@ -71,7 +71,7 @@ Your title goes here
 SUMMARY OF ANALYSIS
 
 Number of groups                                                 1
-Number of observations                                       55188
+Number of observations                                        3790
 
 Number of dependent variables                                    6
 Number of independent variables                                  0
@@ -103,7 +103,7 @@ Input data format  FREE
 
 SUMMARY OF DATA
 
-     Number of missing data patterns            55
+     Number of missing data patterns            32
 
 
 COVARIANCE COVERAGE OF DATA
@@ -118,45 +118,45 @@ Minimum covariance coverage value   0.100
               V65           V66           V67           V68           V69
               ________      ________      ________      ________      ________
  V65            0.996
- V66            0.993         0.996
- V67            0.993         0.994         0.997
- V68            0.990         0.990         0.991         0.993
- V69            0.986         0.986         0.987         0.983         0.989
- V70            0.989         0.989         0.990         0.987         0.983
+ V66            0.980         0.984
+ V67            0.985         0.977         0.989
+ V68            0.978         0.970         0.975         0.982
+ V69            0.945         0.938         0.942         0.937         0.948
+ V70            0.984         0.975         0.979         0.974         0.941
 
 
            Covariance Coverage
               V70
               ________
- V70            0.992
+ V70            0.988
 
 
 UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
 
     V65
-      Category 1    0.853        46919.000
-      Category 2    0.133         7304.000
-      Category 3    0.014          767.000
+      Category 1    0.830         3132.000
+      Category 2    0.157          593.000
+      Category 3    0.013           48.000
     V66
-      Category 1    0.393        21574.000
-      Category 2    0.466        25611.000
-      Category 3    0.141         7769.000
+      Category 1    0.221          825.000
+      Category 2    0.517         1926.000
+      Category 3    0.262          977.000
     V67
-      Category 1    0.429        23602.000
-      Category 2    0.487        26810.000
-      Category 3    0.083         4592.000
+      Category 1    0.310         1161.000
+      Category 2    0.597         2239.000
+      Category 3    0.093          348.000
     V68
-      Category 1    0.421        23083.000
-      Category 2    0.439        24055.000
-      Category 3    0.140         7645.000
+      Category 1    0.287         1067.000
+      Category 2    0.529         1970.000
+      Category 3    0.184          685.000
     V69
-      Category 1    0.631        34427.000
-      Category 2    0.240        13102.000
-      Category 3    0.129         7041.000
+      Category 1    0.540         1942.000
+      Category 2    0.290         1042.000
+      Category 3    0.169          609.000
     V70
-      Category 1    0.429        23473.000
-      Category 2    0.468        25614.000
-      Category 3    0.103         5666.000
+      Category 1    0.407         1525.000
+      Category 2    0.509         1907.000
+      Category 3    0.084          313.000
 
 
 SAMPLE STATISTICS
@@ -168,30 +168,30 @@ SAMPLE STATISTICS
            MEANS/INTERCEPTS/THRESHOLDS
               V65$1         V65$2         V66$1         V66$2         V67$1
               ________      ________      ________      ________      ________
-                1.050         2.199        -0.273         1.074        -0.179
+                0.955         2.235        -0.768         0.637        -0.497
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V67$2         V68$1         V68$2         V69$1         V69$2
               ________      ________      ________      ________      ________
-                1.382        -0.198         1.082         0.334         1.131
+                1.323        -0.563         0.900         0.102         0.956
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V70$1         V70$2
               ________      ________
-               -0.180         1.262
+               -0.235         1.381
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
               V65           V66           V67           V68           V69
               ________      ________      ________      ________      ________
  V65
- V66            0.174
- V67            0.221         0.737
- V68            0.276         0.270         0.377
- V69            0.300         0.421         0.390         0.203
- V70            0.139         0.131         0.248         0.371         0.026
+ V66            0.100
+ V67            0.156         0.736
+ V68            0.089         0.195         0.267
+ V69            0.265         0.310         0.338         0.090
+ V70            0.079         0.097         0.144         0.240         0.129
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
@@ -209,7 +209,7 @@ Number of Free Parameters                       18
 
 Chi-Square Test of Model Fit
 
-          Value                           6769.852*
+          Value                            226.016*
           Degrees of Freedom                     9
           P-Value                           0.0000
 
@@ -220,24 +220,24 @@ Chi-Square Test of Model Fit
 
 RMSEA (Root Mean Square Error Of Approximation)
 
-          Estimate                           0.117
-          90 Percent C.I.                    0.114  0.119
+          Estimate                           0.080
+          90 Percent C.I.                    0.071  0.089
           Probability RMSEA <= .05           0.000
 
 CFI/TLI
 
-          CFI                                0.940
-          TLI                                0.899
+          CFI                                0.967
+          TLI                                0.945
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                         111844.082
+          Value                           6548.166
           Degrees of Freedom                    15
           P-Value                           0.0000
 
 WRMR (Weighted Root Mean Square Residual)
 
-          Value                             13.863
+          Value                              2.554
 
 
 
@@ -248,28 +248,28 @@ MODEL RESULTS
 
  F        BY
     V65                1.000      0.000    999.000    999.000
-    V66                2.397      0.050     48.224      0.000
-    V67                2.735      0.057     47.946      0.000
-    V68                1.350      0.029     45.894      0.000
-    V69                1.421      0.031     45.945      0.000
-    V70                0.899      0.023     39.149      0.000
+    V66                3.659      0.471      7.770      0.000
+    V67                4.329      0.566      7.649      0.000
+    V68                1.359      0.192      7.085      0.000
+    V69                1.829      0.243      7.526      0.000
+    V70                0.921      0.150      6.122      0.000
 
  Thresholds
-    V65$1              1.050      0.007    159.943      0.000
-    V65$2              2.199      0.014    156.396      0.000
-    V66$1             -0.273      0.005    -50.301      0.000
-    V66$2              1.074      0.007    161.936      0.000
-    V67$1             -0.179      0.005    -33.242      0.000
-    V67$2              1.382      0.008    179.889      0.000
-    V68$1             -0.198      0.005    -36.793      0.000
-    V68$2              1.082      0.007    162.364      0.000
-    V69$1              0.334      0.005     61.032      0.000
-    V69$2              1.131      0.007    165.860      0.000
-    V70$1             -0.180      0.005    -33.347      0.000
-    V70$2              1.262      0.007    174.434      0.000
+    V65$1              0.955      0.024     39.495      0.000
+    V65$2              2.235      0.056     40.239      0.000
+    V66$1             -0.768      0.023    -33.552      0.000
+    V66$2              0.637      0.022     28.804      0.000
+    V67$1             -0.497      0.021    -23.184      0.000
+    V67$2              1.323      0.029     46.394      0.000
+    V68$1             -0.563      0.022    -25.865      0.000
+    V68$2              0.900      0.024     37.702      0.000
+    V69$1              0.102      0.021      4.854      0.000
+    V69$2              0.956      0.025     38.583      0.000
+    V70$1             -0.235      0.021    -11.347      0.000
+    V70$2              1.381      0.029     46.934      0.000
 
  Variances
-    F                  0.110      0.004     24.507      0.000
+    F                  0.046      0.012      3.903      0.000
 
 
 STANDARDIZED MODEL RESULTS
@@ -281,26 +281,26 @@ STDYX Standardization
                     Estimate       S.E.  Est./S.E.    P-Value
 
  F        BY
-    V65                0.332      0.007     49.015      0.000
-    V66                0.795      0.004    225.442      0.000
-    V67                0.907      0.004    256.519      0.000
-    V68                0.447      0.004    100.876      0.000
-    V69                0.471      0.005     99.799      0.000
-    V70                0.298      0.005     59.608      0.000
+    V65                0.215      0.027      7.806      0.000
+    V66                0.785      0.017     45.138      0.000
+    V67                0.929      0.019     48.420      0.000
+    V68                0.292      0.019     15.576      0.000
+    V69                0.393      0.020     19.985      0.000
+    V70                0.198      0.020      9.667      0.000
 
  Thresholds
-    V65$1              1.050      0.007    159.943      0.000
-    V65$2              2.199      0.014    156.396      0.000
-    V66$1             -0.273      0.005    -50.301      0.000
-    V66$2              1.074      0.007    161.936      0.000
-    V67$1             -0.179      0.005    -33.242      0.000
-    V67$2              1.382      0.008    179.889      0.000
-    V68$1             -0.198      0.005    -36.793      0.000
-    V68$2              1.082      0.007    162.364      0.000
-    V69$1              0.334      0.005     61.032      0.000
-    V69$2              1.131      0.007    165.860      0.000
-    V70$1             -0.180      0.005    -33.347      0.000
-    V70$2              1.262      0.007    174.434      0.000
+    V65$1              0.955      0.024     39.495      0.000
+    V65$2              2.235      0.056     40.239      0.000
+    V66$1             -0.768      0.023    -33.552      0.000
+    V66$2              0.637      0.022     28.804      0.000
+    V67$1             -0.497      0.021    -23.184      0.000
+    V67$2              1.323      0.029     46.394      0.000
+    V68$1             -0.563      0.022    -25.865      0.000
+    V68$2              0.900      0.024     37.702      0.000
+    V69$1              0.102      0.021      4.854      0.000
+    V69$2              0.956      0.025     38.583      0.000
+    V70$1             -0.235      0.021    -11.347      0.000
+    V70$2              1.381      0.029     46.934      0.000
 
  Variances
     F                  1.000      0.000    999.000    999.000
@@ -311,17 +311,17 @@ R-SQUARE
     Observed                                        Two-Tailed   Residual
     Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
 
-    V65                0.110      0.004     24.507      0.000      0.890
-    V66                0.632      0.006    112.721      0.000      0.368
-    V67                0.822      0.006    128.259      0.000      0.178
-    V68                0.200      0.004     50.438      0.000      0.800
-    V69                0.222      0.004     49.899      0.000      0.778
-    V70                0.089      0.003     29.804      0.000      0.911
+    V65                0.046      0.012      3.903      0.000      0.954
+    V66                0.617      0.027     22.569      0.000      0.383
+    V67                0.863      0.036     24.210      0.000      0.137
+    V68                0.085      0.011      7.788      0.000      0.915
+    V69                0.154      0.015      9.992      0.000      0.846
+    V70                0.039      0.008      4.834      0.000      0.961
 
 
 QUALITY OF NUMERICAL RESULTS
 
-     Condition Number for the Information Matrix              0.293E-04
+     Condition Number for the Information Matrix              0.209E-05
        (ratio of smallest to largest eigenvalue)
 
 
@@ -347,9 +347,9 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v65.
 
-     Beginning Time:  09:44:14
-        Ending Time:  09:44:18
-       Elapsed Time:  00:00:04
+     Beginning Time:  08:27:31
+        Ending Time:  08:27:32
+       Elapsed Time:  00:00:01
 
 
 

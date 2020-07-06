@@ -1,0 +1,317 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   8:27 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = cfa/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v2
+   v3
+   v4;
+
+   CATEGORICAL ARE
+   v2
+   v3
+   v4;
+
+
+   Model:
+
+  f by v2
+   v3
+   v4;
+
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  87
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        5329
+
+Number of dependent variables                                    3
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V2          V3          V4
+
+Continuous latent variables
+   F
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  cfa/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             7
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              V2            V3            V4
+              ________      ________      ________
+ V2             0.995
+ V3             0.984         0.988
+ V4             0.978         0.974         0.983
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    V2
+      Category 1    0.872         4620.000
+      Category 2    0.113          600.000
+      Category 3    0.014           73.000
+      Category 4    0.001            7.000
+    V3
+      Category 1    0.470         2472.000
+      Category 2    0.480         2528.000
+      Category 3    0.048          251.000
+      Category 4    0.003           14.000
+    V4
+      Category 1    0.397         2079.000
+      Category 2    0.540         2826.000
+      Category 3    0.059          308.000
+      Category 4    0.005           24.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V2$1          V2$2          V2$3          V3$1          V3$2
+              ________      ________      ________      ________      ________
+                1.134         2.168         3.007        -0.076         1.642
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V3$3          V4$1          V4$2          V4$3
+              ________      ________      ________      ________
+                2.787        -0.261         1.527         2.606
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V2            V3            V4
+              ________      ________      ________
+ V2
+ V3             0.308
+ V4             0.106         0.431
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     WARNING:  THE RESIDUAL COVARIANCE MATRIX (THETA) IS NOT POSITIVE DEFINITE.
+     THIS COULD INDICATE A NEGATIVE VARIANCE/RESIDUAL VARIANCE FOR AN OBSERVED
+     VARIABLE, A CORRELATION GREATER OR EQUAL TO ONE BETWEEN TWO OBSERVED
+     VARIABLES, OR A LINEAR DEPENDENCY AMONG MORE THAN TWO OBSERVED VARIABLES.
+     CHECK THE RESULTS SECTION FOR MORE INFORMATION.
+     PROBLEM INVOLVING VARIABLE V3.
+
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       12
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000*
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1065.935
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.002
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V2                 1.000      0.000    999.000    999.000
+    V3                 4.073      0.857      4.753      0.000
+    V4                 1.402      0.109     12.866      0.000
+
+ Thresholds
+    V2$1               1.134      0.022     51.769      0.000
+    V2$2               2.168      0.044     49.278      0.000
+    V2$3               3.007      0.115     26.183      0.000
+    V3$1              -0.076      0.017     -4.424      0.000
+    V3$2               1.642      0.029     56.490      0.000
+    V3$3               2.787      0.086     32.225      0.000
+    V4$1              -0.261      0.018    -14.894      0.000
+    V4$2               1.527      0.027     56.390      0.000
+    V4$3               2.606      0.070     37.354      0.000
+
+ Variances
+    F                  0.076      0.018      4.181      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F        BY
+    V2                 0.275      0.033      8.362      0.000
+    V3                 1.119      0.114      9.828      0.000
+    V4                 0.385      0.042      9.277      0.000
+
+ Thresholds
+    V2$1               1.134      0.022     51.769      0.000
+    V2$2               2.168      0.044     49.278      0.000
+    V2$3               3.007      0.115     26.183      0.000
+    V3$1              -0.076      0.017     -4.424      0.000
+    V3$2               1.642      0.029     56.490      0.000
+    V3$3               2.787      0.086     32.225      0.000
+    V4$1              -0.261      0.018    -14.894      0.000
+    V4$2               1.527      0.027     56.390      0.000
+    V4$3               2.606      0.070     37.354      0.000
+
+ Variances
+    F                  1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    V2                 0.076      0.018      4.181      0.000      0.924
+    V3              Undefined   0.12529E+01                       -0.253
+    V4                 0.148      0.032      4.638      0.000      0.852
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.283E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v2.d
+
+     Beginning Time:  08:27:41
+        Ending Time:  08:27:41
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

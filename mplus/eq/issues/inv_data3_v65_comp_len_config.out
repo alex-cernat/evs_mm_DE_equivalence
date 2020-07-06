@@ -1,0 +1,974 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   1:56 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v65
+   v66
+   v67
+   v68
+   v69
+   v70;
+
+   CATEGORICAL ARE
+   v65
+   v66
+   v67
+   v68
+   v69
+   v70;
+
+   GROUPING IS comp_len (0=full 1=short);
+
+
+   Analysis:
+
+                  ESTIMATOR = WLSMV;
+
+                  ITERATIONS = 100000;
+
+                  PARAMETERIZATION = THETA;
+
+  Model:
+
+
+  f1 BY v65@1
+  v66 (L2_full)
+  v67 (L3_full)
+  v68 (L4_full)
+  v69 (L5_full)
+  v70 (L6_full)
+  ;
+
+
+  [v65$1] (t_v65_1);
+  [v65$2] (t_v65_2);
+
+   [f1@0];
+  [v66$1] (t_v66_1);
+  [v66$2] (t_v66_2_full);
+
+   [f1@0];
+  [v67$1] (t_v67_1);
+  [v67$2] (t_v67_2_full);
+
+   [f1@0];
+  [v68$1] (t_v68_1);
+  [v68$2] (t_v68_2_full);
+
+   [f1@0];
+  [v69$1] (t_v69_1);
+  [v69$2] (t_v69_2_full);
+
+   [f1@0];
+  [v70$1] (t_v70_1);
+  [v70$2] (t_v70_2_full);
+
+   [f1@0];
+
+  Model short:
+
+  f1 BY v65@1
+  v66 (L2_short)
+  v67 (L3_short)
+  v68 (L4_short)
+  v69 (L5_short)
+  v70 (L6_short)
+  ;
+
+
+  [v65$1] (t_v65_1);
+  [v65$2] (t_v65_2);
+
+   [f1@0];
+  [v66$1] (t_v66_1);
+  [v66$2] (t_v66_2_short);
+
+   [f1@0];
+  [v67$1] (t_v67_1);
+  [v67$2] (t_v67_2_short);
+
+   [f1@0];
+  [v68$1] (t_v68_1);
+  [v68$2] (t_v68_2_short);
+
+   [f1@0];
+  [v69$1] (t_v69_1);
+  [v69$2] (t_v69_2_short);
+
+   [f1@0];
+  [v70$1] (t_v70_1);
+  [v70$2] (t_v70_2_short);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v65_config.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  1494
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1623
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group FULL                                                  673
+   Group SHORT                                                1626
+   Total sample size                                          2299
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V65         V66         V67         V68         V69         V70
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_LEN
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                100000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group FULL
+     Number of missing data patterns            23
+
+   Group SHORT
+     Number of missing data patterns            25
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR FULL
+
+
+           Covariance Coverage
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65            0.991
+ V66            0.964         0.972
+ V67            0.957         0.954         0.966
+ V68            0.970         0.963         0.958         0.979
+ V69            0.911         0.902         0.899         0.905         0.915
+ V70            0.972         0.960         0.954         0.966         0.906
+
+
+           Covariance Coverage
+              V70
+              ________
+ V70            0.981
+
+
+     PROPORTION OF DATA PRESENT FOR SHORT
+
+
+           Covariance Coverage
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65            0.993
+ V66            0.970         0.975
+ V67            0.983         0.967         0.990
+ V68            0.969         0.953         0.966         0.974
+ V69            0.923         0.911         0.921         0.911         0.928
+ V70            0.977         0.961         0.974         0.962         0.916
+
+
+           Covariance Coverage
+              V70
+              ________
+ V70            0.982
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+  Group FULL
+    V65
+      Category 1    0.817          545.000
+      Category 2    0.171          114.000
+      Category 3    0.012            8.000
+    V66
+      Category 1    0.205          134.000
+      Category 2    0.537          351.000
+      Category 3    0.258          169.000
+    V67
+      Category 1    0.302          196.000
+      Category 2    0.629          409.000
+      Category 3    0.069           45.000
+    V68
+      Category 1    0.275          181.000
+      Category 2    0.551          363.000
+      Category 3    0.175          115.000
+    V69
+      Category 1    0.541          333.000
+      Category 2    0.284          175.000
+      Category 3    0.175          108.000
+    V70
+      Category 1    0.397          262.000
+      Category 2    0.514          339.000
+      Category 3    0.089           59.000
+
+  Group SHORT
+    V65
+      Category 1    0.816         1318.000
+      Category 2    0.168          272.000
+      Category 3    0.015           25.000
+    V66
+      Category 1    0.201          318.000
+      Category 2    0.524          830.000
+      Category 3    0.276          437.000
+    V67
+      Category 1    0.310          498.000
+      Category 2    0.595          958.000
+      Category 3    0.095          153.000
+    V68
+      Category 1    0.288          456.000
+      Category 2    0.534          846.000
+      Category 3    0.178          282.000
+    V69
+      Category 1    0.492          743.000
+      Category 2    0.319          481.000
+      Category 3    0.189          285.000
+    V70
+      Category 1    0.367          586.000
+      Category 2    0.530          847.000
+      Category 3    0.103          164.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR FULL
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                0.904         2.257        -0.824         0.648        -0.520
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                1.482        -0.599         0.937         0.102         0.933
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V70$1         V70$2
+              ________      ________
+               -0.261         1.344
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65
+ V66            0.072
+ V67            0.220         0.687
+ V68            0.163         0.203         0.318
+ V69            0.262         0.224         0.273         0.037
+ V70            0.189         0.097         0.180         0.259         0.114
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V70
+              ________
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SHORT
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                0.901         2.158        -0.839         0.596        -0.497
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                1.310        -0.560         0.923        -0.019         0.882
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V70$1         V70$2
+              ________      ________
+               -0.340         1.266
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65
+ V66            0.055
+ V67            0.126         0.741
+ V68            0.057         0.159         0.217
+ V69            0.261         0.301         0.344         0.105
+ V70            0.025         0.059         0.100         0.287         0.070
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V70
+              ________
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES COULD NOT BE
+     COMPUTED.  THE MODEL MAY NOT BE IDENTIFIED.  CHECK YOUR MODEL.
+     PROBLEM INVOLVING THE FOLLOWING PARAMETER:
+     Parameter 31, Group SHORT: V67
+
+     THE CONDITION NUMBER IS       0.390D-13.
+
+
+
+MODEL RESULTS
+
+                    Estimate
+
+Group FULL
+
+ F1       BY
+    V65                1.000
+    V66                3.269
+    V67              413.864
+    V68                1.271
+    V69                1.136
+    V70                0.875
+
+ Means
+    F1                 0.000
+
+ Thresholds
+    V65$1              0.954
+    V65$2              2.312
+    V66$1             -1.120
+    V66$2              0.880
+    V67$1            -60.453
+    V67$2            172.321
+    V68$1             -0.636
+    V68$2              0.994
+    V69$1              0.104
+    V69$2              0.980
+    V70$1             -0.269
+    V70$2              1.385
+
+ Variances
+    F1                 0.079
+
+ Residual Variances
+    V65                1.000
+    V66                1.000
+    V67                1.000
+    V68                1.000
+    V69                1.000
+    V70                1.000
+
+Group SHORT
+
+ F1       BY
+    V65                1.000
+    V66                5.925
+    V67              653.385
+    V68                1.611
+    V69               53.969
+    V70                0.666
+
+ Means
+    F1                 0.000
+
+ Thresholds
+    V65$1              0.954
+    V65$2              2.312
+    V66$1             -1.120
+    V66$2              0.795
+    V67$1            -60.453
+    V67$2            159.311
+    V68$1             -0.636
+    V68$2              1.049
+    V69$1              0.104
+    V69$2             21.575
+    V70$1             -0.269
+    V70$2              1.002
+
+ Variances
+    F1                 0.031
+
+ Residual Variances
+    V65                1.106
+    V66                0.698
+    V67             1623.280
+    V68                1.211
+    V69              508.397
+    V70                0.612
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+Group FULL
+
+ F1       BY
+    V65                0.271
+    V66                0.677
+    V67                1.000
+    V68                0.336
+    V69                0.304
+    V70                0.239
+
+ Means
+    F1                 0.000
+
+ Thresholds
+    V65$1              0.918
+    V65$2              2.226
+    V66$1             -0.824
+    V66$2              0.648
+    V67$1             -0.520
+    V67$2              1.481
+    V68$1             -0.599
+    V68$2              0.937
+    V69$1              0.099
+    V69$2              0.933
+    V70$1             -0.261
+    V70$2              1.345
+
+ Variances
+    F1                 1.000
+
+ Residual Variances
+    V65                0.927
+    V66                0.542
+    V67                0.000
+    V68                0.887
+    V69                0.907
+    V70                0.943
+
+Group SHORT
+
+ F1       BY
+    V65                0.165
+    V66                0.780
+    V67                0.943
+    V68                0.249
+    V69                0.387
+    V70                0.148
+
+ Means
+    F1                 0.000
+
+ Thresholds
+    V65$1              0.895
+    V65$2              2.169
+    V66$1             -0.839
+    V66$2              0.596
+    V67$1             -0.497
+    V67$2              1.311
+    V68$1             -0.560
+    V68$2              0.923
+    V69$1              0.004
+    V69$2              0.882
+    V70$1             -0.340
+    V70$2              1.266
+
+ Variances
+    F1                 1.000
+
+ Residual Variances
+    V65                0.973
+    V66                0.392
+    V67                0.110
+    V68                0.938
+    V69                0.850
+    V70                0.978
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     f1 BY v65;
+     f1 BY v66;
+     f1 BY v67;
+     f1 BY v68;
+     f1 BY v69;
+     f1 BY v70;
+
+  MODEL FULL:
+
+     f1 BY v65@1;
+     f1 BY v66*3.26927 (l2_full);
+     f1 BY v67*413.86392 (l3_full);
+     f1 BY v68*1.27112 (l4_full);
+     f1 BY v69*1.13646 (l5_full);
+     f1 BY v70*0.87461 (l6_full);
+
+     [ f1@0 ];
+
+     [ v65$1*0.95392 ] (t_v65_1);
+     [ v65$2*2.31228 ] (t_v65_2);
+     [ v66$1*-1.11968 ] (t_v66_1);
+     [ v66$2*0.88021 ] (t_v66_2_full);
+     [ v67$1*-60.45281 ] (t_v67_1);
+     [ v67$2*172.32060 ] (t_v67_2_full);
+     [ v68$1*-0.63585 ] (t_v68_1);
+     [ v68$2*0.99448 ] (t_v68_2_full);
+     [ v69$1*0.10432 ] (t_v69_1);
+     [ v69$2*0.97971 ] (t_v69_2_full);
+     [ v70$1*-0.26895 ] (t_v70_1);
+     [ v70$2*1.38459 ] (t_v70_2_full);
+
+     v65@1;
+     v66@1;
+     v67@1;
+     v68@1;
+     v69@1;
+     v70@1;
+     f1*0.07900;
+
+  MODEL SHORT:
+
+     f1 BY v65@1;
+     f1 BY v66*5.92502 (l2_short);
+     f1 BY v67*653.38507 (l3_short);
+     f1 BY v68*1.61062 (l4_short);
+     f1 BY v69*53.96890 (l5_short);
+     f1 BY v70*0.66597 (l6_short);
+
+     [ f1@0 ];
+
+     [ v65$1*0.95392 ] (t_v65_1);
+     [ v65$2*2.31228 ] (t_v65_2);
+     [ v66$1*-1.11968 ] (t_v66_1);
+     [ v66$2*0.79460 ] (t_v66_2_short);
+     [ v67$1*-60.45281 ] (t_v67_1);
+     [ v67$2*159.31061 ] (t_v67_2_short);
+     [ v68$1*-0.63585 ] (t_v68_1);
+     [ v68$2*1.04862 ] (t_v68_2_short);
+     [ v69$1*0.10432 ] (t_v69_1);
+     [ v69$2*21.57504 ] (t_v69_2_short);
+     [ v70$1*-0.26895 ] (t_v70_1);
+     [ v70$2*1.00175 ] (t_v70_2_short);
+
+     v65*1.10604;
+     v66*0.69788;
+     v67*1623.27991;
+     v68*1.21111;
+     v69*508.39743;
+     v70*0.61209;
+     f1*0.03081;
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR FULL
+
+
+           TAU
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                  1             2             3             4             5
+
+
+           TAU
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                  6             7             8             9            10
+
+
+           TAU
+              V70$1         V70$2
+              ________      ________
+                 11            12
+
+
+           NU
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+                  0             0             0             0             0
+
+
+           NU
+              V70
+              ________
+                  0
+
+
+           LAMBDA
+              F1
+              ________
+ V65                0
+ V66               13
+ V67               14
+ V68               15
+ V69               16
+ V70               17
+
+
+           THETA
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65                0
+ V66                0             0
+ V67                0             0             0
+ V68                0             0             0             0
+ V69                0             0             0             0             0
+ V70                0             0             0             0             0
+
+
+           THETA
+              V70
+              ________
+ V70                0
+
+
+           ALPHA
+              F1
+              ________
+                  0
+
+
+           BETA
+              F1
+              ________
+ F1                 0
+
+
+           PSI
+              F1
+              ________
+ F1                18
+
+
+     PARAMETER SPECIFICATION FOR SHORT
+
+
+           TAU
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                  1             2             3            19             5
+
+
+           TAU
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                 20             7            21             9            22
+
+
+           TAU
+              V70$1         V70$2
+              ________      ________
+                 11            23
+
+
+           NU
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+                  0             0             0             0             0
+
+
+           NU
+              V70
+              ________
+                  0
+
+
+           LAMBDA
+              F1
+              ________
+ V65                0
+ V66               24
+ V67               25
+ V68               26
+ V69               27
+ V70               28
+
+
+           THETA
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65               29
+ V66                0            30
+ V67                0             0            31
+ V68                0             0             0            32
+ V69                0             0             0             0            33
+ V70                0             0             0             0             0
+
+
+           THETA
+              V70
+              ________
+ V70               34
+
+
+           ALPHA
+              F1
+              ________
+                  0
+
+
+           BETA
+              F1
+              ________
+ F1                 0
+
+
+           PSI
+              F1
+              ________
+ F1                35
+
+
+     STARTING VALUES FOR FULL
+
+
+           TAU
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                0.904         2.257        -0.824         0.648        -0.520
+
+
+           TAU
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                1.482        -0.599         0.937         0.102         0.933
+
+
+           TAU
+              V70$1         V70$2
+              ________      ________
+               -0.261         1.344
+
+
+           NU
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              V70
+              ________
+                0.000
+
+
+           LAMBDA
+              F1
+              ________
+ V65            1.000
+ V66            1.304
+ V67            1.070
+ V68            0.713
+ V69            0.696
+ V70            0.691
+
+
+           THETA
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65            1.000
+ V66            0.000         1.000
+ V67            0.000         0.000         1.000
+ V68            0.000         0.000         0.000         1.000
+ V69            0.000         0.000         0.000         0.000         1.000
+ V70            0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              V70
+              ________
+ V70            1.000
+
+
+           ALPHA
+              F1
+              ________
+                0.000
+
+
+           BETA
+              F1
+              ________
+ F1             0.000
+
+
+           PSI
+              F1
+              ________
+ F1             0.050
+
+
+     STARTING VALUES FOR SHORT
+
+
+           TAU
+              V65$1         V65$2         V66$1         V66$2         V67$1
+              ________      ________      ________      ________      ________
+                0.902         2.207        -0.832         0.596        -0.509
+
+
+           TAU
+              V67$2         V68$1         V68$2         V69$1         V69$2
+              ________      ________      ________      ________      ________
+                1.310        -0.579         0.923         0.041         0.882
+
+
+           TAU
+              V70$1         V70$2
+              ________      ________
+               -0.301         1.266
+
+
+           NU
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              V70
+              ________
+                0.000
+
+
+           LAMBDA
+              F1
+              ________
+ V65            1.000
+ V66            1.500
+ V67            1.098
+ V68            0.478
+ V69            2.010
+ V70            0.391
+
+
+           THETA
+              V65           V66           V67           V68           V69
+              ________      ________      ________      ________      ________
+ V65            1.000
+ V66            0.000         1.000
+ V67            0.000         0.000         1.000
+ V68            0.000         0.000         0.000         1.000
+ V69            0.000         0.000         0.000         0.000         1.000
+ V70            0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              V70
+              ________
+ V70            1.000
+
+
+           ALPHA
+              F1
+              ________
+                0.000
+
+
+           BETA
+              F1
+              ________
+ F1             0.000
+
+
+           PSI
+              F1
+              ________
+ F1             0.050
+
+
+SAVEDATA INFORMATION
+
+
+  Difference testing
+
+    Model estimation did not terminate normally.  The file for difference testing
+    was not saved.
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v65_c
+
+     Beginning Time:  13:56:40
+        Ending Time:  13:56:41
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

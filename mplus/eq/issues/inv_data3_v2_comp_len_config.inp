@@ -1,0 +1,96 @@
+TITLE: Your title goes here
+ 
+ DATA: FILE = eq/data.dta;
+ 
+ VARIABLE: 
+ 
+ NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+     v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+     v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+     v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+     v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+     v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+     v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+     v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+     v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273; 
+ 
+ MISSING=.;
+ 
+ USEVARIABLES ARE 
+ v2 
+ v3 
+ v4;
+  
+ CATEGORICAL ARE 
+ v2 
+ v3 
+ v4;
+ 
+ GROUPING IS comp_len (0=full 1=short);
+
+
+ Analysis: 
+
+                ESTIMATOR = WLSMV;
+
+                ITERATIONS = 100000;
+
+                PARAMETERIZATION = THETA;
+
+Model: 
+
+
+f1 BY v2@1
+v3 (L2_full)
+v4 (L3_full)
+;
+
+
+[v2$1] (t_v2_1);
+[v2$2] (t_v2_2);
+[v2$3] (t_v2_3);
+
+ [f1@0];
+[v3$1] (t_v3_1);
+[v3$2] (t_v3_2_full);
+[v3$3] (t_v3_3_full);
+
+ [f1@0];
+[v4$1] (t_v4_1);
+[v4$2] (t_v4_2_full);
+[v4$3] (t_v4_3_full);
+
+ [f1@0];
+
+Model short:
+
+f1 BY v2@1
+v3 (L2_short)
+v4 (L3_short)
+;
+
+
+[v2$1] (t_v2_1);
+[v2$2] (t_v2_2);
+[v2$3] (t_v2_3);
+
+ [f1@0];
+[v3$1] (t_v3_1);
+[v3$2] (t_v3_2_short);
+[v3$3] (t_v3_3_short);
+
+ [f1@0];
+[v4$1] (t_v4_1);
+[v4$2] (t_v4_2_short);
+[v4$3] (t_v4_3_short);
+
+ [f1@0];
+
+ SAVEDATA: DIFFTEST IS v2_config.dat;
+ 
+ OUTPUT: SAMPSTAT; 
+
+                                MODINDICES; 
+
+                                STDYX; 
+

@@ -1,0 +1,561 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   1:55 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v98
+   v99
+   v100
+   v101;
+
+   CATEGORICAL ARE
+   v98
+   v99
+   v100
+   v101;
+
+   GROUPING IS comp_mode (0=sm 1=mm);
+
+
+   Analysis:
+
+                  ESTIMATOR = WLSMV;
+
+                  ITERATIONS = 100000;
+
+                  PARAMETERIZATION = THETA;
+
+  Model:
+
+
+  f1 BY v98@1
+  v99 (L2_sm)
+  v100 (L3_sm)
+  v101 (L4_sm)
+  ;
+
+
+  [v98$1] (t_v98_1);
+  [v98$2] (t_v98_2);
+
+   [f1@0];
+  [v99$1] (t_v99_1);
+  [v99$2] (t_v99_2_sm);
+
+   [f1@0];
+  [v100$1] (t_v100_1);
+  [v100$2] (t_v100_2_sm);
+
+   [f1@0];
+  [v101$1] (t_v101_1);
+  [v101$2] (t_v101_2_sm);
+
+   [f1@0];
+
+  Model mm:
+
+  f1 BY v98@1
+  v99 (L2_mm)
+  v100 (L3_mm)
+  v101 (L4_mm)
+  ;
+
+
+  [v98$1] (t_v98_1);
+  [v98$2] (t_v98_2);
+
+   [f1@0];
+  [v99$1] (t_v99_1);
+  [v99$2] (t_v99_2_mm);
+
+   [f1@0];
+  [v100$1] (t_v100_1);
+  [v100$2] (t_v100_2_mm);
+
+   [f1@0];
+  [v101$1] (t_v101_1);
+  [v101$2] (t_v101_2_mm);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v98_config.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  3244
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  43
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group SM                                                   1483
+   Group MM                                                    646
+   Total sample size                                          2129
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   V98         V99         V100        V101
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_MOD
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                100000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group SM
+     Number of missing data patterns            10
+
+   Group MM
+     Number of missing data patterns            14
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR SM
+
+
+           Covariance Coverage
+              V98           V99           V100          V101
+              ________      ________      ________      ________
+ V98            0.993
+ V99            0.962         0.966
+ V100           0.982         0.961         0.989
+ V101           0.954         0.939         0.954         0.961
+
+
+     PROPORTION OF DATA PRESENT FOR MM
+
+
+           Covariance Coverage
+              V98           V99           V100          V101
+              ________      ________      ________      ________
+ V98            0.969
+ V99            0.768         0.783
+ V100           0.868         0.735         0.892
+ V101           0.734         0.672         0.717         0.754
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+  Group SM
+    V98
+      Category 1    0.642          945.000
+      Category 2    0.223          328.000
+      Category 3    0.136          200.000
+    V99
+      Category 1    0.137          196.000
+      Category 2    0.380          545.000
+      Category 3    0.483          692.000
+    V100
+      Category 1    0.363          532.000
+      Category 2    0.361          530.000
+      Category 3    0.276          405.000
+    V101
+      Category 1    0.048           68.000
+      Category 2    0.267          380.000
+      Category 3    0.686          977.000
+
+  Group MM
+    V98
+      Category 1    0.706          442.000
+      Category 2    0.208          130.000
+      Category 3    0.086           54.000
+    V99
+      Category 1    0.109           55.000
+      Category 2    0.490          248.000
+      Category 3    0.401          203.000
+    V100
+      Category 1    0.370          213.000
+      Category 2    0.464          267.000
+      Category 3    0.167           96.000
+    V101
+      Category 1    0.045           22.000
+      Category 2    0.302          147.000
+      Category 3    0.653          318.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SM
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V98$1         V98$2         V99$1         V99$2         V100$1
+              ________      ________      ________      ________      ________
+                0.363         1.099        -1.095         0.043        -0.351
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V100$2        V101$1        V101$2
+              ________      ________      ________
+                0.595        -1.667        -0.483
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V98           V99           V100          V101
+              ________      ________      ________      ________
+ V98
+ V99            0.581
+ V100           0.643         0.604
+ V101           0.423         0.580         0.610
+
+
+     ESTIMATED SAMPLE STATISTICS FOR MM
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V98$1         V98$2         V99$1         V99$2         V100$1
+              ________      ________      ________      ________      ________
+                0.542         1.364        -1.233         0.250        -0.332
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              V100$2        V101$1        V101$2
+              ________      ________      ________
+                0.967        -1.694        -0.393
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              V98           V99           V100          V101
+              ________      ________      ________      ________
+ V98
+ V99            0.517
+ V100           0.606         0.586
+ V101           0.430         0.683         0.587
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       23
+
+Chi-Square Test of Model Fit
+
+          Value                             44.133*
+          Degrees of Freedom                     5
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          SM                                25.473
+          MM                                18.659
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.086
+          90 Percent C.I.                    0.064  0.110
+          Probability RMSEA <= .05           0.005
+
+CFI/TLI
+
+          CFI                                0.989
+          TLI                                0.975
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           3734.880
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              1.385
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F1       BY
+    V98                1.000      0.000    999.000    999.000
+    V99                1.089      0.102     10.689      0.000
+    V100               1.397      0.162      8.641      0.000
+    V101               0.931      0.090     10.352      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V98$1              0.572      0.046     12.473      0.000
+    V98$2              1.609      0.081     19.921      0.000
+    V99$1             -1.701      0.083    -20.437      0.000
+    V99$2              0.067      0.051      1.299      0.194
+    V100$1            -0.641      0.066     -9.660      0.000
+    V100$2             1.084      0.079     13.702      0.000
+    V101$1            -2.379      0.099    -23.996      0.000
+    V101$2            -0.690      0.055    -12.553      0.000
+
+ Variances
+    F1                 1.193      0.172      6.940      0.000
+
+ Residual Variances
+    V98                1.000      0.000    999.000    999.000
+    V99                1.000      0.000    999.000    999.000
+    V100               1.000      0.000    999.000    999.000
+    V101               1.000      0.000    999.000    999.000
+
+Group MM
+
+ F1       BY
+    V98                1.000      0.000    999.000    999.000
+    V99                1.368      0.189      7.221      0.000
+    V100               1.881      0.447      4.204      0.000
+    V101               1.370      0.196      6.991      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V98$1              0.572      0.046     12.473      0.000
+    V98$2              1.609      0.081     19.921      0.000
+    V99$1             -1.701      0.083    -20.437      0.000
+    V99$2              0.345      0.088      3.938      0.000
+    V100$1            -0.641      0.066     -9.660      0.000
+    V100$2             1.865      0.407      4.584      0.000
+    V101$1            -2.379      0.099    -23.996      0.000
+    V101$2            -0.553      0.082     -6.737      0.000
+
+ Variances
+    F1                 0.649      0.132      4.933      0.000
+
+ Residual Variances
+    V98                0.684      0.119      5.737      0.000
+    V99                0.688      0.145      4.729      0.000
+    V100               1.422      0.572      2.486      0.013
+    V101               0.758      0.150      5.065      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group SM
+
+ F1       BY
+    V98                0.738      0.024     30.444      0.000
+    V99                0.765      0.021     36.915      0.000
+    V100               0.836      0.019     44.323      0.000
+    V101               0.713      0.024     29.716      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V98$1              0.386      0.028     13.804      0.000
+    V98$2              1.087      0.042     25.709      0.000
+    V99$1             -1.095      0.041    -26.422      0.000
+    V99$2              0.043      0.033      1.294      0.196
+    V100$1            -0.351      0.033    -10.498      0.000
+    V100$2             0.594      0.035     17.025      0.000
+    V101$1            -1.668      0.057    -29.346      0.000
+    V101$2            -0.483      0.035    -13.953      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V98                0.456      0.036     12.755      0.000
+    V99                0.414      0.032     13.041      0.000
+    V100               0.300      0.032      9.516      0.000
+    V101               0.492      0.034     14.364      0.000
+
+Group MM
+
+ F1       BY
+    V98                0.698      0.041     17.016      0.000
+    V99                0.799      0.036     21.937      0.000
+    V100               0.786      0.035     22.761      0.000
+    V101               0.785      0.042     18.897      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Thresholds
+    V98$1              0.496      0.039     12.729      0.000
+    V98$2              1.394      0.074     18.904      0.000
+    V99$1             -1.234      0.074    -16.625      0.000
+    V99$2              0.250      0.056      4.440      0.000
+    V100$1            -0.332      0.053     -6.240      0.000
+    V100$2             0.967      0.062     15.566      0.000
+    V101$1            -1.693      0.099    -17.104      0.000
+    V101$2            -0.393      0.058     -6.733      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V98                0.513      0.057      8.963      0.000
+    V99                0.362      0.058      6.218      0.000
+    V100               0.383      0.054      7.051      0.000
+    V101               0.384      0.065      5.881      0.000
+
+
+R-SQUARE
+
+Group SM
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    V98                0.544      0.036     15.222      0.000      0.675
+    V99                0.586      0.032     18.458      0.000      0.643
+    V100               0.700      0.032     22.161      0.000      0.548
+    V101               0.508      0.034     14.858      0.000      0.701
+
+Group MM
+
+    Observed                                        Two-Tailed     Scale
+    Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
+
+    V98                0.487      0.057      8.508      0.000      0.866
+    V99                0.638      0.058     10.968      0.000      0.725
+    V100               0.617      0.054     11.380      0.000      0.519
+    V101               0.616      0.065      9.449      0.000      0.712
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.131E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group SM
+
+
+WITH Statements
+
+V100     WITH V98                 10.062     0.315      0.315        0.315
+V100     WITH V99                 23.713    -0.606     -0.606       -0.606
+V101     WITH V98                 23.891    -0.372     -0.372       -0.372
+
+Group MM
+
+
+No modification indices above the minimum value.
+
+
+
+SAVEDATA INFORMATION
+
+
+  Difference testing
+
+  Save file
+    v98_config.dat
+  Save format      Free
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v98_c
+
+     Beginning Time:  13:55:45
+        Ending Time:  13:55:46
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

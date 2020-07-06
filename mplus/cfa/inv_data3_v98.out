@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-06/26/2020   9:44 AM
+07/06/2020   8:27 AM
 
 INPUT INSTRUCTIONS
 
@@ -10,15 +10,15 @@ INPUT INSTRUCTIONS
 
    VARIABLE:
 
-   NAMES = id_cocas caseno v1 v2 v3 v4 v5 v6 v32 v33 v34 v35 v36 v37 v46 v47 v48 v49
-       v50 v65 v66 v67 v68 v69 v70 v98 v99 v100 v101 v103 v104 v105 v106 v107 v115
-       v116 v117 v118 v119 v120 v121 v122 v123 v124 v125 v126 v127 v128 v129 v130 v131
-       v132 v133 v134 v135 v136 v137 v138 v139 v140 v141 v145 v146 v147 v148 v149 v150
-       v151 v152 v153 v154 v155 v156 v157 v158 v159 v160 v161 v162 v163 v164 v165 v166
-       v167 v168 v176 v177 v178 v179 v180 v181 v182 v183 v185 v186 v187 v188 v189 v190
-       v191 v192 v193 v194 v195 v196 v197 v199 v200 v201 v202 v203 v205 v206 v207 v208
-       v209 v210 v211 v212 v213 v214 v215 v216 v217 v218 v219 v220 v221 v222 v223 v224
-       v267 v268 v269 v270 v271 v272 v273 v274;
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
 
    MISSING=.;
 
@@ -55,7 +55,7 @@ INPUT INSTRUCTIONS
 *** WARNING
   Data set contains cases with missing on all variables.
   These cases were not included in the analysis.
-  Number of cases with missing on all variables:  1256
+  Number of cases with missing on all variables:  1754
    1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
 
 
@@ -65,7 +65,7 @@ Your title goes here
 SUMMARY OF ANALYSIS
 
 Number of groups                                                 1
-Number of observations                                       54020
+Number of observations                                        3662
 
 Number of dependent variables                                    4
 Number of independent variables                                  0
@@ -111,30 +111,30 @@ Minimum covariance coverage value   0.100
            Covariance Coverage
               V98           V99           V100          V101
               ________      ________      ________      ________
- V98            0.981
- V99            0.949         0.962
- V100           0.959         0.950         0.975
- V101           0.939         0.934         0.944         0.955
+ V98            0.978
+ V99            0.853         0.863
+ V100           0.917         0.838         0.933
+ V101           0.835         0.788         0.825         0.851
 
 
 UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
 
     V98
-      Category 1    0.414        21935.000
-      Category 2    0.306        16212.000
-      Category 3    0.280        14828.000
+      Category 1    0.676         2419.000
+      Category 2    0.220          788.000
+      Category 3    0.104          374.000
     V99
-      Category 1    0.115         5991.000
-      Category 2    0.366        19003.000
-      Category 3    0.519        26953.000
+      Category 1    0.130          412.000
+      Category 2    0.433         1370.000
+      Category 3    0.436         1380.000
     V100
-      Category 1    0.197        10349.000
-      Category 2    0.379        19937.000
-      Category 3    0.425        22367.000
+      Category 1    0.363         1240.000
+      Category 2    0.414         1414.000
+      Category 3    0.223          763.000
     V101
-      Category 1    0.055         2842.000
-      Category 2    0.249        12854.000
-      Category 3    0.696        35883.000
+      Category 1    0.050          155.000
+      Category 2    0.283          881.000
+      Category 3    0.668         2080.000
 
 
 SAMPLE STATISTICS
@@ -146,22 +146,22 @@ SAMPLE STATISTICS
            MEANS/INTERCEPTS/THRESHOLDS
               V98$1         V98$2         V99$1         V99$2         V100$1
               ________      ________      ________      ________      ________
-               -0.217         0.583        -1.199        -0.047        -0.854
+                0.455         1.257        -1.125         0.160        -0.351
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V100$2        V101$1        V101$2
               ________      ________      ________
-                0.190        -1.597        -0.512
+                0.761        -1.647        -0.433
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
               V98           V99           V100          V101
               ________      ________      ________      ________
  V98
- V99            0.677
- V100           0.652         0.693
- V101           0.478         0.640         0.648
+ V99            0.567
+ V100           0.655         0.611
+ V101           0.437         0.623         0.590
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
@@ -174,7 +174,7 @@ Number of Free Parameters                       12
 
 Chi-Square Test of Model Fit
 
-          Value                            867.682*
+          Value                             72.525*
           Degrees of Freedom                     2
           P-Value                           0.0000
 
@@ -185,24 +185,24 @@ Chi-Square Test of Model Fit
 
 RMSEA (Root Mean Square Error Of Approximation)
 
-          Estimate                           0.090
-          90 Percent C.I.                    0.085  0.095
+          Estimate                           0.098
+          90 Percent C.I.                    0.080  0.118
           Probability RMSEA <= .05           0.000
 
 CFI/TLI
 
-          CFI                                0.995
-          TLI                                0.984
+          CFI                                0.989
+          TLI                                0.968
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                         159044.161
+          Value                           6557.074
           Degrees of Freedom                     6
           P-Value                           0.0000
 
 WRMR (Weighted Root Mean Square Residual)
 
-          Value                              5.660
+          Value                              1.790
 
 
 
@@ -213,22 +213,22 @@ MODEL RESULTS
 
  F        BY
     V98                1.000      0.000    999.000    999.000
-    V99                1.112      0.005    203.965      0.000
-    V100               1.094      0.006    195.340      0.000
-    V101               0.962      0.006    170.827      0.000
+    V99                1.051      0.028     37.895      0.000
+    V100               1.105      0.033     33.583      0.000
+    V101               0.983      0.029     33.672      0.000
 
  Thresholds
-    V98$1             -0.217      0.005    -39.530      0.000
-    V98$2              0.583      0.006    100.616      0.000
-    V99$1             -1.199      0.007   -166.353      0.000
-    V99$2             -0.047      0.006     -8.595      0.000
-    V100$1            -0.854      0.006   -136.614      0.000
-    V100$2             0.190      0.005     34.492      0.000
-    V101$1            -1.597      0.009   -177.110      0.000
-    V101$2            -0.512      0.006    -88.441      0.000
+    V98$1              0.455      0.022     20.926      0.000
+    V98$2              1.257      0.028     44.538      0.000
+    V99$1             -1.125      0.028    -39.817      0.000
+    V99$2              0.160      0.022      7.146      0.000
+    V100$1            -0.351      0.022    -15.996      0.000
+    V100$2             0.761      0.024     31.902      0.000
+    V101$1            -1.647      0.038    -43.443      0.000
+    V101$2            -0.433      0.023    -18.640      0.000
 
  Variances
-    F                  0.588      0.005    123.130      0.000
+    F                  0.556      0.024     23.040      0.000
 
 
 STANDARDIZED MODEL RESULTS
@@ -240,20 +240,20 @@ STDYX Standardization
                     Estimate       S.E.  Est./S.E.    P-Value
 
  F        BY
-    V98                0.767      0.003    246.260      0.000
-    V99                0.853      0.002    346.291      0.000
-    V100               0.839      0.003    333.788      0.000
-    V101               0.738      0.003    215.052      0.000
+    V98                0.746      0.016     46.080      0.000
+    V99                0.784      0.013     58.540      0.000
+    V100               0.824      0.013     65.330      0.000
+    V101               0.733      0.016     46.950      0.000
 
  Thresholds
-    V98$1             -0.217      0.005    -39.530      0.000
-    V98$2              0.583      0.006    100.616      0.000
-    V99$1             -1.199      0.007   -166.353      0.000
-    V99$2             -0.047      0.006     -8.595      0.000
-    V100$1            -0.854      0.006   -136.614      0.000
-    V100$2             0.190      0.005     34.492      0.000
-    V101$1            -1.597      0.009   -177.110      0.000
-    V101$2            -0.512      0.006    -88.441      0.000
+    V98$1              0.455      0.022     20.926      0.000
+    V98$2              1.257      0.028     44.538      0.000
+    V99$1             -1.125      0.028    -39.817      0.000
+    V99$2              0.160      0.022      7.146      0.000
+    V100$1            -0.351      0.022    -15.996      0.000
+    V100$2             0.761      0.024     31.902      0.000
+    V101$1            -1.647      0.038    -43.443      0.000
+    V101$2            -0.433      0.023    -18.640      0.000
 
  Variances
     F                  1.000      0.000    999.000    999.000
@@ -264,15 +264,15 @@ R-SQUARE
     Observed                                        Two-Tailed   Residual
     Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
 
-    V98                0.588      0.005    123.130      0.000      0.412
-    V99                0.727      0.004    173.145      0.000      0.273
-    V100               0.703      0.004    166.894      0.000      0.297
-    V101               0.544      0.005    107.526      0.000      0.456
+    V98                0.556      0.024     23.040      0.000      0.444
+    V99                0.614      0.021     29.270      0.000      0.386
+    V100               0.680      0.021     32.665      0.000      0.320
+    V101               0.537      0.023     23.475      0.000      0.463
 
 
 QUALITY OF NUMERICAL RESULTS
 
-     Condition Number for the Information Matrix              0.156E-01
+     Condition Number for the Information Matrix              0.136E-01
        (ratio of smallest to largest eigenvalue)
 
 
@@ -298,9 +298,9 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v98.
 
-     Beginning Time:  09:44:07
-        Ending Time:  09:44:09
-       Elapsed Time:  00:00:02
+     Beginning Time:  08:27:24
+        Ending Time:  08:27:24
+       Elapsed Time:  00:00:00
 
 
 

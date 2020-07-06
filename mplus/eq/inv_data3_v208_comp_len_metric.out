@@ -1,0 +1,510 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+07/06/2020   2:40 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Your title goes here
+
+   DATA: FILE = eq/data.dta;
+
+   VARIABLE:
+
+   NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+       v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+       v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+       v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+       v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+       v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+       v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+       v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+       v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273;
+
+   MISSING=.;
+
+   USEVARIABLES ARE
+   v208
+   v209
+   v210
+   v211;
+
+   GROUPING IS comp_len (0=full 1=short);
+
+  Model:
+
+
+  f1 BY v208@1
+  v209 (L2)
+  v210 (L3)
+  v211 (L4)
+  ;
+
+  [v208] (i1_full);
+  [v209] (i2_full);
+  [v210] (i3_full);
+  [v211] (i4_full);
+
+   [f1@0];
+
+  Model short:
+
+  f1 BY v208@1
+  v209 (L2)
+  v210 (L3)
+  v211 (L4)
+  ;
+
+  [v208] (i1_short);
+  [v209] (i2_short);
+  [v210] (i3_short);
+  [v211] (i4_short);
+
+   [f1@0];
+
+   SAVEDATA: DIFFTEST IS v208_metric.dat;
+
+   OUTPUT: SAMPSTAT;
+
+                                  MODINDICES;
+
+                                  STDYX;
+
+
+
+
+*** WARNING in SAVEDATA command
+  The DIFFTEST option is available only for the estimators MLMV, WLSMV and ULSMV.
+  Request for DIFFTEST will be ignored.
+*** WARNING
+  Data set contains unknown or missing values for GROUPING,
+  PATTERN, COHORT, CLUSTER and/or STRATIFICATION variables.
+  Number of cases with unknown or missing values:  1494
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1697
+   3 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+Your title goes here
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group FULL                                                  668
+   Group SHORT                                                1557
+   Total sample size                                          2225
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   V208        V209        V210        V211
+
+Continuous latent variables
+   F1
+
+Variables with special functions
+
+  Grouping variable     COMP_LEN
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  eq/data.dta
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group FULL
+     Number of missing data patterns            12
+
+   Group SHORT
+     Number of missing data patterns            15
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR FULL
+
+
+           Covariance Coverage
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+ V208           0.990
+ V209           0.961         0.966
+ V210           0.973         0.954         0.976
+ V211           0.952         0.939         0.943         0.961
+
+
+     PROPORTION OF DATA PRESENT FOR SHORT
+
+
+           Covariance Coverage
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+ V208           0.992
+ V209           0.949         0.954
+ V210           0.969         0.943         0.974
+ V211           0.936         0.924         0.933         0.941
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR FULL
+
+
+           Means
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+                1.913         2.218         2.619         2.892
+
+
+           Covariances
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+ V208           1.534
+ V209           0.703         1.938
+ V210           0.907         0.539         2.291
+ V211           0.383         0.383         0.263         2.219
+
+
+           Correlations
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+ V208           1.000
+ V209           0.408         1.000
+ V210           0.484         0.256         1.000
+ V211           0.207         0.185         0.117         1.000
+
+
+     ESTIMATED SAMPLE STATISTICS FOR SHORT
+
+
+           Means
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+                1.976         2.241         2.604         3.130
+
+
+           Covariances
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+ V208           1.519
+ V209           0.697         1.977
+ V210           0.861         0.648         2.233
+ V211           0.123         0.321         0.194         2.138
+
+
+           Correlations
+              V208          V209          V210          V211
+              ________      ________      ________      ________
+ V208           1.000
+ V209           0.402         1.000
+ V210           0.468         0.308         1.000
+ V211           0.068         0.156         0.089         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -14579.028
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR FULL
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V208                  1.918       1.121       1.000   55.22%       1.000      1.000      1.000
+             661.000       1.533      -0.037       5.000    4.69%       2.000      3.000
+     V209                  2.229       0.717       1.000   45.58%       1.000      1.000      2.000
+             645.000       1.938      -0.947       5.000    8.37%       2.000      4.000
+     V210                  2.629       0.241       1.000   37.27%       1.000      2.000      2.000
+             652.000       2.295      -1.499       5.000   13.96%       3.000      4.000
+     V211                  2.897       0.010       1.000   26.79%       1.000      2.000      3.000
+             642.000       2.220      -1.492       5.000   17.60%       4.000      4.000
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR SHORT
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V208                  1.977       1.032       1.000   51.17%       1.000      1.000      1.000
+            1544.000       1.518      -0.156       5.000    4.86%       2.000      3.000
+     V209                  2.260       0.668       1.000   45.29%       1.000      1.000      2.000
+            1486.000       1.978      -1.035       5.000    8.61%       2.000      4.000
+     V210                  2.609       0.217       1.000   38.23%       1.000      2.000      2.000
+            1517.000       2.233      -1.496       5.000   12.20%       3.000      4.000
+     V211                  3.137      -0.186       1.000   20.07%       1.000      3.000      3.000
+            1465.000       2.138      -1.388       5.000   22.73%       4.000      5.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       21
+
+Loglikelihood
+
+          H0 Value                      -14595.359
+          H1 Value                      -14579.028
+
+Information Criteria
+
+          Akaike (AIC)                   29232.717
+          Bayesian (BIC)                 29352.575
+          Sample-Size Adjusted BIC       29285.855
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             32.662
+          Degrees of Freedom                     7
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          FULL                              10.490
+          SHORT                             22.172
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.057
+          90 Percent C.I.                    0.038  0.078
+          Probability RMSEA <= .05           0.241
+
+CFI/TLI
+
+          CFI                                0.975
+          TLI                                0.957
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1034.506
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.030
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group FULL
+
+ F1       BY
+    V208               1.000      0.000    999.000    999.000
+    V209               0.738      0.048     15.240      0.000
+    V210               0.916      0.057     16.097      0.000
+    V211               0.260      0.042      6.269      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V208               1.914      0.048     40.030      0.000
+    V209               2.218      0.055     40.039      0.000
+    V210               2.618      0.060     43.854      0.000
+    V211               2.893      0.058     49.759      0.000
+
+ Variances
+    F1                 0.991      0.100      9.918      0.000
+
+ Residual Variances
+    V208               0.522      0.079      6.604      0.000
+    V209               1.450      0.092     15.761      0.000
+    V210               1.503      0.104     14.512      0.000
+    V211               2.104      0.119     17.657      0.000
+
+Group SHORT
+
+ F1       BY
+    V208               1.000      0.000    999.000    999.000
+    V209               0.738      0.048     15.240      0.000
+    V210               0.916      0.057     16.097      0.000
+    V211               0.260      0.042      6.269      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V208               1.976      0.031     62.838      0.000
+    V209               2.242      0.036     62.066      0.000
+    V210               2.604      0.038     68.301      0.000
+    V211               3.129      0.038     81.519      0.000
+
+ Variances
+    F1                 0.929      0.072     12.836      0.000
+
+ Residual Variances
+    V208               0.600      0.061      9.867      0.000
+    V209               1.446      0.064     22.726      0.000
+    V210               1.438      0.072     19.973      0.000
+    V211               2.096      0.078     26.777      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group FULL
+
+ F1       BY
+    V208               0.809      0.032     25.503      0.000
+    V209               0.521      0.027     19.500      0.000
+    V210               0.597      0.027     22.341      0.000
+    V211               0.176      0.028      6.391      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V208               1.556      0.057     27.153      0.000
+    V209               1.572      0.057     27.512      0.000
+    V210               1.714      0.060     28.632      0.000
+    V211               1.963      0.067     29.457      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V208               0.345      0.051      6.722      0.000
+    V209               0.729      0.028     26.183      0.000
+    V210               0.644      0.032     20.218      0.000
+    V211               0.969      0.010    100.128      0.000
+
+Group SHORT
+
+ F1       BY
+    V208               0.779      0.025     31.012      0.000
+    V209               0.509      0.024     21.542      0.000
+    V210               0.593      0.023     25.234      0.000
+    V211               0.171      0.025      6.720      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    V208               1.598      0.038     41.708      0.000
+    V209               1.605      0.039     41.590      0.000
+    V210               1.749      0.040     43.554      0.000
+    V211               2.130      0.047     44.950      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    V208               0.393      0.039     10.023      0.000
+    V209               0.741      0.024     30.754      0.000
+    V210               0.649      0.028     23.293      0.000
+    V211               0.971      0.009    111.797      0.000
+
+
+R-SQUARE
+
+Group FULL
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V208               0.655      0.051     12.751      0.000
+    V209               0.271      0.028      9.750      0.000
+    V210               0.356      0.032     11.170      0.000
+    V211               0.031      0.010      3.195      0.001
+
+Group SHORT
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    V208               0.607      0.039     15.506      0.000
+    V209               0.259      0.024     10.771      0.000
+    V210               0.351      0.028     12.617      0.000
+    V211               0.029      0.009      3.360      0.001
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.214E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group FULL
+
+
+No modification indices above the minimum value.
+
+Group SHORT
+
+
+WITH Statements
+
+V211     WITH V208                17.916    -0.198     -0.198       -0.176
+V211     WITH V209                15.204     0.195      0.195        0.112
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v208_
+
+     Beginning Time:  14:40:11
+        Ending Time:  14:40:12
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

@@ -1,0 +1,166 @@
+TITLE: Your title goes here
+ 
+ DATA: FILE = eq/data.dta;
+ 
+ VARIABLE: 
+ 
+ NAMES = id_cocas weight comp_mode comp_len mode mm_matrix_group wei_mmf v2 v3 v4 v32
+     v33 v34 v35 v36 v37 v46 v47 v48 v49 v50 v65 v66 v67 v68 v69 v70 v82 v83 v84 v98
+     v99 v100 v101 v103 v104 v105 v106 v107 v115 v116 v117 v118 v119 v120 v121 v122
+     v123 v124 v125 v126 v127 v128 v129 v130 v131 v132 v133 v134 v135 v136 v137 v138
+     v139 v140 v141 v145 v146 v147 v148 v149 v150 v151 v152 v153 v154 v155 v156 v157
+     v158 v159 v160 v161 v162 v163 v164 v165 v166 v167 v176 v177 v178 v179 v180 v181
+     v182 v183 v185 v186 v187 v188 v189 v191 v192 v193 v194 v195 v196 v197 v199 v200
+     v201 v202 v203 v205 v206 v207 v208 v209 v210 v211 v212 v213 v214 v215 v216 v217
+     v218 v220 v221 v222 v223 v224 v267 v268 v269 v271 v272 v273; 
+ 
+ MISSING=.;
+ 
+ USEVARIABLES ARE 
+ v176 
+ v177 
+ v178 
+ v179 
+ v180 
+ v181 
+ v182 
+ v183;
+  
+ CATEGORICAL ARE 
+ v176 
+ v177 
+ v178 
+ v179 
+ v180 
+ v181 
+ v182 
+ v183;
+ 
+ GROUPING IS comp_len (0=full 1=short);
+
+
+ Analysis: 
+
+                ESTIMATOR = WLSMV;
+
+                ITERATIONS = 100000;
+
+                PARAMETERIZATION = THETA;
+
+Model: 
+
+
+f1 BY v176@1
+v177 (L2)
+v178 (L3)
+v179 (L4)
+v180 (L5)
+v181 (L6)
+v182 (L7)
+v183 (L8)
+;
+
+
+[v176$1] (t_v176_1);
+[v176$2] (t_v176_2);
+[v176$3] (t_v176_3);
+
+ [f1@0];
+[v177$1] (t_v177_1);
+[v177$2] (t_v177_2_full);
+[v177$3] (t_v177_3_full);
+
+ [f1@0];
+[v178$1] (t_v178_1);
+[v178$2] (t_v178_2_full);
+[v178$3] (t_v178_3_full);
+
+ [f1@0];
+[v179$1] (t_v179_1);
+[v179$2] (t_v179_2_full);
+[v179$3] (t_v179_3_full);
+
+ [f1@0];
+[v180$1] (t_v180_1);
+[v180$2] (t_v180_2_full);
+[v180$3] (t_v180_3_full);
+
+ [f1@0];
+[v181$1] (t_v181_1);
+[v181$2] (t_v181_2_full);
+[v181$3] (t_v181_3_full);
+
+ [f1@0];
+[v182$1] (t_v182_1);
+[v182$2] (t_v182_2_full);
+[v182$3] (t_v182_3_full);
+
+ [f1@0];
+[v183$1] (t_v183_1);
+[v183$2] (t_v183_2_full);
+[v183$3] (t_v183_3_full);
+
+ [f1@0];
+
+Model short:
+
+f1 BY v176@1
+v177 (L2)
+v178 (L3)
+v179 (L4)
+v180 (L5)
+v181 (L6)
+v182 (L7)
+v183 (L8)
+;
+
+
+[v176$1] (t_v176_1);
+[v176$2] (t_v176_2);
+[v176$3] (t_v176_3);
+
+ [f1@0];
+[v177$1] (t_v177_1);
+[v177$2] (t_v177_2_short);
+[v177$3] (t_v177_3_short);
+
+ [f1@0];
+[v178$1] (t_v178_1);
+[v178$2] (t_v178_2_short);
+[v178$3] (t_v178_3_short);
+
+ [f1@0];
+[v179$1] (t_v179_1);
+[v179$2] (t_v179_2_short);
+[v179$3] (t_v179_3_short);
+
+ [f1@0];
+[v180$1] (t_v180_1);
+[v180$2] (t_v180_2_short);
+[v180$3] (t_v180_3_short);
+
+ [f1@0];
+[v181$1] (t_v181_1);
+[v181$2] (t_v181_2_short);
+[v181$3] (t_v181_3_short);
+
+ [f1@0];
+[v182$1] (t_v182_1);
+[v182$2] (t_v182_2_short);
+[v182$3] (t_v182_3_short);
+
+ [f1@0];
+[v183$1] (t_v183_1);
+[v183$2] (t_v183_2_short);
+[v183$3] (t_v183_3_short);
+
+ [f1@0];
+
+ SAVEDATA: DIFFTEST IS v176_metric.dat;
+ 
+ OUTPUT: SAMPSTAT; 
+
+                                MODINDICES; 
+
+                                STDYX; 
+
