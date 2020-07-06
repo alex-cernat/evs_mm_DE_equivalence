@@ -12,6 +12,7 @@ Using an experiment in the European Value Study Germany we do the following comp
 - [x] alternative quality indicators (Tobias/Pablo)
 - [x] create weights (Tobias will do the weights)
 - [x] check scales fit and choose for invariance (Alex)
+- [ ] check scales fit and choose for invariance (Alex)
 - [ ] do invariance testing (Alex)
 - [ ] write intro and lit review (Joe)
 - [ ] write data section (Tobias/Pablo)
