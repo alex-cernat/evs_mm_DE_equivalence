@@ -266,7 +266,7 @@ fit_eq <- fit_eq %>%
   arrange(Topic, group, model) %>%
   group_by(Topic, group) %>%
   mutate(CFI_dif = CFI - lag(CFI),
-         sig_CFI = CFI_dif > 0.01,
+         sig_CFI = CFI_dif < -0.01,
          group = ifelse(group == "len", "Length", "Mode design")) %>%
   ungroup()
 
@@ -276,7 +276,11 @@ count(fit_eq, Topic) %>%
 fit_eq %>%
   count(group, model, sig_CFI)
 
+fit_eq %>%
+  filter(sig_CFI == T) %>%
+  View()
+
 # save fit
 
-write_csv(fit_cfa, "./data/clean/eq_fit.csv")
+write_csv(fit_eq, "./data/clean/eq_fit.csv")
 
