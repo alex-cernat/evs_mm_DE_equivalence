@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-07/06/2020   1:52 PM
+07/13/2020   8:31 AM
 
 INPUT INSTRUCTIONS
 
@@ -30,6 +30,11 @@ INPUT INSTRUCTIONS
 
    GROUPING IS comp_len (0=full 1=short);
 
+  WEIGHT IS weight;
+
+   Analysis:
+
+                  ESTIMATOR = MLR;
   Model:
 
 
@@ -39,12 +44,12 @@ INPUT INSTRUCTIONS
   v140 (L4)
   ;
 
-  [v134] (i1_full);
+
+   [f1@0];[v134] (i1_full);
   [v137] (i2_full);
   [v139] (i3_full);
   [v140] (i4_full);
 
-   [f1@0];
 
   Model short:
 
@@ -54,12 +59,12 @@ INPUT INSTRUCTIONS
   v140 (L4)
   ;
 
-  [v134] (i1_short);
+
+   [f1@0];[v134] (i1_short);
   [v137] (i2_short);
   [v139] (i3_short);
   [v140] (i4_short);
 
-   [f1@0];
 
    SAVEDATA: DIFFTEST IS v134_metric.dat;
 
@@ -112,8 +117,9 @@ Continuous latent variables
 Variables with special functions
 
   Grouping variable     COMP_LEN
+  Weight variable       WEIGHT
 
-Estimator                                                       ML
+Estimator                                                      MLR
 Information matrix                                        OBSERVED
 Maximum number of iterations                                  1000
 Convergence criterion                                    0.500D-04
@@ -174,25 +180,25 @@ SAMPLE STATISTICS
            Means
               V134          V137          V139          V140
               ________      ________      ________      ________
-                1.699         2.547         5.416         2.574
+                1.828         2.719         5.655         2.650
 
 
            Covariances
               V134          V137          V139          V140
               ________      ________      ________      ________
- V134           2.643
- V137           1.028         5.954
- V139           0.413         1.326        10.058
- V140           1.418         1.372         0.923         5.350
+ V134           2.939
+ V137           1.133         6.450
+ V139           0.367         1.407         9.814
+ V140           1.494         1.432         0.965         5.476
 
 
            Correlations
               V134          V137          V139          V140
               ________      ________      ________      ________
  V134           1.000
- V137           0.259         1.000
- V139           0.080         0.171         1.000
- V140           0.377         0.243         0.126         1.000
+ V137           0.260         1.000
+ V139           0.068         0.177         1.000
+ V140           0.372         0.241         0.132         1.000
 
 
      ESTIMATED SAMPLE STATISTICS FOR SHORT
@@ -201,28 +207,28 @@ SAMPLE STATISTICS
            Means
               V134          V137          V139          V140
               ________      ________      ________      ________
-                1.764         2.485         5.785         2.650
+                1.889         2.624         6.015         2.807
 
 
            Covariances
               V134          V137          V139          V140
               ________      ________      ________      ________
- V134           3.215
- V137           1.376         5.977
- V139           0.564         0.864        10.144
- V140           1.321         1.752         0.945         5.732
+ V134           3.727
+ V137           1.607         6.495
+ V139           0.780         0.940         9.870
+ V140           1.637         1.997         1.011         6.351
 
 
            Correlations
               V134          V137          V139          V140
               ________      ________      ________      ________
  V134           1.000
- V137           0.314         1.000
- V139           0.099         0.111         1.000
- V140           0.308         0.299         0.124         1.000
+ V137           0.327         1.000
+ V139           0.129         0.117         1.000
+ V140           0.336         0.311         0.128         1.000
 
 
-     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -18450.596
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -18614.551
 
 
 UNIVARIATE SAMPLE STATISTICS
@@ -233,14 +239,14 @@ UNIVARIATE SAMPLE STATISTICS
          Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
         Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
 
-     V134                  1.694       2.887       1.000   76.44%       1.000      1.000      1.000
-             607.000       2.634       8.629      10.000    0.66%       1.000      2.000
-     V137                  2.540       1.610       1.000   59.53%       1.000      1.000      1.000
-             593.000       5.948       1.571      10.000    2.53%       2.000      4.000
-     V139                  5.424      -0.004       1.000   18.56%       2.000      4.000      5.000
-             609.000      10.064      -1.351      10.000   15.93%       7.000      9.000
-     V140                  2.544       1.481       1.000   55.08%       1.000      1.000      1.000
-             610.000       5.245       1.203      10.000    1.48%       2.000      5.000
+     V134                  1.818       2.450       1.000   76.44%       1.000      1.000      1.000
+             607.000       2.929       5.892      10.000    0.66%       1.000      2.000
+     V137                  2.710       1.466       1.000   59.53%       1.000      1.000      1.000
+             593.000       6.448       1.099      10.000    2.53%       2.000      4.000
+     V139                  5.661      -0.136       1.000   18.56%       2.000      4.000      5.000
+             609.000       9.821      -1.302      10.000   15.93%       7.000      9.000
+     V140                  2.609       1.405       1.000   55.08%       1.000      1.000      1.000
+             610.000       5.365       0.964      10.000    1.48%       2.000      5.000
 
 
      UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR SHORT
@@ -248,14 +254,14 @@ UNIVARIATE SAMPLE STATISTICS
          Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
         Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
 
-     V134                  1.746       2.967       1.000   76.51%       1.000      1.000      1.000
-            1439.000       3.198       8.855      10.000    1.74%       1.000      2.000
-     V137                  2.467       1.770       1.000   60.55%       1.000      1.000      1.000
-            1412.000       5.947       2.196      10.000    3.97%       1.000      4.000
-     V139                  5.785      -0.140       1.000   16.11%       2.000      5.000      6.000
-            1471.000      10.146      -1.322      10.000   19.51%       7.000      9.000
-     V140                  2.631       1.432       1.000   56.32%       1.000      1.000      1.000
-            1447.000       5.701       1.113      10.000    2.35%       2.000      5.000
+     V134                  1.864       2.656       1.000   76.51%       1.000      1.000      1.000
+            1439.000       3.696       6.759      10.000    1.74%       1.000      2.000
+     V137                  2.604       1.638       1.000   60.55%       1.000      1.000      1.000
+            1412.000       6.466       1.671      10.000    3.97%       1.000      4.000
+     V139                  6.015      -0.246       1.000   16.11%       2.000      5.000      6.000
+            1471.000       9.870      -1.250      10.000   19.51%       7.000      9.000
+     V140                  2.783       1.326       1.000   56.32%       1.000      1.000      1.000
+            1447.000       6.310       0.738      10.000    2.35%       2.000      5.000
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
@@ -268,47 +274,58 @@ Number of Free Parameters                       21
 
 Loglikelihood
 
-          H0 Value                      -18456.347
-          H1 Value                      -18450.596
+          H0 Value                      -18619.989
+          H0 Scaling Correction Factor      2.0200
+            for MLR
+          H1 Value                      -18614.551
+          H1 Scaling Correction Factor      1.8656
+            for MLR
 
 Information Criteria
 
-          Akaike (AIC)                   36954.694
-          Bayesian (BIC)                 37074.007
-          Sample-Size Adjusted BIC       37007.287
+          Akaike (AIC)                   37281.979
+          Bayesian (BIC)                 37401.292
+          Sample-Size Adjusted BIC       37334.572
             (n* = (n + 2) / 24)
 
 Chi-Square Test of Model Fit
 
-          Value                             11.502
+          Value                              7.756*
           Degrees of Freedom                     7
-          P-Value                           0.1182
+          P-Value                           0.3546
+          Scaling Correction Factor         1.4023
+            for MLR
 
 Chi-Square Contribution From Each Group
 
-          FULL                               9.754
-          SHORT                              1.747
+          FULL                               7.470
+          SHORT                              0.286
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
 
 RMSEA (Root Mean Square Error Of Approximation)
 
-          Estimate                           0.024
-          90 Percent C.I.                    0.000  0.049
-          Probability RMSEA <= .05           0.960
+          Estimate                           0.010
+          90 Percent C.I.                    0.000  0.040
+          Probability RMSEA <= .05           0.993
 
 CFI/TLI
 
-          CFI                                0.991
-          TLI                                0.985
+          CFI                                0.998
+          TLI                                0.996
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                            515.217
+          Value                            316.391
           Degrees of Freedom                    12
           P-Value                           0.0000
 
 SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.018
+          Value                              0.017
 
 
 
@@ -321,53 +338,53 @@ Group FULL
 
  F1       BY
     V134               1.000      0.000    999.000    999.000
-    V137               1.260      0.109     11.528      0.000
-    V139               0.653      0.103      6.331      0.000
-    V140               1.338      0.116     11.534      0.000
+    V137               1.183      0.150      7.872      0.000
+    V139               0.610      0.104      5.837      0.000
+    V140               1.280      0.156      8.180      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Intercepts
-    V134               1.699      0.066     25.904      0.000
-    V137               2.544      0.101     25.152      0.000
-    V139               5.419      0.128     42.266      0.000
-    V140               2.570      0.093     27.770      0.000
+    V134               1.827      0.082     22.407      0.000
+    V137               2.716      0.118     22.973      0.000
+    V139               5.657      0.137     41.207      0.000
+    V140               2.646      0.106     25.058      0.000
 
  Variances
-    F1                 0.926      0.133      6.945      0.000
+    F1                 1.056      0.249      4.245      0.000
 
  Residual Variances
-    V134               1.703      0.148     11.525      0.000
-    V137               4.645      0.327     14.190      0.000
-    V139               9.626      0.565     17.030      0.000
-    V140               3.595      0.293     12.277      0.000
+    V134               1.882      0.314      5.993      0.000
+    V137               5.085      0.519      9.791      0.000
+    V139               9.402      0.382     24.620      0.000
+    V140               3.666      0.443      8.269      0.000
 
 Group SHORT
 
  F1       BY
     V134               1.000      0.000    999.000    999.000
-    V137               1.260      0.109     11.528      0.000
-    V139               0.653      0.103      6.331      0.000
-    V140               1.338      0.116     11.534      0.000
+    V137               1.183      0.150      7.872      0.000
+    V139               0.610      0.104      5.837      0.000
+    V140               1.280      0.156      8.180      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Intercepts
-    V134               1.764      0.047     37.379      0.000
-    V137               2.484      0.064     38.533      0.000
-    V139               5.785      0.083     69.627      0.000
-    V140               2.650      0.063     42.076      0.000
+    V134               1.889      0.064     29.671      0.000
+    V137               2.623      0.080     32.661      0.000
+    V139               6.015      0.091     66.393      0.000
+    V140               2.808      0.079     35.355      0.000
 
  Variances
-    F1                 1.031      0.124      8.318      0.000
+    F1                 1.312      0.291      4.512      0.000
 
  Residual Variances
-    V134               2.191      0.127     17.281      0.000
-    V137               4.277      0.228     18.738      0.000
-    V139               9.722      0.370     26.277      0.000
-    V140               3.923      0.226     17.333      0.000
+    V134               2.415      0.270      8.954      0.000
+    V137               4.614      0.392     11.777      0.000
+    V139               9.392      0.266     35.308      0.000
+    V140               4.236      0.377     11.237      0.000
 
 
 STANDARDIZED MODEL RESULTS
@@ -381,54 +398,54 @@ STDYX Standardization
 Group FULL
 
  F1       BY
-    V134               0.593      0.038     15.483      0.000
-    V137               0.490      0.033     14.650      0.000
-    V139               0.198      0.030      6.638      0.000
-    V140               0.562      0.039     14.400      0.000
+    V134               0.600      0.061      9.869      0.000
+    V137               0.474      0.049      9.597      0.000
+    V139               0.200      0.032      6.198      0.000
+    V140               0.566      0.058      9.794      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Intercepts
-    V134               1.048      0.050     21.029      0.000
-    V137               1.029      0.050     20.489      0.000
-    V139               1.712      0.063     27.148      0.000
-    V140               1.121      0.051     22.116      0.000
+    V134               1.066      0.034     31.228      0.000
+    V137               1.060      0.028     37.341      0.000
+    V139               1.808      0.058     30.934      0.000
+    V140               1.139      0.028     40.329      0.000
 
  Variances
     F1                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    V134               0.648      0.045     14.248      0.000
-    V137               0.760      0.033     23.171      0.000
-    V139               0.961      0.012     81.036      0.000
-    V140               0.684      0.044     15.608      0.000
+    V134               0.641      0.073      8.793      0.000
+    V137               0.775      0.047     16.515      0.000
+    V139               0.960      0.013     74.261      0.000
+    V140               0.679      0.065     10.381      0.000
 
 Group SHORT
 
  F1       BY
-    V134               0.566      0.031     18.444      0.000
-    V137               0.526      0.031     16.937      0.000
-    V139               0.208      0.029      7.050      0.000
-    V140               0.566      0.030     18.553      0.000
+    V134               0.593      0.052     11.490      0.000
+    V137               0.534      0.046     11.632      0.000
+    V139               0.222      0.033      6.811      0.000
+    V140               0.580      0.047     12.315      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Intercepts
-    V134               0.983      0.032     30.912      0.000
-    V137               1.022      0.032     31.493      0.000
-    V139               1.815      0.042     42.910      0.000
-    V140               1.103      0.033     33.362      0.000
+    V134               0.978      0.022     45.182      0.000
+    V137               1.033      0.017     61.340      0.000
+    V139               1.914      0.041     46.733      0.000
+    V140               1.111      0.019     58.794      0.000
 
  Variances
     F1                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    V134               0.680      0.035     19.592      0.000
-    V137               0.723      0.033     22.136      0.000
-    V139               0.957      0.012     78.004      0.000
-    V140               0.680      0.035     19.696      0.000
+    V134               0.648      0.061     10.572      0.000
+    V137               0.715      0.049     14.613      0.000
+    V139               0.951      0.014     65.585      0.000
+    V140               0.663      0.055     12.137      0.000
 
 
 R-SQUARE
@@ -438,25 +455,25 @@ Group FULL
     Observed                                        Two-Tailed
     Variable        Estimate       S.E.  Est./S.E.    P-Value
 
-    V134               0.352      0.045      7.742      0.000
-    V137               0.240      0.033      7.325      0.000
-    V139               0.039      0.012      3.319      0.001
-    V140               0.316      0.044      7.200      0.000
+    V134               0.359      0.073      4.935      0.000
+    V137               0.225      0.047      4.799      0.000
+    V139               0.040      0.013      3.099      0.002
+    V140               0.321      0.065      4.897      0.000
 
 Group SHORT
 
     Observed                                        Two-Tailed
     Variable        Estimate       S.E.  Est./S.E.    P-Value
 
-    V134               0.320      0.035      9.222      0.000
-    V137               0.277      0.033      8.469      0.000
-    V139               0.043      0.012      3.525      0.000
-    V140               0.320      0.035      9.277      0.000
+    V134               0.352      0.061      5.745      0.000
+    V137               0.285      0.049      5.816      0.000
+    V139               0.049      0.014      3.405      0.001
+    V140               0.337      0.055      6.158      0.000
 
 
 QUALITY OF NUMERICAL RESULTS
 
-     Condition Number for the Information Matrix              0.138E-01
+     Condition Number for the Information Matrix              0.109E-01
        (ratio of smallest to largest eigenvalue)
 
 
@@ -489,9 +506,9 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v134_
 
-     Beginning Time:  13:52:53
-        Ending Time:  13:52:54
-       Elapsed Time:  00:00:01
+     Beginning Time:  08:31:37
+        Ending Time:  08:31:37
+       Elapsed Time:  00:00:00
 
 
 

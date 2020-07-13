@@ -23,6 +23,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_mode (0=sm 1=mm);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -31,11 +36,11 @@ v218 (L2)
 v220 (L3)
 ;
 
-[v217] (i1_sm);
+
+ [f1@0];[v217] (i1_sm);
 [v218] (i2_sm);
 [v220] (i3_sm);
 
- [f1@0];
 
 Model mm:
 
@@ -44,11 +49,11 @@ v218 (L2)
 v220 (L3)
 ;
 
-[v217] (i1_mm);
+
+ [f1@0];[v217] (i1_mm);
 [v218] (i2_mm);
 [v220] (i3_mm);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v217_metric.dat;
  

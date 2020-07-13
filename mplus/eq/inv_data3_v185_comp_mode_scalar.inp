@@ -24,6 +24,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_mode (0=sm 1=mm);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -33,12 +38,12 @@ v187 (L3)
 v188 (L4)
 ;
 
-[v185] (i1);
+
+ [f1@0];[v185] (i1);
 [v186] (i2);
 [v187] (i3);
 [v188] (i4);
 
- [f1@0];
 
 Model mm:
 
@@ -48,12 +53,12 @@ v187 (L3)
 v188 (L4)
 ;
 
-[v185] (i1);
+
+ [f1@0];[v185] (i1);
 [v186] (i2);
 [v187] (i3);
 [v188] (i4);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v185_scalar.dat;
  

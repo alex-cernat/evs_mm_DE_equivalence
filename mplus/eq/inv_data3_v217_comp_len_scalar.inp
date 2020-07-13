@@ -23,6 +23,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -31,11 +36,11 @@ v218 (L2)
 v220 (L3)
 ;
 
-[v217] (i1);
+
+ [f1@0];[v217] (i1);
 [v218] (i2);
 [v220] (i3);
 
- [f1@0];
 
 Model short:
 
@@ -44,11 +49,11 @@ v218 (L2)
 v220 (L3)
 ;
 
-[v217] (i1);
+
+ [f1@0];[v217] (i1);
 [v218] (i2);
 [v220] (i3);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v217_scalar.dat;
  

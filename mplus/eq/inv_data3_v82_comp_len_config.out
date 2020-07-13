@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-07/06/2020   1:55 PM
+07/13/2020   8:45 AM
 
 INPUT INSTRUCTIONS
 
@@ -29,6 +29,13 @@ INPUT INSTRUCTIONS
 
    GROUPING IS comp_len (0=full 1=short);
 
+  !WEIGHT IS weight;
+
+   Analysis:
+                  ESTIMATOR = ML;
+
+
+
   Model:
 
 
@@ -37,11 +44,11 @@ INPUT INSTRUCTIONS
   v84 (L3_full)
   ;
 
-  [v82] (i1_full);
+
+   [f1@0];[v82] (i1_full);
   [v83] (i2_full);
   [v84] (i3_full);
 
-   [f1@0];
 
   Model short:
 
@@ -50,11 +57,11 @@ INPUT INSTRUCTIONS
   v84 (L3_short)
   ;
 
-  [v82] (i1_short);
+
+   [f1@0];[v82] (i1_short);
   [v83] (i2_short);
   [v84] (i3_short);
 
-   [f1@0];
 
    SAVEDATA: DIFFTEST IS v82_config.dat;
 
@@ -460,8 +467,8 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v82_c
 
-     Beginning Time:  13:55:14
-        Ending Time:  13:55:15
+     Beginning Time:  08:45:50
+        Ending Time:  08:45:51
        Elapsed Time:  00:00:01
 
 

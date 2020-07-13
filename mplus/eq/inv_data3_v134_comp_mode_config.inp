@@ -24,6 +24,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_mode (0=sm 1=mm);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -33,12 +38,12 @@ v139 (L3_sm)
 v140 (L4_sm)
 ;
 
-[v134] (i1_sm);
+
+ [f1@0];[v134] (i1_sm);
 [v137] (i2_sm);
 [v139] (i3_sm);
 [v140] (i4_sm);
 
- [f1@0];
 
 Model mm:
 
@@ -48,12 +53,12 @@ v139 (L3_mm)
 v140 (L4_mm)
 ;
 
-[v134] (i1_mm);
+
+ [f1@0];[v134] (i1_mm);
 [v137] (i2_mm);
 [v139] (i3_mm);
 [v140] (i4_mm);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v134_config.dat;
  

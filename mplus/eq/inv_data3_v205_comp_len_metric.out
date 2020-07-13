@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-07/06/2020   2:43 PM
+07/13/2020   8:29 AM
 
 INPUT INSTRUCTIONS
 
@@ -34,6 +34,7 @@ INPUT INSTRUCTIONS
 
    GROUPING IS comp_len (0=full 1=short);
 
+  WEIGHT IS weight;
 
    Analysis:
 
@@ -52,21 +53,19 @@ INPUT INSTRUCTIONS
   ;
 
 
+   [f1@0];
   [v205$1] (t_v205_1);
   [v205$2] (t_v205_2);
   [v205$3] (t_v205_3);
 
-   [f1@0];
   [v206$1] (t_v206_1);
   [v206$2] (t_v206_2_full);
   [v206$3] (t_v206_3_full);
 
-   [f1@0];
   [v207$1] (t_v207_1);
   [v207$2] (t_v207_2_full);
   [v207$3] (t_v207_3_full);
 
-   [f1@0];
 
   Model short:
 
@@ -76,21 +75,19 @@ INPUT INSTRUCTIONS
   ;
 
 
+   [f1@0];
   [v205$1] (t_v205_1);
   [v205$2] (t_v205_2);
   [v205$3] (t_v205_3);
 
-   [f1@0];
   [v206$1] (t_v206_1);
   [v206$2] (t_v206_2_short);
   [v206$3] (t_v206_3_short);
 
-   [f1@0];
   [v207$1] (t_v207_1);
   [v207$2] (t_v207_2_short);
   [v207$3] (t_v207_3_short);
 
-   [f1@0];
 
    SAVEDATA: DIFFTEST IS v205_metric.dat;
 
@@ -140,6 +137,7 @@ Continuous latent variables
 Variables with special functions
 
   Grouping variable     COMP_LEN
+  Weight variable       WEIGHT
 
 Estimator                                                    WLSMV
 Maximum number of iterations                                100000
@@ -196,37 +194,37 @@ UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
 
   Group FULL
     V205
-      Category 1    0.236          152.000
-      Category 2    0.455          293.000
-      Category 3    0.188          121.000
-      Category 4    0.121           78.000
+      Category 1    0.231          147.921
+      Category 2    0.454          291.259
+      Category 3    0.190          121.917
+      Category 4    0.125           79.852
     V206
-      Category 1    0.048           31.000
-      Category 2    0.196          126.000
-      Category 3    0.349          225.000
-      Category 4    0.407          262.000
+      Category 1    0.051           32.439
+      Category 2    0.179          114.588
+      Category 3    0.347          221.726
+      Category 4    0.423          270.558
     V207
-      Category 1    0.039           25.000
-      Category 2    0.139           89.000
-      Category 3    0.286          183.000
-      Category 4    0.536          343.000
+      Category 1    0.039           24.897
+      Category 2    0.135           85.720
+      Category 3    0.292          185.499
+      Category 4    0.534          339.352
 
   Group SHORT
     V205
-      Category 1    0.275          414.000
-      Category 2    0.416          626.000
-      Category 3    0.167          251.000
-      Category 4    0.143          215.000
+      Category 1    0.259          388.615
+      Category 2    0.405          607.272
+      Category 3    0.172          257.376
+      Category 4    0.164          246.494
     V206
-      Category 1    0.072          109.000
-      Category 2    0.239          360.000
-      Category 3    0.306          460.000
-      Category 4    0.383          576.000
+      Category 1    0.076          113.650
+      Category 2    0.237          356.857
+      Category 3    0.295          443.850
+      Category 4    0.392          589.694
     V207
-      Category 1    0.050           75.000
-      Category 2    0.141          212.000
-      Category 3    0.267          401.000
-      Category 4    0.543          816.000
+      Category 1    0.054           81.285
+      Category 2    0.155          233.088
+      Category 3    0.258          388.066
+      Category 4    0.533          803.195
 
 
 SAMPLE STATISTICS
@@ -238,21 +236,21 @@ SAMPLE STATISTICS
            MEANS/INTERCEPTS/THRESHOLDS
               V205$1        V205$2        V205$3        V206$1        V206$2
               ________      ________      ________      ________      ________
-               -0.719         0.499         1.169        -1.663        -0.694
+               -0.736         0.482         1.152        -1.638        -0.739
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V206$3        V207$1        V207$2        V207$3
               ________      ________      ________      ________
-                0.236        -1.762        -0.923        -0.090
+                0.194        -1.760        -0.938        -0.085
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
               V205          V206          V207
               ________      ________      ________
  V205
- V206           0.555
- V207           0.450         0.691
+ V206           0.558
+ V207           0.413         0.694
 
 
      ESTIMATED SAMPLE STATISTICS FOR SHORT
@@ -261,24 +259,32 @@ SAMPLE STATISTICS
            MEANS/INTERCEPTS/THRESHOLDS
               V205$1        V205$2        V205$3        V206$1        V206$2
               ________      ________      ________      ________      ________
-               -0.598         0.497         1.068        -1.458        -0.491
+               -0.646         0.423         0.977        -1.436        -0.488
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V206$3        V207$1        V207$2        V207$3
               ________      ________      ________      ________
-                0.298        -1.646        -0.875        -0.107
+                0.274        -1.607        -0.811        -0.084
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
               V205          V206          V207
               ________      ________      ________
  V205
- V206           0.657
- V207           0.503         0.728
+ V206           0.679
+ V207           0.498         0.725
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     WARNING:  THE RESIDUAL COVARIANCE MATRIX (THETA) IN GROUP SHORT IS NOT
+     POSITIVE DEFINITE.  THIS COULD INDICATE A NEGATIVE VARIANCE/RESIDUAL
+     VARIANCE FOR AN OBSERVED VARIABLE, A CORRELATION GREATER OR EQUAL TO ONE
+     BETWEEN TWO OBSERVED VARIABLES, OR A LINEAR DEPENDENCY AMONG MORE THAN TWO
+     OBSERVED VARIABLES.  CHECK THE RESULTS SECTION FOR MORE INFORMATION.
+     PROBLEM INVOLVING VARIABLE V206.
+
 
 
 
@@ -288,14 +294,14 @@ Number of Free Parameters                       20
 
 Chi-Square Test of Model Fit
 
-          Value                              3.613*
+          Value                              3.661*
           Degrees of Freedom                     4
-          P-Value                           0.4609
+          P-Value                           0.4538
 
 Chi-Square Contribution From Each Group
 
-          FULL                               2.585
-          SHORT                              1.028
+          FULL                               2.569
+          SHORT                              1.092
 
 *   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
     for chi-square difference testing in the regular way.  MLM, MLR and WLSM
@@ -305,8 +311,8 @@ Chi-Square Contribution From Each Group
 RMSEA (Root Mean Square Error Of Approximation)
 
           Estimate                           0.000
-          90 Percent C.I.                    0.000  0.043
-          Probability RMSEA <= .05           0.979
+          90 Percent C.I.                    0.000  0.044
+          Probability RMSEA <= .05           0.978
 
 CFI/TLI
 
@@ -315,13 +321,13 @@ CFI/TLI
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                           4713.261
+          Value                           3545.393
           Degrees of Freedom                     6
           P-Value                           0.0000
 
 WRMR (Weighted Root Mean Square Residual)
 
-          Value                              0.526
+          Value                              0.528
 
 
 
@@ -334,25 +340,25 @@ Group FULL
 
  F1       BY
     V205               1.000      0.000    999.000    999.000
-    V206               3.629      0.997      3.640      0.000
-    V207               1.342      0.101     13.302      0.000
+    V206               4.768      2.461      1.938      0.053
+    V207               1.284      0.104     12.336      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.846      0.052    -16.340      0.000
-    V205$2             0.663      0.046     14.447      0.000
-    V205$3             1.464      0.074     19.761      0.000
-    V206$1            -4.977      1.196     -4.162      0.000
-    V206$2            -2.085      0.521     -4.006      0.000
-    V206$3             0.708      0.194      3.660      0.000
-    V207$1            -2.636      0.141    -18.665      0.000
-    V207$2            -1.336      0.096    -13.873      0.000
-    V207$3            -0.131      0.073     -1.803      0.071
+    V205$1            -0.908      0.062    -14.585      0.000
+    V205$2             0.596      0.051     11.585      0.000
+    V205$3             1.391      0.085     16.416      0.000
+    V206$1            -6.331      2.991     -2.117      0.034
+    V206$2            -2.818      1.351     -2.086      0.037
+    V206$3             0.739      0.361      2.048      0.041
+    V207$1            -2.577      0.158    -16.283      0.000
+    V207$2            -1.321      0.107    -12.361      0.000
+    V207$3            -0.120      0.078     -1.530      0.126
 
  Variances
-    F1                 0.609      0.088      6.942      0.000
+    F1                 0.595      0.102      5.851      0.000
 
  Residual Variances
     V205               1.000      0.000    999.000    999.000
@@ -363,30 +369,30 @@ Group SHORT
 
  F1       BY
     V205               1.000      0.000    999.000    999.000
-    V206               3.629      0.997      3.640      0.000
-    V207               1.342      0.101     13.302      0.000
+    V206               4.768      2.461      1.938      0.053
+    V207               1.284      0.104     12.336      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.846      0.052    -16.340      0.000
-    V205$2             0.663      0.046     14.447      0.000
-    V205$3             1.464      0.074     19.761      0.000
-    V206$1            -4.977      1.196     -4.162      0.000
-    V206$2            -1.674      0.416     -4.024      0.000
-    V206$3             1.017      0.282      3.604      0.000
-    V207$1            -2.636      0.141    -18.665      0.000
-    V207$2            -1.422      0.095    -14.911      0.000
-    V207$3            -0.174      0.053     -3.291      0.001
+    V205$1            -0.908      0.062    -14.585      0.000
+    V205$2             0.596      0.051     11.585      0.000
+    V205$3             1.391      0.085     16.416      0.000
+    V206$1            -6.331      2.991     -2.117      0.034
+    V206$2            -2.164      1.032     -2.096      0.036
+    V206$3             1.215      0.616      1.971      0.049
+    V207$1            -2.577      0.158    -16.283      0.000
+    V207$2            -1.328      0.105    -12.671      0.000
+    V207$3            -0.138      0.060     -2.301      0.021
 
  Variances
-    F1                 0.832      0.105      7.949      0.000
+    F1                 0.870      0.130      6.670      0.000
 
  Residual Variances
-    V205               1.024      0.114      8.970      0.000
-    V206               0.649      0.448      1.450      0.147
-    V207               1.143      0.145      7.883      0.000
+    V205               1.062      0.140      7.574      0.000
+    V206              -0.120      0.870     -0.138      0.890
+    V207               1.251      0.182      6.891      0.000
 
 
 STANDARDIZED MODEL RESULTS
@@ -400,60 +406,60 @@ STDYX Standardization
 Group FULL
 
  F1       BY
-    V205               0.615      0.028     22.344      0.000
-    V206               0.943      0.027     35.192      0.000
-    V207               0.723      0.024     30.154      0.000
+    V205               0.611      0.033     18.670      0.000
+    V206               0.965      0.033     29.630      0.000
+    V207               0.704      0.029     24.497      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.667      0.036    -18.512      0.000
-    V205$2             0.523      0.033     15.867      0.000
-    V205$3             1.154      0.048     23.935      0.000
-    V206$1            -1.657      0.079    -21.008      0.000
-    V206$2            -0.694      0.054    -12.863      0.000
-    V206$3             0.236      0.050      4.725      0.000
-    V207$1            -1.821      0.076    -23.972      0.000
-    V207$2            -0.923      0.058    -15.900      0.000
-    V207$3            -0.090      0.050     -1.821      0.069
+    V205$1            -0.719      0.042    -16.918      0.000
+    V205$2             0.472      0.037     12.726      0.000
+    V205$3             1.101      0.054     20.215      0.000
+    V206$1            -1.660      0.098    -16.924      0.000
+    V206$2            -0.739      0.061    -12.112      0.000
+    V206$3             0.194      0.056      3.462      0.001
+    V207$1            -1.831      0.087    -21.150      0.000
+    V207$2            -0.938      0.064    -14.631      0.000
+    V207$3            -0.085      0.055     -1.549      0.121
 
  Variances
     F1                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    V205               0.621      0.034     18.334      0.000
-    V206               0.111      0.051      2.193      0.028
-    V207               0.477      0.035     13.746      0.000
+    V205               0.627      0.040     15.676      0.000
+    V206               0.069      0.063      1.094      0.274
+    V207               0.505      0.040     12.485      0.000
 
 Group SHORT
 
  F1       BY
-    V205               0.670      0.019     35.846      0.000
-    V206               0.972      0.018     53.654      0.000
-    V207               0.753      0.018     40.779      0.000
+    V205               0.671      0.022     30.009      0.000
+    V206               1.003      0.021     47.679      0.000
+    V207               0.731      0.023     32.056      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.621      0.030    -21.032      0.000
-    V205$2             0.486      0.028     17.104      0.000
-    V205$3             1.074      0.036     29.938      0.000
-    V206$1            -1.460      0.048    -30.604      0.000
-    V206$2            -0.491      0.034    -14.549      0.000
-    V206$3             0.298      0.033      9.089      0.000
-    V207$1            -1.622      0.052    -31.366      0.000
-    V207$2            -0.875      0.037    -23.494      0.000
-    V207$3            -0.107      0.032     -3.300      0.001
+    V205$1            -0.654      0.033    -19.940      0.000
+    V205$2             0.429      0.032     13.477      0.000
+    V205$3             1.001      0.040     24.732      0.000
+    V206$1            -1.428      0.056    -25.696      0.000
+    V206$2            -0.488      0.038    -12.843      0.000
+    V206$3             0.274      0.037      7.399      0.000
+    V207$1            -1.573      0.061    -25.933      0.000
+    V207$2            -0.811      0.043    -18.875      0.000
+    V207$3            -0.084      0.037     -2.297      0.022
 
  Variances
     F1                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    V205               0.552      0.025     22.054      0.000
-    V206               0.056      0.035      1.589      0.112
-    V207               0.433      0.028     15.548      0.000
+    V205               0.550      0.030     18.312      0.000
+    V206              -0.006    999.000    999.000    999.000
+    V207               0.466      0.033     13.994      0.000
 
 
 R-SQUARE
@@ -463,23 +469,23 @@ Group FULL
     Observed                                        Two-Tailed     Scale
     Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
 
-    V205               0.379      0.034     11.172      0.000      0.788
-    V206               0.889      0.051     17.596      0.000      0.333
-    V207               0.523      0.035     15.077      0.000      0.691
+    V205               0.373      0.040      9.335      0.000      0.792
+    V206               0.931      0.063     14.815      0.000      0.262
+    V207               0.495      0.040     12.249      0.000      0.710
 
 Group SHORT
 
     Observed                                        Two-Tailed     Scale
     Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
 
-    V205               0.448      0.025     17.923      0.000      0.734
-    V206               0.944      0.035     26.827      0.000      0.293
-    V207               0.567      0.028     20.390      0.000      0.615
+    V205               0.450      0.030     15.005      0.000      0.720
+    V206            Undefined   0.10061E+01                        0.226
+    V207               0.534      0.033     16.028      0.000      0.610
 
 
 QUALITY OF NUMERICAL RESULTS
 
-     Condition Number for the Information Matrix              0.275E-03
+     Condition Number for the Information Matrix              0.918E-04
        (ratio of smallest to largest eigenvalue)
 
 
@@ -521,8 +527,8 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v205_
 
-     Beginning Time:  14:43:03
-        Ending Time:  14:43:03
+     Beginning Time:  08:29:08
+        Ending Time:  08:29:08
        Elapsed Time:  00:00:00
 
 

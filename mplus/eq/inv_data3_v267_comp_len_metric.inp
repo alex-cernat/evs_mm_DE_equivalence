@@ -34,7 +34,8 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
-
+WEIGHT IS weight; 
+ 
  Analysis: 
 
                 ESTIMATOR = WLSMV;
@@ -55,36 +56,31 @@ v273 (L6)
 ;
 
 
+ [f1@0];
 [v267$1] (t_v267_1);
 [v267$2] (t_v267_2);
 [v267$3] (t_v267_3);
 
- [f1@0];
 [v268$1] (t_v268_1);
 [v268$2] (t_v268_2_full);
 [v268$3] (t_v268_3_full);
 
- [f1@0];
 [v269$1] (t_v269_1);
 [v269$2] (t_v269_2_full);
 [v269$3] (t_v269_3_full);
 
- [f1@0];
 [v271$1] (t_v271_1);
 [v271$2] (t_v271_2_full);
 [v271$3] (t_v271_3_full);
 
- [f1@0];
 [v272$1] (t_v272_1);
 [v272$2] (t_v272_2_full);
 [v272$3] (t_v272_3_full);
 
- [f1@0];
 [v273$1] (t_v273_1);
 [v273$2] (t_v273_2_full);
 [v273$3] (t_v273_3_full);
 
- [f1@0];
 
 Model short:
 
@@ -97,36 +93,31 @@ v273 (L6)
 ;
 
 
+ [f1@0];
 [v267$1] (t_v267_1);
 [v267$2] (t_v267_2);
 [v267$3] (t_v267_3);
 
- [f1@0];
 [v268$1] (t_v268_1);
 [v268$2] (t_v268_2_short);
 [v268$3] (t_v268_3_short);
 
- [f1@0];
 [v269$1] (t_v269_1);
 [v269$2] (t_v269_2_short);
 [v269$3] (t_v269_3_short);
 
- [f1@0];
 [v271$1] (t_v271_1);
 [v271$2] (t_v271_2_short);
 [v271$3] (t_v271_3_short);
 
- [f1@0];
 [v272$1] (t_v272_1);
 [v272$2] (t_v272_2_short);
 [v272$3] (t_v272_3_short);
 
- [f1@0];
 [v273$1] (t_v273_1);
 [v273$2] (t_v273_2_short);
 [v273$3] (t_v273_3_short);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v267_metric.dat;
  

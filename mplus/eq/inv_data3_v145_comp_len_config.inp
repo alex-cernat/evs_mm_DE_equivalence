@@ -30,7 +30,8 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
-
+WEIGHT IS weight; 
+ 
  Analysis: 
 
                 ESTIMATOR = WLSMV;
@@ -49,26 +50,23 @@ v148 (L4_full)
 ;
 
 
+ [f1@0];
 [v145$1] (t_v145_1);
 [v145$2] (t_v145_2);
 [v145$3] (t_v145_3);
 
- [f1@0];
 [v146$1] (t_v146_1);
 [v146$2] (t_v146_2_full);
 [v146$3] (t_v146_3_full);
 
- [f1@0];
 [v147$1] (t_v147_1);
 [v147$2] (t_v147_2_full);
 [v147$3] (t_v147_3_full);
 
- [f1@0];
 [v148$1] (t_v148_1);
 [v148$2] (t_v148_2_full);
 [v148$3] (t_v148_3_full);
 
- [f1@0];
 
 Model short:
 
@@ -79,26 +77,23 @@ v148 (L4_short)
 ;
 
 
+ [f1@0];
 [v145$1] (t_v145_1);
 [v145$2] (t_v145_2);
 [v145$3] (t_v145_3);
 
- [f1@0];
 [v146$1] (t_v146_1);
 [v146$2] (t_v146_2_short);
 [v146$3] (t_v146_3_short);
 
- [f1@0];
 [v147$1] (t_v147_1);
 [v147$2] (t_v147_2_short);
 [v147$3] (t_v147_3_short);
 
- [f1@0];
 [v148$1] (t_v148_1);
 [v148$2] (t_v148_2_short);
 [v148$3] (t_v148_3_short);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v145_config.dat;
  

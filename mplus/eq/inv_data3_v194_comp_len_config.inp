@@ -30,7 +30,8 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
-
+WEIGHT IS weight; 
+ 
  Analysis: 
 
                 ESTIMATOR = WLSMV;
@@ -49,26 +50,23 @@ v197 (L4_full)
 ;
 
 
+ [f1@0];
 [v194$1] (t_v194_1);
 [v194$2] (t_v194_2);
 [v194$3] (t_v194_3);
 
- [f1@0];
 [v195$1] (t_v195_1);
 [v195$2] (t_v195_2_full);
 [v195$3] (t_v195_3_full);
 
- [f1@0];
 [v196$1] (t_v196_1);
 [v196$2] (t_v196_2_full);
 [v196$3] (t_v196_3_full);
 
- [f1@0];
 [v197$1] (t_v197_1);
 [v197$2] (t_v197_2_full);
 [v197$3] (t_v197_3_full);
 
- [f1@0];
 
 Model short:
 
@@ -79,26 +77,23 @@ v197 (L4_short)
 ;
 
 
+ [f1@0];
 [v194$1] (t_v194_1);
 [v194$2] (t_v194_2);
 [v194$3] (t_v194_3);
 
- [f1@0];
 [v195$1] (t_v195_1);
 [v195$2] (t_v195_2_short);
 [v195$3] (t_v195_3_short);
 
- [f1@0];
 [v196$1] (t_v196_1);
 [v196$2] (t_v196_2_short);
 [v196$3] (t_v196_3_short);
 
- [f1@0];
 [v197$1] (t_v197_1);
 [v197$2] (t_v197_2_short);
 [v197$3] (t_v197_3_short);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v194_config.dat;
  

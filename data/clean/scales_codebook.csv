@@ -1,10 +1,7 @@
 Code,Label,Topic,scale
-v1,how important in your life: work (Q1A),importance,4
 v2,how important in your life: family (Q1B),importance,4
 v3,how important in your life: friends and acquaintances (Q1C),importance,4
 v4,how important in your life: leisure time (Q1D),importance,4
-v5,how important in your life: politics (Q1E),importance,4
-v6,how important in your life: religion (Q1F),importance,4
 v32,how much you trust: your family (Q8A),trust_pl,4
 v33,how much you trust: people in your neighborhood (Q8B),trust_pl,4
 v34,how much you trust: people you know personally (Q8C),trust_pl,4
@@ -22,6 +19,9 @@ v67,important in marriage: good housing (Q23C),marriage,3
 v68,important in marriage: share household chores (Q23D),marriage,3
 v69,important in marriage: children (Q23E),marriage,3
 v70,important in marriage: time for friends and personal hobbies (Q23F),marriage,3
+v82,homosexual couples - as good parents as other couples (Q27A),traditional_family,5
+v83,duty towards society to have children (Q27B),traditional_family,5
+v84,It is childs duty to provide long-term care for parents (Q27C),traditional_family,5
 v98,political action: signing a petition (Q30A),action,3
 v99,political action: joining in boycotts (Q30B),action,3
 v100,political action: attending lawful demonstrations (Q30C),action,3
@@ -55,7 +55,7 @@ v135,democracy: people choose their leaders in free elections (Q39C),democracy1,
 v136,democracy: people receive state aid for unemployment (Q39D),democracy1,10
 v137,democracy: the army takes over when government is incompetent (Q39E),democracy2,10
 v138,democracy: civil rights protect people from state oppression (Q39F),democracy1,10
-v139,democracy: the state makes peopleâ€™s incomes equal (Q39G),democracy1,10
+v139,democracy: the state makes people’s incomes equal (Q39G),democracy2,10
 v140,democracy: people obey their rulers (Q39H),democracy2,10
 v141,democracy: women have the same rights as men (Q39I),democracy1,10
 v145,political system: strong leader (Q43A),pol_system,4
@@ -81,7 +81,6 @@ v164,how close do you feel: to own town/city (Q45A),belong,4
 v165,"how close do you feel: to your [county, region, district] (Q45B)",belong,4
 v166,how close do you feel: to [country] (Q45C),belong,4
 v167,how close do you feel: to [continent] (Q45D),belong,4
-v168,how close do you feel: to world (Q45E),NA,4
 v176,how often in country's elections: votes are counted fairly (Q50A),elections,4
 v177,how often in country's elections: opposition candidates are prevented from runni,elections,4
 v178,how often in country's elections: TV news favors the governing party (Q50C),elections,4
@@ -95,7 +94,6 @@ v186,immigrants increase crime problems (Q52B),immigration,10
 v187,immigrants are a strain on welfare system (Q52C),immigration,10
 v188,better if immigrants maintain/not maintain own customs (Q52D),immigration,10
 v189,important: to have been born in [country] (Q53A),national,4
-v190,important: to respect [country nationality] political institutions and laws (Q53,NA,4
 v191,important: to have [country nationality] ancestry (Q53C),national,4
 v192,important: to be able to speak [national language] (Q53D),national,4
 v193,important: to share [national] culture (Q53E),national,4
@@ -122,7 +120,6 @@ v215,are you concerned with: Europeans (Q60D),concern,5
 v216,are you concerned with: humankind (Q60E),concern,5
 v217,are you concerned with: elderly people (Q61A),concern_grp,5
 v218,are you concerned with: unemployed people (Q61B),concern_grp,5
-v219,are you concerned with: immigrants (Q61C),NA,5
 v220,are you concerned with: sick and disabled (Q61D),concern_grp,5
 v221,important: eliminating income inequalities (Q62A),society,4
 v222,important: basic needs for all (Q62B),society,4
@@ -131,8 +128,6 @@ v224,important: protecting against terrorism (Q62D),society,4
 v267,"at age 14, mother liked to read books (Q104A)",childhood,4
 v268,"at age 14, discussed politics with mother (Q104B)",childhood,4
 v269,"at age 14, mother liked to follow the news (Q104C)",childhood,4
-v270,"at age 14, parent(s) had problems making ends meet (Q104D)",NA,4
 v271,"at age 14, father liked to read books (Q104E)",childhood,4
 v272,"at age 14, discussed politics with father (Q104F)",childhood,4
 v273,"at age 14, father liked to follow the news (Q104G)",childhood,4
-v274,"at age 14, parent(s) had problems replacing broken things (Q104H)",NA,4

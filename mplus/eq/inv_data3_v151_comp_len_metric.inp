@@ -30,6 +30,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -45,7 +50,8 @@ v161 (L9)
 v163 (L10)
 ;
 
-[v151] (i1_full);
+
+ [f1@0];[v151] (i1_full);
 [v153] (i2_full);
 [v154] (i3_full);
 [v155] (i4_full);
@@ -56,7 +62,6 @@ v163 (L10)
 [v161] (i9_full);
 [v163] (i10_full);
 
- [f1@0];
 
 Model short:
 
@@ -72,7 +77,8 @@ v161 (L9)
 v163 (L10)
 ;
 
-[v151] (i1_short);
+
+ [f1@0];[v151] (i1_short);
 [v153] (i2_short);
 [v154] (i3_short);
 [v155] (i4_short);
@@ -83,7 +89,6 @@ v163 (L10)
 [v161] (i9_short);
 [v163] (i10_short);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v151_metric.dat;
  

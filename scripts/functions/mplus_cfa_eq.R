@@ -46,6 +46,9 @@ mplus_cfa_eq <- function(df_use,
                 ESTIMATOR = WLSMV;\n
                 ITERATIONS = 100000;\n
                 PARAMETERIZATION = THETA;\n\n"
+  } else {
+    syn_analysis <- "\n Analysis: \n
+                ESTIMATOR = MLR;\n"
 }
 
   ### here starting to add equivalence
@@ -81,6 +84,15 @@ if (model == "config") extr_load <- str_c("_", grp)
 
     syn_loading <- str_c(syn_loading, ";\n\n")
 
+# add correlation for one model
+
+    if ("v212" %in% vars_use) {
+      syn_loading <- str_c(syn_loading,
+                           "v212 WITH v213; v215 WITH v216;\n\n")
+    }
+
+    # fix mean to 0 in first group for estimation
+    syn_loading <- str_c(syn_loading, "\n [f1@0];")
 
 # Intercepts --------------------------------------------------------------
 
@@ -98,8 +110,6 @@ if (categorical == F) {
   }) %>%
     reduce(str_c)
 
-  # fix mean to 0 in first group for estimation
-  syn_mean <- str_c(syn_mean, "\n [f1@0];")
 }
 
 
@@ -171,8 +181,7 @@ if (categorical == T) {
                                                      nr_cat[i]))
       }
 
-      # fix mean to 0 in first group for estimation
-      syn_mean <- str_c(syn_mean, "\n [f1@0];")
+
     }
 
 }

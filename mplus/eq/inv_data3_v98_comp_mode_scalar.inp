@@ -30,7 +30,8 @@ TITLE: Your title goes here
  
  GROUPING IS comp_mode (0=sm 1=mm);
 
-
+WEIGHT IS weight; 
+ 
  Analysis: 
 
                 ESTIMATOR = WLSMV;
@@ -49,22 +50,19 @@ v101 (L4)
 ;
 
 
+ [f1@0];
 [v98$1] (t_v98_1);
 [v98$2] (t_v98_2);
 
- [f1@0];
 [v99$1] (t_v99_1);
 [v99$2] (t_v99_2);
 
- [f1@0];
 [v100$1] (t_v100_1);
 [v100$2] (t_v100_2);
 
- [f1@0];
 [v101$1] (t_v101_1);
 [v101$2] (t_v101_2);
 
- [f1@0];
 
 Model mm:
 
@@ -75,22 +73,19 @@ v101 (L4)
 ;
 
 
+ [f1@0];
 [v98$1] (t_v98_1);
 [v98$2] (t_v98_2);
 
- [f1@0];
 [v99$1] (t_v99_1);
 [v99$2] (t_v99_2);
 
- [f1@0];
 [v100$1] (t_v100_1);
 [v100$2] (t_v100_2);
 
- [f1@0];
 [v101$1] (t_v101_1);
 [v101$2] (t_v101_2);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v98_scalar.dat;
  

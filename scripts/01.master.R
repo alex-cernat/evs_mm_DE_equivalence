@@ -128,7 +128,7 @@ make_cfa <- function(scale) {
   vars_explore <- vars_scales$variables[vars_scales$Topic %in% scale]
   cat <- vars_scales$scale[vars_scales$variables == vars_explore[1]] %>%
     as.numeric() < 5
-  mplus_cfa(inv_data3, vars_explore, categorical = cat)
+  mplus_cfa(inv_data3, vars_explore, categorical = cat, weights = weight)
 }
 
 # make models
@@ -195,12 +195,14 @@ write_csv(fit_cfa, "./data/clean/cfa_fit.csv")
 
 # make codebook
 
-labs <- inv_data2[, -c(1,2)] %>%
+labs <- evs_clean[, -c(1,2)] %>%
   map(function(x) attributes(x)$label)
+
+labs <- map(labs, function(x) ifelse(is.null(x), "NA", x))
 
 codebook <- tibble(Code = names(labs),
        Label = unlist(labs)) %>%
-  left_join(vars_scales, by = c("Code" = "variables"))
+  right_join(vars_scales, by = c("Code" = "variables"))
 
 # save codebook
 write_csv(codebook, "./data/clean/scales_codebook.csv")
@@ -234,10 +236,12 @@ args <- expand_grid(vars_arg, groups) %>%
   expand_grid(model = c("config", "metric", "scalar")) %>%
   select(-topic)
 
-pmap(args, mplus_cfa_eq, df_use = inv_data3)
+pmap(args, mplus_cfa_eq, df_use = inv_data3, weights = "weight")
 
 
-
+# mplus_cfa_eq(df_use = inv_data3, categorical = T, vars_use = vars_use_list[[1]],
+#              weights = "weight", group_var = "comp_mode",
+#              group_name = c("sm", "mm"), model = "config")
 
 
 # Import ------------------------------------------------------------------
@@ -248,6 +252,8 @@ eq_models <- MplusAutomation::readModels(
   list.files("./mplus/eq/", pattern = "out", full.names = T)
 )
 
+
+# set V82 with no weights due to convergence issues
 
 
 # import fit
@@ -262,25 +268,83 @@ fit_eq <- fit_eq %>%
   separate(col = "name", into = c("var", "group", "model"), sep = "_") %>%
   left_join(vars_scales, by = c("var" = "variables")) %>%
   rename_all(~ str_remove_all(., "M_|Value|_Estimate")) %>%
-  select(Topic, group, model, everything(), -Filename, scale, var) %>%
+  select(Topic, group, model, everything(), scale, var, Filename) %>%
   arrange(Topic, group, model) %>%
   group_by(Topic, group) %>%
   mutate(CFI_dif = CFI - lag(CFI),
          sig_CFI = CFI_dif < -0.01,
+         sig_grp = lead(sig_CFI, n = 1),
+         sig_grp = ifelse(is.na(sig_grp), F, sig_grp),
          group = ifelse(group == "len", "Length", "Mode design")) %>%
   ungroup()
 
-count(fit_eq, Topic) %>%
-  filter(n < 3)
 
 fit_eq %>%
   count(group, model, sig_CFI)
 
 fit_eq %>%
-  filter(sig_CFI == T) %>%
+#  filter(sig_CFI == T|sig_grp == T) %>%
   View()
 
-# save fit
 
+# Show differences --------------------------------------------------------
+
+sig_models <- eq_models[fit_eq$Filename[fit_eq$sig_grp == T]]
+
+
+get_dif_par <- function(model) {
+  nm <- model$summaries$Filename
+
+  param_dif <- model$parameters$unstandardized %>%
+    as_tibble() %>%
+    select(paramHeader, param, est, se, Group) %>%
+    filter(!paramHeader %in% c("Means", "Residual.Variances", "Variances")) %>%
+    mutate(Group = as.numeric(as.factor(Group))) %>%
+    pivot_wider(names_from = Group, values_from = c(est, se)) %>%
+    mutate(name = nm,
+           name = str_remove_all(name, "inv_data3_|\\.out|comp_")) %>%
+    separate(col = "name", into = c("first_var", "group", "model"),
+             sep = "_") %>%
+    rename(coef = paramHeader, variable = param)
+
+  if (param_dif$model[1] == "metric") {
+    param_dif %>%
+      filter(!str_detect(coef, "BY"))
+  } else {
+    param_dif %>%
+      filter(str_detect(coef, "BY"))
+  }
+
+}
+
+sig_parameters <- map_df(sig_models, get_dif_par)
+
+View(sig_parameters)
+
+# Do some overall sig testing ---------------------------------------------
+
+fit_eq_small <- fit_eq %>%
+  filter(model != "config") %>%
+  mutate(cat = ifelse(scale > 4, F, T))
+
+# type of comparison
+count(fit_eq_small, sig_CFI, model) %>%
+  mutate(prop = n/sum(n))
+chisq.test(fit_eq_small$sig_CFI, fit_eq_small$model)
+
+# type of comparison
+count(fit_eq_small, sig_CFI, group) %>%
+  mutate(prop = n/sum(n))
+chisq.test(fit_eq_small$sig_CFI, fit_eq_small$group)
+
+
+count(fit_eq_small, sig_CFI, cat) %>%
+  mutate(prop = n/sum(n))
+chisq.test(fit_eq_small$sig_CFI, fit_eq_small$cat)
+
+
+
+# save results ------------------------------------------------------------
 write_csv(fit_eq, "./data/clean/eq_fit.csv")
-
+write_csv(sig_parameters, "./data/clean/sig_parameters.csv")
+write_rds(inv_data3, "./data/clean/evs_clean2.rds" )

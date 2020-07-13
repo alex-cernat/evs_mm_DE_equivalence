@@ -12,13 +12,12 @@ Using an experiment in the European Value Study Germany we do the following comp
 - [x] alternative quality indicators (Tobias/Pablo)
 - [x] create weights (Tobias will do the weights)
 - [x] check scales fit and choose for invariance (Alex)
-- [ ] do table where we have differences (Alex)
-- [ ] topic, if categorical/topic, if it explains significant models
-- [ ] do the analysis with weight
-- [ ] add core for that one model
+- [x] check problematic models
+- [x] add corrlation for that one model
+- [x] do the analysis with weight
+- [x] do table where we have differences (Alex)
+- [x] topic, if categorical/topic, if it explains significant models
 - [ ] to add topic and if there is showcards (Pablo)
-
-- [ ] do invariance testing (Alex)
 - [ ] write intro and lit review (Joe)
 - [ ] write data section (Tobias/Pablo)
 - [ ] write methods quality indicators (Tobias/Pablo)

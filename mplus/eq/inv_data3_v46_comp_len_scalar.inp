@@ -25,6 +25,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -35,13 +40,13 @@ v49 (L4)
 v50 (L5)
 ;
 
-[v46] (i1);
+
+ [f1@0];[v46] (i1);
 [v47] (i2);
 [v48] (i3);
 [v49] (i4);
 [v50] (i5);
 
- [f1@0];
 
 Model short:
 
@@ -52,13 +57,13 @@ v49 (L4)
 v50 (L5)
 ;
 
-[v46] (i1);
+
+ [f1@0];[v46] (i1);
 [v47] (i2);
 [v48] (i3);
 [v49] (i4);
 [v50] (i5);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v46_scalar.dat;
  

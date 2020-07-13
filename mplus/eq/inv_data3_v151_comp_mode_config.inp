@@ -30,6 +30,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_mode (0=sm 1=mm);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -45,7 +50,8 @@ v161 (L9_sm)
 v163 (L10_sm)
 ;
 
-[v151] (i1_sm);
+
+ [f1@0];[v151] (i1_sm);
 [v153] (i2_sm);
 [v154] (i3_sm);
 [v155] (i4_sm);
@@ -56,7 +62,6 @@ v163 (L10_sm)
 [v161] (i9_sm);
 [v163] (i10_sm);
 
- [f1@0];
 
 Model mm:
 
@@ -72,7 +77,8 @@ v161 (L9_mm)
 v163 (L10_mm)
 ;
 
-[v151] (i1_mm);
+
+ [f1@0];[v151] (i1_mm);
 [v153] (i2_mm);
 [v154] (i3_mm);
 [v155] (i4_mm);
@@ -83,7 +89,6 @@ v163 (L10_mm)
 [v161] (i9_mm);
 [v163] (i10_mm);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v151_config.dat;
  

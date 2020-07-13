@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-07/06/2020   2:40 PM
+07/13/2020   8:29 AM
 
 INPUT INSTRUCTIONS
 
@@ -34,6 +34,7 @@ INPUT INSTRUCTIONS
 
    GROUPING IS comp_mode (0=sm 1=mm);
 
+  WEIGHT IS weight;
 
    Analysis:
 
@@ -52,21 +53,19 @@ INPUT INSTRUCTIONS
   ;
 
 
+   [f1@0];
   [v205$1] (t_v205_1);
   [v205$2] (t_v205_2);
   [v205$3] (t_v205_3);
 
-   [f1@0];
   [v206$1] (t_v206_1);
   [v206$2] (t_v206_2_sm);
   [v206$3] (t_v206_3_sm);
 
-   [f1@0];
   [v207$1] (t_v207_1);
   [v207$2] (t_v207_2_sm);
   [v207$3] (t_v207_3_sm);
 
-   [f1@0];
 
   Model mm:
 
@@ -76,21 +75,19 @@ INPUT INSTRUCTIONS
   ;
 
 
+   [f1@0];
   [v205$1] (t_v205_1);
   [v205$2] (t_v205_2);
   [v205$3] (t_v205_3);
 
-   [f1@0];
   [v206$1] (t_v206_1);
   [v206$2] (t_v206_2_mm);
   [v206$3] (t_v206_3_mm);
 
-   [f1@0];
   [v207$1] (t_v207_1);
   [v207$2] (t_v207_2_mm);
   [v207$3] (t_v207_3_mm);
 
-   [f1@0];
 
    SAVEDATA: DIFFTEST IS v205_config.dat;
 
@@ -140,6 +137,7 @@ Continuous latent variables
 Variables with special functions
 
   Grouping variable     COMP_MOD
+  Weight variable       WEIGHT
 
 Estimator                                                    WLSMV
 Maximum number of iterations                                100000
@@ -196,37 +194,37 @@ UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
 
   Group SM
     V205
-      Category 1    0.289          427.000
-      Category 2    0.397          586.000
-      Category 3    0.175          258.000
-      Category 4    0.139          205.000
+      Category 1    0.290          428.852
+      Category 2    0.387          570.875
+      Category 3    0.176          259.371
+      Category 4    0.147          217.527
     V206
-      Category 1    0.069          100.000
-      Category 2    0.195          284.000
-      Category 3    0.326          474.000
-      Category 4    0.411          598.000
+      Category 1    0.074          107.000
+      Category 2    0.196          284.949
+      Category 3    0.319          462.743
+      Category 4    0.412          597.658
     V207
-      Category 1    0.044           64.000
-      Category 2    0.106          155.000
-      Category 3    0.224          329.000
-      Category 4    0.627          920.000
+      Category 1    0.047           68.804
+      Category 2    0.105          154.380
+      Category 3    0.217          317.447
+      Category 4    0.631          924.421
 
   Group MM
     V205
-      Category 1    0.236          152.000
-      Category 2    0.455          293.000
-      Category 3    0.188          121.000
-      Category 4    0.121           78.000
+      Category 1    0.231          147.921
+      Category 2    0.454          291.259
+      Category 3    0.190          121.917
+      Category 4    0.125           79.852
     V206
-      Category 1    0.048           31.000
-      Category 2    0.196          126.000
-      Category 3    0.349          225.000
-      Category 4    0.407          262.000
+      Category 1    0.051           32.439
+      Category 2    0.179          114.588
+      Category 3    0.347          221.726
+      Category 4    0.423          270.558
     V207
-      Category 1    0.039           25.000
-      Category 2    0.139           89.000
-      Category 3    0.286          183.000
-      Category 4    0.536          343.000
+      Category 1    0.039           24.897
+      Category 2    0.135           85.720
+      Category 3    0.292          185.499
+      Category 4    0.534          339.352
 
 
 SAMPLE STATISTICS
@@ -238,21 +236,21 @@ SAMPLE STATISTICS
            MEANS/INTERCEPTS/THRESHOLDS
               V205$1        V205$2        V205$3        V206$1        V206$2
               ________      ________      ________      ________      ________
-               -0.555         0.485         1.085        -1.486        -0.632
+               -0.552         0.459         1.048        -1.449        -0.613
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V206$3        V207$1        V207$2        V207$3
               ________      ________      ________      ________
-                0.226        -1.710        -1.040        -0.323
+                0.224        -1.675        -1.026        -0.334
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
               V205          V206          V207
               ________      ________      ________
  V205
- V206           0.535
- V207           0.420         0.642
+ V206           0.546
+ V207           0.412         0.632
 
 
      ESTIMATED SAMPLE STATISTICS FOR MM
@@ -261,21 +259,21 @@ SAMPLE STATISTICS
            MEANS/INTERCEPTS/THRESHOLDS
               V205$1        V205$2        V205$3        V206$1        V206$2
               ________      ________      ________      ________      ________
-               -0.719         0.499         1.169        -1.663        -0.694
+               -0.736         0.482         1.152        -1.638        -0.739
 
 
            MEANS/INTERCEPTS/THRESHOLDS
               V206$3        V207$1        V207$2        V207$3
               ________      ________      ________      ________
-                0.236        -1.762        -0.923        -0.090
+                0.194        -1.760        -0.938        -0.085
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
               V205          V206          V207
               ________      ________      ________
  V205
- V206           0.555
- V207           0.450         0.691
+ V206           0.558
+ V207           0.413         0.694
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
@@ -288,14 +286,14 @@ Number of Free Parameters                       22
 
 Chi-Square Test of Model Fit
 
-          Value                              2.862*
+          Value                              2.581*
           Degrees of Freedom                     2
-          P-Value                           0.2390
+          P-Value                           0.2751
 
 Chi-Square Contribution From Each Group
 
-          SM                                 0.969
-          MM                                 1.894
+          SM                                 0.841
+          MM                                 1.740
 
 *   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
     for chi-square difference testing in the regular way.  MLM, MLR and WLSM
@@ -304,9 +302,9 @@ Chi-Square Contribution From Each Group
 
 RMSEA (Root Mean Square Error Of Approximation)
 
-          Estimate                           0.020
-          90 Percent C.I.                    0.000  0.067
-          Probability RMSEA <= .05           0.813
+          Estimate                           0.016
+          90 Percent C.I.                    0.000  0.065
+          Probability RMSEA <= .05           0.837
 
 CFI/TLI
 
@@ -315,13 +313,13 @@ CFI/TLI
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                           2810.731
+          Value                           2294.690
           Degrees of Freedom                     6
           P-Value                           0.0000
 
 WRMR (Weighted Root Mean Square Residual)
 
-          Value                              0.496
+          Value                              0.470
 
 
 
@@ -334,25 +332,25 @@ Group SM
 
  F1       BY
     V205               1.000      0.000    999.000    999.000
-    V206               2.901      0.616      4.709      0.000
-    V207               1.374      0.110     12.450      0.000
+    V206               3.064      0.782      3.917      0.000
+    V207               1.287      0.111     11.632      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.725      0.038    -18.886      0.000
-    V205$2             0.585      0.037     15.912      0.000
-    V205$3             1.329      0.052     25.689      0.000
-    V206$1            -3.493      0.499     -6.996      0.000
-    V206$2            -1.486      0.227     -6.541      0.000
-    V206$3             0.531      0.104      5.092      0.000
-    V207$1            -2.428      0.111    -21.862      0.000
-    V207$2            -1.476      0.075    -19.655      0.000
-    V207$3            -0.459      0.051     -8.988      0.000
+    V205$1            -0.724      0.041    -17.532      0.000
+    V205$2             0.556      0.039     14.097      0.000
+    V205$3             1.287      0.055     23.203      0.000
+    V206$1            -3.601      0.638     -5.644      0.000
+    V206$2            -1.524      0.286     -5.332      0.000
+    V206$3             0.556      0.127      4.395      0.000
+    V207$1            -2.317      0.115    -20.058      0.000
+    V207$2            -1.420      0.078    -18.212      0.000
+    V207$3            -0.463      0.053     -8.768      0.000
 
  Variances
-    F1                 0.538      0.073      7.395      0.000
+    F1                 0.551      0.081      6.777      0.000
 
  Residual Variances
     V205               1.000      0.000    999.000    999.000
@@ -363,30 +361,30 @@ Group MM
 
  F1       BY
     V205               1.000      0.000    999.000    999.000
-    V206               2.906      0.548      5.299      0.000
-    V207               1.548      0.172      8.974      0.000
+    V206               3.404      0.792      4.299      0.000
+    V207               1.508      0.182      8.263      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.725      0.038    -18.886      0.000
-    V205$2             0.585      0.037     15.912      0.000
-    V205$3             1.329      0.052     25.689      0.000
-    V206$1            -3.493      0.499     -6.996      0.000
-    V206$2            -1.458      0.235     -6.211      0.000
-    V206$3             0.495      0.133      3.732      0.000
-    V207$1            -2.428      0.111    -21.862      0.000
-    V207$2            -1.271      0.098    -13.029      0.000
-    V207$3            -0.124      0.068     -1.841      0.066
+    V205$1            -0.724      0.041    -17.532      0.000
+    V205$2             0.556      0.039     14.097      0.000
+    V205$3             1.287      0.055     23.203      0.000
+    V206$1            -3.601      0.638     -5.644      0.000
+    V206$2            -1.625      0.313     -5.192      0.000
+    V206$3             0.426      0.152      2.795      0.005
+    V207$1            -2.317      0.115    -20.058      0.000
+    V207$2            -1.235      0.103    -12.013      0.000
+    V207$3            -0.112      0.072     -1.569      0.117
 
  Variances
-    F1                 0.444      0.076      5.863      0.000
+    F1                 0.391      0.077      5.103      0.000
 
  Residual Variances
-    V205               0.784      0.089      8.862      0.000
-    V206               0.658      0.354      1.856      0.063
-    V207               0.834      0.132      6.320      0.000
+    V205               0.788      0.102      7.735      0.000
+    V206               0.298      0.465      0.642      0.521
+    V207               0.842      0.149      5.641      0.000
 
 
 STANDARDIZED MODEL RESULTS
@@ -400,60 +398,60 @@ STDYX Standardization
 Group SM
 
  F1       BY
-    V205               0.591      0.026     22.744      0.000
-    V206               0.905      0.029     31.641      0.000
-    V207               0.710      0.027     25.904      0.000
+    V205               0.596      0.028     21.029      0.000
+    V206               0.915      0.031     29.070      0.000
+    V207               0.691      0.031     22.546      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.585      0.030    -19.788      0.000
-    V205$2             0.471      0.029     16.450      0.000
-    V205$3             1.072      0.038     28.300      0.000
-    V206$1            -1.486      0.050    -29.658      0.000
-    V206$2            -0.632      0.035    -17.878      0.000
-    V206$3             0.226      0.033      6.809      0.000
-    V207$1            -1.710      0.058    -29.653      0.000
-    V207$2            -1.040      0.040    -25.981      0.000
-    V207$3            -0.323      0.033     -9.692      0.000
+    V205$1            -0.581      0.032    -18.436      0.000
+    V205$2             0.446      0.031     14.584      0.000
+    V205$3             1.034      0.040     25.597      0.000
+    V206$1            -1.449      0.054    -27.068      0.000
+    V206$2            -0.613      0.037    -16.358      0.000
+    V206$3             0.224      0.035      6.355      0.000
+    V207$1            -1.675      0.062    -27.086      0.000
+    V207$2            -1.026      0.043    -24.055      0.000
+    V207$3            -0.334      0.035     -9.481      0.000
 
  Variances
     F1                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    V205               0.650      0.031     21.143      0.000
-    V206               0.181      0.052      3.494      0.000
-    V207               0.496      0.039     12.760      0.000
+    V205               0.645      0.034     19.067      0.000
+    V206               0.162      0.058      2.808      0.005
+    V207               0.523      0.042     12.351      0.000
 
 Group MM
 
  F1       BY
-    V205               0.601      0.034     17.700      0.000
-    V206               0.922      0.037     24.996      0.000
-    V207               0.749      0.035     21.591      0.000
+    V205               0.576      0.041     14.151      0.000
+    V206               0.969      0.049     19.846      0.000
+    V207               0.717      0.041     17.648      0.000
 
  Means
     F1                 0.000      0.000    999.000    999.000
 
  Thresholds
-    V205$1            -0.654      0.039    -16.750      0.000
-    V205$2             0.527      0.035     14.935      0.000
-    V205$3             1.199      0.055     21.842      0.000
-    V206$1            -1.663      0.084    -19.729      0.000
-    V206$2            -0.694      0.054    -12.863      0.000
-    V206$3             0.236      0.050      4.725      0.000
-    V207$1            -1.762      0.091    -19.444      0.000
-    V207$2            -0.923      0.058    -15.900      0.000
-    V207$3            -0.090      0.050     -1.818      0.069
+    V205$1            -0.666      0.044    -15.173      0.000
+    V205$2             0.512      0.039     13.238      0.000
+    V205$3             1.186      0.060     19.617      0.000
+    V206$1            -1.638      0.107    -15.252      0.000
+    V206$2            -0.739      0.061    -12.111      0.000
+    V206$3             0.194      0.056      3.463      0.001
+    V207$1            -1.760      0.101    -17.515      0.000
+    V207$2            -0.938      0.064    -14.628      0.000
+    V207$3            -0.085      0.055     -1.550      0.121
 
  Variances
     F1                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    V205               0.638      0.041     15.620      0.000
-    V206               0.149      0.068      2.190      0.029
-    V207               0.439      0.052      8.457      0.000
+    V205               0.668      0.047     14.241      0.000
+    V206               0.062      0.095      0.653      0.514
+    V207               0.486      0.058      8.352      0.000
 
 
 R-SQUARE
@@ -463,23 +461,23 @@ Group SM
     Observed                                        Two-Tailed     Scale
     Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
 
-    V205               0.350      0.031     11.372      0.000      0.806
-    V206               0.819      0.052     15.820      0.000      0.425
-    V207               0.504      0.039     12.952      0.000      0.704
+    V205               0.355      0.034     10.515      0.000      0.803
+    V206               0.838      0.058     14.535      0.000      0.402
+    V207               0.477      0.042     11.273      0.000      0.723
 
 Group MM
 
     Observed                                        Two-Tailed     Scale
     Variable        Estimate       S.E.  Est./S.E.    P-Value     Factors
 
-    V205               0.362      0.041      8.850      0.000      0.902
-    V206               0.851      0.068     12.498      0.000      0.476
-    V207               0.561      0.052     10.795      0.000      0.726
+    V205               0.332      0.047      7.076      0.000      0.921
+    V206               0.938      0.095      9.923      0.000      0.455
+    V207               0.514      0.058      8.824      0.000      0.760
 
 
 QUALITY OF NUMERICAL RESULTS
 
-     Condition Number for the Information Matrix              0.408E-03
+     Condition Number for the Information Matrix              0.338E-03
        (ratio of smallest to largest eigenvalue)
 
 
@@ -521,9 +519,9 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\eq\inv_data3_v205_
 
-     Beginning Time:  14:40:25
-        Ending Time:  14:40:26
-       Elapsed Time:  00:00:01
+     Beginning Time:  08:29:03
+        Ending Time:  08:29:03
+       Elapsed Time:  00:00:00
 
 
 

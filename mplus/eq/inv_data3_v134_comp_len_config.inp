@@ -24,6 +24,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
+WEIGHT IS weight; 
+ 
+ Analysis: 
+
+                ESTIMATOR = MLR;
 Model: 
 
 
@@ -33,12 +38,12 @@ v139 (L3_full)
 v140 (L4_full)
 ;
 
-[v134] (i1_full);
+
+ [f1@0];[v134] (i1_full);
 [v137] (i2_full);
 [v139] (i3_full);
 [v140] (i4_full);
 
- [f1@0];
 
 Model short:
 
@@ -48,12 +53,12 @@ v139 (L3_short)
 v140 (L4_short)
 ;
 
-[v134] (i1_short);
+
+ [f1@0];[v134] (i1_short);
 [v137] (i2_short);
 [v139] (i3_short);
 [v140] (i4_short);
 
- [f1@0];
 
  SAVEDATA: DIFFTEST IS v134_config.dat;
  

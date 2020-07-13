@@ -1,0 +1,192 @@
+---
+title: "Report on equivalence testing in EVS Germany"
+author: "Alexandru Cernat"
+date: "13/07/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+# clean memory
+rm(list = ls())
+
+# use local packages on work machine
+if (Sys.getenv("USERNAME") == "msassac6") {.libPaths(c(
+  paste0(
+    "C:/Users/",
+    Sys.getenv("USERNAME"),
+    "/Dropbox (The University of Manchester)/R/package"
+  ),
+  .libPaths()[-1]
+))}
+
+
+
+pkg <- c("tidyverse", "haven", "MplusAutomation", "knitr")
+
+#install.packages(pkg)
+sapply(pkg, library , character.only = T)
+
+# load local functions
+map(list.files("../scripts/functions/", full.names = T),
+    source) %>% suppressMessages()
+
+# load data
+codebook <- read_csv("../data/clean/scales_codebook.csv")
+cfa_fit <- read_csv("../data/clean/cfa_fit.csv")
+fit_eq <- read_csv("../data/clean/eq_fit.csv")
+sig_parameters <- read_csv("../data/clean/sig_parameters.csv")
+inv_data3 <- read_rds("../data/clean/evs_clean2.rds" )
+
+
+
+
+knitr::opts_chunk$set(echo = F)
+```
+
+## Variables we are looking at
+
+We started with the scales identified by Pablo and available in the excel on GitHub.
+
+After some model testing (see bellow) we ended up with the following questions/scales.
+
+```{r}
+DT::datatable(mutate(codebook, Label = str_remove_all(Label, "\\u003c/"))) 
+
+```
+
+
+## Initial fit evaluations
+
+To improve fit some of the initial models were changed:
+
+- from "importance" we excluded: v1, v5, v6 due to the low correlation with the rest of the variables
+- based on the fit we redid the norms scale in two:
+   - f1 by v149 v150 v152 v159 v162;
+   - f2 by v151 v153 v154 v155 v156 v157 v158 v160 v161;
+- we split democracy in two groups:
+   - f1 by v133 v135 v136 v138 v141;
+   - f2 by v134 v137 v139 v140;
+- exclude v168 due to low correlation with rest of models
+- from parents remove v270 and v274 (slightly different topic and worse fit)
+- in the "concern" model add v212 WITH v213; and v215 WITH v216;
+- exclude v219 low loading, probably capture issues around migration
+- exclude 190 due to low loading
+- religion was excluded because it had estimation issues
+
+Here are the overall fit for the scales we are interested:
+
+```{r}
+DT::datatable(cfa_fit) %>% 
+  DT::formatRound(columns = c(colnames(cfa_fit)), digits = 2)
+
+```
+
+## Equivalence testing
+
+We test three models:
+
+- configural
+- metric
+- scalar
+
+We do it across two variables:
+
+- single versus mixed mode
+- short versus long (within mixed mode)
+
+
+## A little bit about estimation and issues
+
+We treat variables with 5 or more categories as continuous and those with less than 5 as categorical. We use the weights created by Tobias. For the continuous variables we use MLR estimation while for the categorical ones we use WLSMV with Theta parametrization. We fix the means of the latent variables to 0 to aid estimation and the loading of the first variable was fixed to 1.
+
+Two models had issues during equivalence. 
+
+- For the "importance" scale some of the categories have no cases in some of the groups so the equivalence doesn't work. I ignore that scale. 
+
+- For the "traditional family" scale MLR with weights leads to estimation issues so I use ML with no weights instead.
+
+
+## Findings on equivalence
+
+Here are the overall model fits for all the models we test. We use a difference in CFI lower than -0.01 as an indicator that the model is significantly worse.
+
+```{r}
+DT::datatable(fit_eq) %>% 
+  DT::formatRound(columns = c(colnames(fit_eq)), digits = 2)
+```
+
+We can look just at the models that are significant:
+
+```{r}
+DT::datatable(filter(fit_eq, sig_CFI == T)) %>% 
+  DT::formatRound(columns = c(colnames(fit_eq)), digits = 2)
+```
+
+We can look at a summary by group and type of model. We see that a few models have differences in the loadings and some more had differences in the intercepts.
+
+```{r}
+
+fit_eq %>%
+  count(group, model, sig_CFI) %>% 
+  kable()
+
+```
+
+
+We can also try to do some testing depending on the type of response scale, type of model and group compared. It seems that it's more likely we don't have scalar equivalence. Also, kind of surprising, there are no categorical variables that lack equivalence so that is highly significant. I would be a little cautious to over-interpret that as it might be a statistical artifact (they use different estimators). 
+
+
+```{r}
+
+fit_eq_small <- fit_eq %>%
+  filter(model != "config") %>%
+  mutate(cat = ifelse(scale > 4, F, T))
+
+# type of comparison
+count(fit_eq_small, sig_CFI, model) %>%
+  group_by(sig_CFI) %>% 
+  mutate(prop = n/sum(n)) %>% 
+  kable()
+chisq.test(fit_eq_small$sig_CFI, fit_eq_small$model)
+
+# type of comparison
+count(fit_eq_small, sig_CFI, group) %>%
+  group_by(sig_CFI) %>% 
+  mutate(prop = n/sum(n)) %>% 
+  kable()
+chisq.test(fit_eq_small$sig_CFI, fit_eq_small$group)
+
+
+count(fit_eq_small, sig_CFI, cat) %>%
+  group_by(sig_CFI) %>% 
+  mutate(prop = n/sum(n)) %>% 
+  kable()
+chisq.test(fit_eq_small$sig_CFI, fit_eq_small$cat)
+
+
+```
+
+
+## Parameters that are different
+
+We can have a look at the parameters that appear to be significantly different. I haven't had the chance to go through each one and see what it means substantively but maybe that's something we might need to do.
+
+```{r}
+sig_parameters %>% 
+  mutate(dif = est_2 - est_1) %>% 
+  DT::datatable() %>% 
+  DT::formatRound(columns = c(colnames(sig_parameters), "dif"), digits = 2)
+```
+
+
+## Next steps
+
+- [ ] Look into coefficients that are different across groups to understand what might be the cause (Alex & Joe)
+- [ ] add the topic and if they used show-cards or not to see if they explain the significant models (Pablo)
+- [ ] write intro and lit review (Joe)
+- [ ] write data section (Tobias/Pablo)
+- [ ] write methods quality indicators (Tobias/Pablo)
+- [ ] write methods invariance (Alex)
+- [ ] write up results (Joe/Alex)
+- [ ] write conclusions (Joe/Alex)
