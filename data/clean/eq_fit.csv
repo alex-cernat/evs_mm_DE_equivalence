@@ -1,145 +1,145 @@
-Topic,group,model,ChiSq,ChiSqDF,ChiSqP,CFI,RMSEA,var,scale,CFI_dif,sig_CFI,sig_grp
-action,Length,config,50.525,5,0,0.987,0.091,v98,3,NA,NA,FALSE
-action,Length,metric,38.641,8,0,0.991,0.059,v98,3,0.0040000000000000036,FALSE,FALSE
-action,Length,scalar,35.401,11,2e-4,0.993,0.045,v98,3,0.0020000000000000018,FALSE,FALSE
-action,Mode design,config,43.762,5,0,0.989,0.085,v98,3,NA,NA,FALSE
-action,Mode design,metric,41.957,8,0,0.99,0.063,v98,3,0.0010000000000000009,FALSE,FALSE
-action,Mode design,scalar,59.391,11,0,0.986,0.064,v98,3,-0.0040000000000000036,FALSE,FALSE
-belong,Length,config,291.184,6,0,0.923,0.204,v164,4,NA,NA,FALSE
-belong,Length,metric,242.26,9,0,0.937,0.151,v164,4,0.014000000000000012,FALSE,FALSE
-belong,Length,scalar,222.152,15,0,0.944,0.11,v164,4,0.006999999999999895,FALSE,FALSE
-belong,Mode design,config,296.645,6,0,0.924,0.212,v164,4,NA,NA,FALSE
-belong,Mode design,metric,253.58,9,0,0.936,0.159,v164,4,0.01200000000000001,FALSE,FALSE
-belong,Mode design,scalar,252.397,15,0,0.938,0.121,v164,4,0.0019999999999998908,FALSE,FALSE
-childhood,Length,config,345.689,20,0,0.912,0.121,v267,4,NA,NA,FALSE
-childhood,Length,metric,317.296,25,0,0.921,0.103,v267,4,0.009000000000000008,FALSE,FALSE
-childhood,Length,scalar,281.012,35,0,0.934,0.08,v267,4,0.013000000000000012,FALSE,FALSE
-childhood,Mode design,config,374.765,20,0,0.91,0.13,v267,4,NA,NA,FALSE
-childhood,Mode design,metric,345.488,25,0,0.919,0.11,v267,4,0.009000000000000008,FALSE,FALSE
-childhood,Mode design,scalar,312.358,35,0,0.93,0.087,v267,4,0.01100000000000001,FALSE,FALSE
-concern,Length,config,11.794,6,0.0667,0.997,0.029,v212,5,NA,NA,FALSE
-concern,Length,metric,16.171,10,0.0949,0.997,0.023,v212,5,0,FALSE,FALSE
-concern,Length,scalar,34.795,15,0.0026,0.989,0.034,v212,5,-0.008000000000000007,FALSE,FALSE
-concern,Mode design,config,3.339,6,0.7652,1,0,v212,5,NA,NA,FALSE
-concern,Mode design,metric,7.437,10,0.6837,1,0,v212,5,0,FALSE,FALSE
-concern,Mode design,scalar,13.865,15,0.5358,1,0,v212,5,0,FALSE,FALSE
-concern_grp,Length,config,0,0,0,1,0,v217,5,NA,NA,FALSE
-concern_grp,Length,metric,7.022,2,0.0299,0.996,0.047,v217,5,-0.0040000000000000036,FALSE,FALSE
-concern_grp,Length,scalar,13.057,5,0.0228,0.993,0.038,v217,5,-0.0030000000000000027,FALSE,FALSE
-concern_grp,Mode design,config,0,0,0,1,0,v217,5,NA,NA,FALSE
-concern_grp,Mode design,metric,7.727,2,0.021,0.996,0.052,v217,5,-0.0040000000000000036,FALSE,TRUE
-concern_grp,Mode design,scalar,24.365,5,2e-4,0.985,0.06,v217,5,-0.01100000000000001,TRUE,FALSE
-democracy1,Length,config,58.745,10,0,0.933,0.067,v133,10,NA,NA,FALSE
-democracy1,Length,metric,60.56,14,0,0.936,0.055,v133,10,0.0030000000000000027,FALSE,TRUE
-democracy1,Length,scalar,83.273,19,0,0.912,0.055,v133,10,-0.02400000000000002,TRUE,FALSE
-democracy1,Mode design,config,50.826,10,0,0.932,0.062,v133,10,NA,NA,FALSE
-democracy1,Mode design,metric,54.312,14,0,0.933,0.052,v133,10,0.0010000000000000009,FALSE,TRUE
-democracy1,Mode design,scalar,94.865,19,0,0.874,0.061,v133,10,-0.05900000000000005,TRUE,FALSE
-democracy2,Length,config,7.496,4,0.1119,0.989,0.028,v134,10,NA,NA,FALSE
-democracy2,Length,metric,7.756,7,0.3546,0.998,0.01,v134,10,0.009000000000000008,FALSE,FALSE
-democracy2,Length,scalar,14.352,11,0.2141,0.989,0.017,v134,10,-0.009000000000000008,FALSE,FALSE
-democracy2,Mode design,config,12.788,4,0.0124,0.972,0.045,v134,10,NA,NA,FALSE
-democracy2,Mode design,metric,13.416,7,0.0626,0.98,0.029,v134,10,0.008000000000000007,FALSE,TRUE
-democracy2,Mode design,scalar,27.896,11,0.0034,0.946,0.038,v134,10,-0.03400000000000003,TRUE,FALSE
-elections,Length,config,467.036,42,0,0.945,0.098,v176,4,NA,NA,FALSE
-elections,Length,metric,417.454,49,0,0.953,0.084,v176,4,0.008000000000000007,FALSE,FALSE
-elections,Length,scalar,384.077,63,0,0.959,0.069,v176,4,0.006000000000000005,FALSE,FALSE
-elections,Mode design,config,498.808,42,0,0.921,0.102,v176,4,NA,NA,FALSE
-elections,Mode design,metric,454.222,49,0,0.93,0.089,v176,4,0.009000000000000008,FALSE,FALSE
-elections,Mode design,scalar,436.669,63,0,0.935,0.075,v176,4,0.0050000000000000044,FALSE,FALSE
-environment,Length,config,41.247,10,0,0.97,0.053,v199,5,NA,NA,FALSE
-environment,Length,metric,41.749,14,1e-4,0.973,0.042,v199,5,0.0030000000000000027,FALSE,FALSE
-environment,Length,scalar,46.119,19,5e-4,0.974,0.036,v199,5,0.0010000000000000009,FALSE,FALSE
-environment,Mode design,config,52.992,10,0,0.955,0.063,v199,5,NA,NA,FALSE
-environment,Mode design,metric,58.794,14,0,0.953,0.054,v199,5,-0.0020000000000000018,FALSE,TRUE
-environment,Mode design,scalar,75.867,19,0,0.941,0.053,v199,5,-0.01200000000000001,TRUE,FALSE
-european,Length,config,36.27,6,0,0.996,0.067,v194,4,NA,NA,FALSE
-european,Length,metric,35.541,9,0,0.997,0.051,v194,4,0.0010000000000000009,FALSE,FALSE
-european,Length,scalar,35.736,15,0.0019,0.997,0.035,v194,4,0,FALSE,FALSE
-european,Mode design,config,70.36,6,0,0.993,0.1,v194,4,NA,NA,FALSE
-european,Mode design,metric,82.307,9,0,0.992,0.087,v194,4,-0.0010000000000000009,FALSE,FALSE
-european,Mode design,scalar,98.907,15,0,0.991,0.072,v194,4,-0.0010000000000000009,FALSE,FALSE
-immigration,Length,config,6.964,4,0.1378,0.998,0.026,v185,10,NA,NA,FALSE
-immigration,Length,metric,9.441,7,0.2225,0.998,0.018,v185,10,0,FALSE,FALSE
-immigration,Length,scalar,17.066,11,0.1059,0.996,0.022,v185,10,-0.0020000000000000018,FALSE,FALSE
-immigration,Mode design,config,7.175,4,0.1269,0.997,0.027,v185,10,NA,NA,FALSE
-immigration,Mode design,metric,8.803,7,0.2671,0.998,0.015,v185,10,0.0010000000000000009,FALSE,FALSE
-immigration,Mode design,scalar,18.934,11,0.0623,0.993,0.026,v185,10,-0.0050000000000000044,FALSE,FALSE
-marriage,Length,config,146.964,19,0,0.948,0.077,v65,3,NA,NA,FALSE
-marriage,Length,metric,144.99,24,0,0.951,0.066,v65,3,0.0030000000000000027,FALSE,FALSE
-marriage,Length,scalar,134.535,29,0,0.957,0.056,v65,3,0.006000000000000005,FALSE,FALSE
-marriage,Mode design,config,90.417,19,0,0.979,0.059,v65,3,NA,NA,FALSE
-marriage,Mode design,metric,86.087,24,0,0.981,0.049,v65,3,0.0020000000000000018,FALSE,FALSE
-marriage,Mode design,scalar,84.535,29,0,0.983,0.042,v65,3,0.0020000000000000018,FALSE,FALSE
-national,Length,config,61.115,6,0,0.988,0.089,v189,4,NA,NA,FALSE
-national,Length,metric,62.711,9,0,0.988,0.072,v189,4,0,FALSE,FALSE
-national,Length,scalar,63.128,15,0,0.99,0.053,v189,4,0.0020000000000000018,FALSE,FALSE
-national,Mode design,config,65.509,6,0,0.984,0.096,v189,4,NA,NA,FALSE
-national,Mode design,metric,72.121,9,0,0.983,0.081,v189,4,-0.0010000000000000009,FALSE,FALSE
-national,Mode design,scalar,72.454,15,0,0.985,0.06,v189,4,0.0020000000000000018,FALSE,FALSE
-norms1,Length,config,44.647,10,0,0.927,0.055,v149,10,NA,NA,FALSE
-norms1,Length,metric,51.305,14,0,0.921,0.048,v149,10,-0.006000000000000005,FALSE,TRUE
-norms1,Length,scalar,65.291,19,0,0.902,0.046,v149,10,-0.019000000000000017,TRUE,FALSE
-norms1,Mode design,config,35.454,10,1e-4,0.921,0.049,v149,10,NA,NA,TRUE
-norms1,Mode design,metric,42.619,14,1e-4,0.911,0.043,v149,10,-0.010000000000000009,TRUE,FALSE
-norms1,Mode design,scalar,50.814,19,1e-4,0.902,0.039,v149,10,-0.009000000000000008,FALSE,FALSE
-norms2,Length,config,533.466,70,0,0.869,0.063,v151,10,NA,NA,FALSE
-norms2,Length,metric,552.465,79,0,0.866,0.06,v151,10,-0.0030000000000000027,FALSE,FALSE
-norms2,Length,scalar,577.417,89,0,0.861,0.057,v151,10,-0.0050000000000000044,FALSE,FALSE
-norms2,Mode design,config,541.654,70,0,0.889,0.079,v151,10,NA,NA,FALSE
-norms2,Mode design,metric,556.068,79,0,0.888,0.075,v151,10,-0.0010000000000000009,FALSE,TRUE
-norms2,Mode design,scalar,606.518,89,0,0.878,0.073,v151,10,-0.010000000000000009,TRUE,FALSE
-pol_system,Length,config,7.008,6,0.3201,0.999,0.012,v145,4,NA,NA,FALSE
-pol_system,Length,metric,11.256,9,0.2585,0.997,0.015,v145,4,-0.0020000000000000018,FALSE,FALSE
-pol_system,Length,scalar,24.543,15,0.0564,0.988,0.024,v145,4,-0.009000000000000008,FALSE,FALSE
-pol_system,Mode design,config,16.144,6,0.013,0.988,0.04,v145,4,NA,NA,FALSE
-pol_system,Mode design,metric,15.089,9,0.0885,0.993,0.025,v145,4,0.0050000000000000044,FALSE,FALSE
-pol_system,Mode design,scalar,28.128,15,0.0208,0.984,0.029,v145,4,-0.009000000000000008,FALSE,FALSE
-pol_watch,Length,config,27.512,4,0,0.967,0.073,v208,5,NA,NA,FALSE
-pol_watch,Length,metric,34.902,7,0,0.961,0.06,v208,5,-0.006000000000000005,FALSE,TRUE
-pol_watch,Length,scalar,50.892,11,0,0.944,0.057,v208,5,-0.017000000000000015,TRUE,FALSE
-pol_watch,Mode design,config,16.541,4,0.0024,0.98,0.054,v208,5,NA,NA,TRUE
-pol_watch,Mode design,metric,32.978,7,0,0.958,0.059,v208,5,-0.02200000000000002,TRUE,TRUE
-pol_watch,Mode design,scalar,111.109,11,0,0.839,0.092,v208,5,-0.119,TRUE,FALSE
-policy,Length,config,24.309,10,0.0068,0.949,0.036,v103,10,NA,NA,TRUE
-policy,Length,metric,34.407,14,0.0018,0.928,0.036,v103,10,-0.020999999999999908,TRUE,TRUE
-policy,Length,scalar,43.518,19,0.0011,0.913,0.034,v103,10,-0.015000000000000013,TRUE,FALSE
-policy,Mode design,config,10.674,10,0.3835,0.997,0.008,v103,10,NA,NA,FALSE
-policy,Mode design,metric,15.992,14,0.3139,0.991,0.011,v103,10,-0.006000000000000005,FALSE,TRUE
-policy,Mode design,scalar,41.636,19,0.002,0.895,0.033,v103,10,-0.09599999999999997,TRUE,FALSE
-society,Length,config,29.147,6,1e-4,0.958,0.059,v221,4,NA,NA,FALSE
-society,Length,metric,27.689,9,0.0011,0.966,0.043,v221,4,0.008000000000000007,FALSE,FALSE
-society,Length,scalar,33.049,15,0.0046,0.968,0.033,v221,4,0.0020000000000000018,FALSE,FALSE
-society,Mode design,config,35.406,6,0,0.964,0.067,v221,4,NA,NA,FALSE
-society,Mode design,metric,40.106,9,0,0.962,0.057,v221,4,-0.0020000000000000018,FALSE,FALSE
-society,Mode design,scalar,46.677,15,0,0.962,0.044,v221,4,0,FALSE,FALSE
-surveillance,Length,config,0.379,2,0.8275,1,0,v205,4,NA,NA,FALSE
-surveillance,Length,metric,3.661,4,0.4538,1,0,v205,4,0,FALSE,FALSE
-surveillance,Length,scalar,11.499,8,0.175,0.999,0.02,v205,4,-0.0010000000000000009,FALSE,FALSE
-surveillance,Mode design,config,2.581,2,0.2751,1,0.016,v205,4,NA,NA,FALSE
-surveillance,Mode design,metric,4.503,4,0.3422,1,0.011,v205,4,0,FALSE,FALSE
-surveillance,Mode design,scalar,23.29,8,0.003,0.993,0.042,v205,4,-0.007000000000000006,FALSE,FALSE
-traditional_family,Length,config,0,0,0,1,0,v82,5,NA,NA,TRUE
-traditional_family,Length,metric,6.908,2,0.0316,0.979,0.046,v82,5,-0.02100000000000002,TRUE,FALSE
-traditional_family,Length,scalar,8.737,5,0.12,0.984,0.026,v82,5,0.0050000000000000044,FALSE,FALSE
-traditional_family,Mode design,config,0,0,0,1,0,v82,5,NA,NA,TRUE
-traditional_family,Mode design,metric,4.656,2,0.0975,0.985,0.035,v82,5,-0.015000000000000013,TRUE,TRUE
-traditional_family,Mode design,scalar,17.36,5,0.0039,0.932,0.048,v82,5,-0.052999999999999936,TRUE,FALSE
-trust,Length,config,1818.979,272,0,0.934,0.054,v115,4,NA,NA,FALSE
-trust,Length,metric,1673.096,289,0,0.941,0.05,v115,4,0.006999999999999895,FALSE,FALSE
-trust,Length,scalar,1526.458,323,0,0.949,0.044,v115,4,0.008000000000000007,FALSE,FALSE
-trust,Mode design,config,2430.497,272,0,0.909,0.086,v115,4,NA,NA,FALSE
-trust,Mode design,metric,2187.848,289,0,0.92,0.078,v115,4,0.01100000000000001,FALSE,FALSE
-trust,Mode design,scalar,2015.204,323,0,0.929,0.07,v115,4,0.009000000000000008,FALSE,FALSE
-trust_pl,Length,config,446.216,20,0,0.985,0.137,v32,4,NA,NA,FALSE
-trust_pl,Length,metric,383.351,25,0,0.987,0.112,v32,4,0.0020000000000000018,FALSE,FALSE
-trust_pl,Length,scalar,333.235,35,0,0.99,0.087,v32,4,0.0030000000000000027,FALSE,FALSE
-trust_pl,Mode design,config,534.704,20,0,0.985,0.154,v32,4,NA,NA,FALSE
-trust_pl,Mode design,metric,457.098,25,0,0.987,0.126,v32,4,0.0020000000000000018,FALSE,FALSE
-trust_pl,Mode design,scalar,527.103,35,0,0.985,0.114,v32,4,-0.0020000000000000018,FALSE,FALSE
-work,Length,config,34.621,10,1e-4,0.97,0.038,v46,5,NA,NA,FALSE
-work,Length,metric,36.928,14,8e-4,0.972,0.031,v46,5,0.0020000000000000018,FALSE,TRUE
-work,Length,scalar,54.375,19,0,0.956,0.033,v46,5,-0.016000000000000014,TRUE,FALSE
-work,Mode design,config,29.635,10,0.001,0.98,0.043,v46,5,NA,NA,FALSE
-work,Mode design,metric,34.312,14,0.0019,0.979,0.037,v46,5,-0.0010000000000000009,FALSE,TRUE
-work,Mode design,scalar,53.793,19,0,0.964,0.041,v46,5,-0.015000000000000013,TRUE,FALSE
+Topic,group,model,Filename,ChiSq,ChiSqDF,ChiSqP,CFI,RMSEA,var,scale,CFI_dif,sig_CFI,sig_grp
+action,Length,config,inv_data3_v98_comp_len_config.out,50.525,5,0,0.987,0.091,v98,3,NA,NA,FALSE
+action,Length,metric,inv_data3_v98_comp_len_metric.out,38.641,8,0,0.991,0.059,v98,3,0.0040000000000000036,FALSE,FALSE
+action,Length,scalar,inv_data3_v98_comp_len_scalar.out,35.401,11,2e-4,0.993,0.045,v98,3,0.0020000000000000018,FALSE,FALSE
+action,Mode design,config,inv_data3_v98_comp_mode_config.out,43.762,5,0,0.989,0.085,v98,3,NA,NA,FALSE
+action,Mode design,metric,inv_data3_v98_comp_mode_metric.out,41.957,8,0,0.99,0.063,v98,3,0.0010000000000000009,FALSE,FALSE
+action,Mode design,scalar,inv_data3_v98_comp_mode_scalar.out,59.391,11,0,0.986,0.064,v98,3,-0.0040000000000000036,FALSE,FALSE
+belong,Length,config,inv_data3_v164_comp_len_config.out,291.184,6,0,0.923,0.204,v164,4,NA,NA,FALSE
+belong,Length,metric,inv_data3_v164_comp_len_metric.out,242.26,9,0,0.937,0.151,v164,4,0.014000000000000012,FALSE,FALSE
+belong,Length,scalar,inv_data3_v164_comp_len_scalar.out,222.152,15,0,0.944,0.11,v164,4,0.006999999999999895,FALSE,FALSE
+belong,Mode design,config,inv_data3_v164_comp_mode_config.out,296.645,6,0,0.924,0.212,v164,4,NA,NA,FALSE
+belong,Mode design,metric,inv_data3_v164_comp_mode_metric.out,253.58,9,0,0.936,0.159,v164,4,0.01200000000000001,FALSE,FALSE
+belong,Mode design,scalar,inv_data3_v164_comp_mode_scalar.out,252.397,15,0,0.938,0.121,v164,4,0.0019999999999998908,FALSE,FALSE
+childhood,Length,config,inv_data3_v267_comp_len_config.out,345.689,20,0,0.912,0.121,v267,4,NA,NA,FALSE
+childhood,Length,metric,inv_data3_v267_comp_len_metric.out,317.296,25,0,0.921,0.103,v267,4,0.009000000000000008,FALSE,FALSE
+childhood,Length,scalar,inv_data3_v267_comp_len_scalar.out,281.012,35,0,0.934,0.08,v267,4,0.013000000000000012,FALSE,FALSE
+childhood,Mode design,config,inv_data3_v267_comp_mode_config.out,374.765,20,0,0.91,0.13,v267,4,NA,NA,FALSE
+childhood,Mode design,metric,inv_data3_v267_comp_mode_metric.out,345.488,25,0,0.919,0.11,v267,4,0.009000000000000008,FALSE,FALSE
+childhood,Mode design,scalar,inv_data3_v267_comp_mode_scalar.out,312.358,35,0,0.93,0.087,v267,4,0.01100000000000001,FALSE,FALSE
+concern,Length,config,inv_data3_v212_comp_len_config.out,11.794,6,0.0667,0.997,0.029,v212,5,NA,NA,FALSE
+concern,Length,metric,inv_data3_v212_comp_len_metric.out,16.171,10,0.0949,0.997,0.023,v212,5,0,FALSE,FALSE
+concern,Length,scalar,inv_data3_v212_comp_len_scalar.out,34.795,15,0.0026,0.989,0.034,v212,5,-0.008000000000000007,FALSE,FALSE
+concern,Mode design,config,inv_data3_v212_comp_mode_config.out,3.339,6,0.7652,1,0,v212,5,NA,NA,FALSE
+concern,Mode design,metric,inv_data3_v212_comp_mode_metric.out,7.437,10,0.6837,1,0,v212,5,0,FALSE,FALSE
+concern,Mode design,scalar,inv_data3_v212_comp_mode_scalar.out,13.865,15,0.5358,1,0,v212,5,0,FALSE,FALSE
+concern_grp,Length,config,inv_data3_v217_comp_len_config.out,0,0,0,1,0,v217,5,NA,NA,FALSE
+concern_grp,Length,metric,inv_data3_v217_comp_len_metric.out,7.022,2,0.0299,0.996,0.047,v217,5,-0.0040000000000000036,FALSE,FALSE
+concern_grp,Length,scalar,inv_data3_v217_comp_len_scalar.out,13.057,5,0.0228,0.993,0.038,v217,5,-0.0030000000000000027,FALSE,FALSE
+concern_grp,Mode design,config,inv_data3_v217_comp_mode_config.out,0,0,0,1,0,v217,5,NA,NA,FALSE
+concern_grp,Mode design,metric,inv_data3_v217_comp_mode_metric.out,7.727,2,0.021,0.996,0.052,v217,5,-0.0040000000000000036,FALSE,TRUE
+concern_grp,Mode design,scalar,inv_data3_v217_comp_mode_scalar.out,24.365,5,2e-4,0.985,0.06,v217,5,-0.01100000000000001,TRUE,FALSE
+democracy1,Length,config,inv_data3_v133_comp_len_config.out,58.745,10,0,0.933,0.067,v133,10,NA,NA,FALSE
+democracy1,Length,metric,inv_data3_v133_comp_len_metric.out,60.56,14,0,0.936,0.055,v133,10,0.0030000000000000027,FALSE,TRUE
+democracy1,Length,scalar,inv_data3_v133_comp_len_scalar.out,83.273,19,0,0.912,0.055,v133,10,-0.02400000000000002,TRUE,FALSE
+democracy1,Mode design,config,inv_data3_v133_comp_mode_config.out,50.826,10,0,0.932,0.062,v133,10,NA,NA,FALSE
+democracy1,Mode design,metric,inv_data3_v133_comp_mode_metric.out,54.312,14,0,0.933,0.052,v133,10,0.0010000000000000009,FALSE,TRUE
+democracy1,Mode design,scalar,inv_data3_v133_comp_mode_scalar.out,94.865,19,0,0.874,0.061,v133,10,-0.05900000000000005,TRUE,FALSE
+democracy2,Length,config,inv_data3_v134_comp_len_config.out,7.496,4,0.1119,0.989,0.028,v134,10,NA,NA,FALSE
+democracy2,Length,metric,inv_data3_v134_comp_len_metric.out,7.756,7,0.3546,0.998,0.01,v134,10,0.009000000000000008,FALSE,FALSE
+democracy2,Length,scalar,inv_data3_v134_comp_len_scalar.out,14.352,11,0.2141,0.989,0.017,v134,10,-0.009000000000000008,FALSE,FALSE
+democracy2,Mode design,config,inv_data3_v134_comp_mode_config.out,12.788,4,0.0124,0.972,0.045,v134,10,NA,NA,FALSE
+democracy2,Mode design,metric,inv_data3_v134_comp_mode_metric.out,13.416,7,0.0626,0.98,0.029,v134,10,0.008000000000000007,FALSE,TRUE
+democracy2,Mode design,scalar,inv_data3_v134_comp_mode_scalar.out,27.896,11,0.0034,0.946,0.038,v134,10,-0.03400000000000003,TRUE,FALSE
+elections,Length,config,inv_data3_v176_comp_len_config.out,467.036,42,0,0.945,0.098,v176,4,NA,NA,FALSE
+elections,Length,metric,inv_data3_v176_comp_len_metric.out,417.454,49,0,0.953,0.084,v176,4,0.008000000000000007,FALSE,FALSE
+elections,Length,scalar,inv_data3_v176_comp_len_scalar.out,384.077,63,0,0.959,0.069,v176,4,0.006000000000000005,FALSE,FALSE
+elections,Mode design,config,inv_data3_v176_comp_mode_config.out,498.808,42,0,0.921,0.102,v176,4,NA,NA,FALSE
+elections,Mode design,metric,inv_data3_v176_comp_mode_metric.out,454.222,49,0,0.93,0.089,v176,4,0.009000000000000008,FALSE,FALSE
+elections,Mode design,scalar,inv_data3_v176_comp_mode_scalar.out,436.669,63,0,0.935,0.075,v176,4,0.0050000000000000044,FALSE,FALSE
+environment,Length,config,inv_data3_v199_comp_len_config.out,41.247,10,0,0.97,0.053,v199,5,NA,NA,FALSE
+environment,Length,metric,inv_data3_v199_comp_len_metric.out,41.749,14,1e-4,0.973,0.042,v199,5,0.0030000000000000027,FALSE,FALSE
+environment,Length,scalar,inv_data3_v199_comp_len_scalar.out,46.119,19,5e-4,0.974,0.036,v199,5,0.0010000000000000009,FALSE,FALSE
+environment,Mode design,config,inv_data3_v199_comp_mode_config.out,52.992,10,0,0.955,0.063,v199,5,NA,NA,FALSE
+environment,Mode design,metric,inv_data3_v199_comp_mode_metric.out,58.794,14,0,0.953,0.054,v199,5,-0.0020000000000000018,FALSE,TRUE
+environment,Mode design,scalar,inv_data3_v199_comp_mode_scalar.out,75.867,19,0,0.941,0.053,v199,5,-0.01200000000000001,TRUE,FALSE
+european,Length,config,inv_data3_v194_comp_len_config.out,36.27,6,0,0.996,0.067,v194,4,NA,NA,FALSE
+european,Length,metric,inv_data3_v194_comp_len_metric.out,35.541,9,0,0.997,0.051,v194,4,0.0010000000000000009,FALSE,FALSE
+european,Length,scalar,inv_data3_v194_comp_len_scalar.out,35.736,15,0.0019,0.997,0.035,v194,4,0,FALSE,FALSE
+european,Mode design,config,inv_data3_v194_comp_mode_config.out,70.36,6,0,0.993,0.1,v194,4,NA,NA,FALSE
+european,Mode design,metric,inv_data3_v194_comp_mode_metric.out,82.307,9,0,0.992,0.087,v194,4,-0.0010000000000000009,FALSE,FALSE
+european,Mode design,scalar,inv_data3_v194_comp_mode_scalar.out,98.907,15,0,0.991,0.072,v194,4,-0.0010000000000000009,FALSE,FALSE
+immigration,Length,config,inv_data3_v185_comp_len_config.out,6.964,4,0.1378,0.998,0.026,v185,10,NA,NA,FALSE
+immigration,Length,metric,inv_data3_v185_comp_len_metric.out,9.441,7,0.2225,0.998,0.018,v185,10,0,FALSE,FALSE
+immigration,Length,scalar,inv_data3_v185_comp_len_scalar.out,17.066,11,0.1059,0.996,0.022,v185,10,-0.0020000000000000018,FALSE,FALSE
+immigration,Mode design,config,inv_data3_v185_comp_mode_config.out,7.175,4,0.1269,0.997,0.027,v185,10,NA,NA,FALSE
+immigration,Mode design,metric,inv_data3_v185_comp_mode_metric.out,8.803,7,0.2671,0.998,0.015,v185,10,0.0010000000000000009,FALSE,FALSE
+immigration,Mode design,scalar,inv_data3_v185_comp_mode_scalar.out,18.934,11,0.0623,0.993,0.026,v185,10,-0.0050000000000000044,FALSE,FALSE
+marriage,Length,config,inv_data3_v65_comp_len_config.out,146.964,19,0,0.948,0.077,v65,3,NA,NA,FALSE
+marriage,Length,metric,inv_data3_v65_comp_len_metric.out,144.99,24,0,0.951,0.066,v65,3,0.0030000000000000027,FALSE,FALSE
+marriage,Length,scalar,inv_data3_v65_comp_len_scalar.out,134.535,29,0,0.957,0.056,v65,3,0.006000000000000005,FALSE,FALSE
+marriage,Mode design,config,inv_data3_v65_comp_mode_config.out,90.417,19,0,0.979,0.059,v65,3,NA,NA,FALSE
+marriage,Mode design,metric,inv_data3_v65_comp_mode_metric.out,86.087,24,0,0.981,0.049,v65,3,0.0020000000000000018,FALSE,FALSE
+marriage,Mode design,scalar,inv_data3_v65_comp_mode_scalar.out,84.535,29,0,0.983,0.042,v65,3,0.0020000000000000018,FALSE,FALSE
+national,Length,config,inv_data3_v189_comp_len_config.out,61.115,6,0,0.988,0.089,v189,4,NA,NA,FALSE
+national,Length,metric,inv_data3_v189_comp_len_metric.out,62.711,9,0,0.988,0.072,v189,4,0,FALSE,FALSE
+national,Length,scalar,inv_data3_v189_comp_len_scalar.out,63.128,15,0,0.99,0.053,v189,4,0.0020000000000000018,FALSE,FALSE
+national,Mode design,config,inv_data3_v189_comp_mode_config.out,65.509,6,0,0.984,0.096,v189,4,NA,NA,FALSE
+national,Mode design,metric,inv_data3_v189_comp_mode_metric.out,72.121,9,0,0.983,0.081,v189,4,-0.0010000000000000009,FALSE,FALSE
+national,Mode design,scalar,inv_data3_v189_comp_mode_scalar.out,72.454,15,0,0.985,0.06,v189,4,0.0020000000000000018,FALSE,FALSE
+norms1,Length,config,inv_data3_v149_comp_len_config.out,44.647,10,0,0.927,0.055,v149,10,NA,NA,FALSE
+norms1,Length,metric,inv_data3_v149_comp_len_metric.out,51.305,14,0,0.921,0.048,v149,10,-0.006000000000000005,FALSE,TRUE
+norms1,Length,scalar,inv_data3_v149_comp_len_scalar.out,65.291,19,0,0.902,0.046,v149,10,-0.019000000000000017,TRUE,FALSE
+norms1,Mode design,config,inv_data3_v149_comp_mode_config.out,35.454,10,1e-4,0.921,0.049,v149,10,NA,NA,TRUE
+norms1,Mode design,metric,inv_data3_v149_comp_mode_metric.out,42.619,14,1e-4,0.911,0.043,v149,10,-0.010000000000000009,TRUE,FALSE
+norms1,Mode design,scalar,inv_data3_v149_comp_mode_scalar.out,50.814,19,1e-4,0.902,0.039,v149,10,-0.009000000000000008,FALSE,FALSE
+norms2,Length,config,inv_data3_v151_comp_len_config.out,533.466,70,0,0.869,0.063,v151,10,NA,NA,FALSE
+norms2,Length,metric,inv_data3_v151_comp_len_metric.out,552.465,79,0,0.866,0.06,v151,10,-0.0030000000000000027,FALSE,FALSE
+norms2,Length,scalar,inv_data3_v151_comp_len_scalar.out,577.417,89,0,0.861,0.057,v151,10,-0.0050000000000000044,FALSE,FALSE
+norms2,Mode design,config,inv_data3_v151_comp_mode_config.out,541.654,70,0,0.889,0.079,v151,10,NA,NA,FALSE
+norms2,Mode design,metric,inv_data3_v151_comp_mode_metric.out,556.068,79,0,0.888,0.075,v151,10,-0.0010000000000000009,FALSE,TRUE
+norms2,Mode design,scalar,inv_data3_v151_comp_mode_scalar.out,606.518,89,0,0.878,0.073,v151,10,-0.010000000000000009,TRUE,FALSE
+pol_system,Length,config,inv_data3_v145_comp_len_config.out,7.008,6,0.3201,0.999,0.012,v145,4,NA,NA,FALSE
+pol_system,Length,metric,inv_data3_v145_comp_len_metric.out,11.256,9,0.2585,0.997,0.015,v145,4,-0.0020000000000000018,FALSE,FALSE
+pol_system,Length,scalar,inv_data3_v145_comp_len_scalar.out,24.543,15,0.0564,0.988,0.024,v145,4,-0.009000000000000008,FALSE,FALSE
+pol_system,Mode design,config,inv_data3_v145_comp_mode_config.out,16.144,6,0.013,0.988,0.04,v145,4,NA,NA,FALSE
+pol_system,Mode design,metric,inv_data3_v145_comp_mode_metric.out,15.089,9,0.0885,0.993,0.025,v145,4,0.0050000000000000044,FALSE,FALSE
+pol_system,Mode design,scalar,inv_data3_v145_comp_mode_scalar.out,28.128,15,0.0208,0.984,0.029,v145,4,-0.009000000000000008,FALSE,FALSE
+pol_watch,Length,config,inv_data3_v208_comp_len_config.out,27.512,4,0,0.967,0.073,v208,5,NA,NA,FALSE
+pol_watch,Length,metric,inv_data3_v208_comp_len_metric.out,34.902,7,0,0.961,0.06,v208,5,-0.006000000000000005,FALSE,TRUE
+pol_watch,Length,scalar,inv_data3_v208_comp_len_scalar.out,50.892,11,0,0.944,0.057,v208,5,-0.017000000000000015,TRUE,FALSE
+pol_watch,Mode design,config,inv_data3_v208_comp_mode_config.out,16.541,4,0.0024,0.98,0.054,v208,5,NA,NA,TRUE
+pol_watch,Mode design,metric,inv_data3_v208_comp_mode_metric.out,32.978,7,0,0.958,0.059,v208,5,-0.02200000000000002,TRUE,TRUE
+pol_watch,Mode design,scalar,inv_data3_v208_comp_mode_scalar.out,111.109,11,0,0.839,0.092,v208,5,-0.119,TRUE,FALSE
+policy,Length,config,inv_data3_v103_comp_len_config.out,24.309,10,0.0068,0.949,0.036,v103,10,NA,NA,TRUE
+policy,Length,metric,inv_data3_v103_comp_len_metric.out,34.407,14,0.0018,0.928,0.036,v103,10,-0.020999999999999908,TRUE,TRUE
+policy,Length,scalar,inv_data3_v103_comp_len_scalar.out,43.518,19,0.0011,0.913,0.034,v103,10,-0.015000000000000013,TRUE,FALSE
+policy,Mode design,config,inv_data3_v103_comp_mode_config.out,10.674,10,0.3835,0.997,0.008,v103,10,NA,NA,FALSE
+policy,Mode design,metric,inv_data3_v103_comp_mode_metric.out,15.992,14,0.3139,0.991,0.011,v103,10,-0.006000000000000005,FALSE,TRUE
+policy,Mode design,scalar,inv_data3_v103_comp_mode_scalar.out,41.636,19,0.002,0.895,0.033,v103,10,-0.09599999999999997,TRUE,FALSE
+society,Length,config,inv_data3_v221_comp_len_config.out,29.147,6,1e-4,0.958,0.059,v221,4,NA,NA,FALSE
+society,Length,metric,inv_data3_v221_comp_len_metric.out,27.689,9,0.0011,0.966,0.043,v221,4,0.008000000000000007,FALSE,FALSE
+society,Length,scalar,inv_data3_v221_comp_len_scalar.out,33.049,15,0.0046,0.968,0.033,v221,4,0.0020000000000000018,FALSE,FALSE
+society,Mode design,config,inv_data3_v221_comp_mode_config.out,35.406,6,0,0.964,0.067,v221,4,NA,NA,FALSE
+society,Mode design,metric,inv_data3_v221_comp_mode_metric.out,40.106,9,0,0.962,0.057,v221,4,-0.0020000000000000018,FALSE,FALSE
+society,Mode design,scalar,inv_data3_v221_comp_mode_scalar.out,46.677,15,0,0.962,0.044,v221,4,0,FALSE,FALSE
+surveillance,Length,config,inv_data3_v205_comp_len_config.out,0.379,2,0.8275,1,0,v205,4,NA,NA,FALSE
+surveillance,Length,metric,inv_data3_v205_comp_len_metric.out,3.661,4,0.4538,1,0,v205,4,0,FALSE,FALSE
+surveillance,Length,scalar,inv_data3_v205_comp_len_scalar.out,11.499,8,0.175,0.999,0.02,v205,4,-0.0010000000000000009,FALSE,FALSE
+surveillance,Mode design,config,inv_data3_v205_comp_mode_config.out,2.581,2,0.2751,1,0.016,v205,4,NA,NA,FALSE
+surveillance,Mode design,metric,inv_data3_v205_comp_mode_metric.out,4.503,4,0.3422,1,0.011,v205,4,0,FALSE,FALSE
+surveillance,Mode design,scalar,inv_data3_v205_comp_mode_scalar.out,23.29,8,0.003,0.993,0.042,v205,4,-0.007000000000000006,FALSE,FALSE
+traditional_family,Length,config,inv_data3_v82_comp_len_config.out,0,0,0,1,0,v82,5,NA,NA,TRUE
+traditional_family,Length,metric,inv_data3_v82_comp_len_metric.out,6.908,2,0.0316,0.979,0.046,v82,5,-0.02100000000000002,TRUE,FALSE
+traditional_family,Length,scalar,inv_data3_v82_comp_len_scalar.out,8.737,5,0.12,0.984,0.026,v82,5,0.0050000000000000044,FALSE,FALSE
+traditional_family,Mode design,config,inv_data3_v82_comp_mode_config.out,0,0,0,1,0,v82,5,NA,NA,TRUE
+traditional_family,Mode design,metric,inv_data3_v82_comp_mode_metric.out,4.656,2,0.0975,0.985,0.035,v82,5,-0.015000000000000013,TRUE,TRUE
+traditional_family,Mode design,scalar,inv_data3_v82_comp_mode_scalar.out,17.36,5,0.0039,0.932,0.048,v82,5,-0.052999999999999936,TRUE,FALSE
+trust,Length,config,inv_data3_v115_comp_len_config.out,1818.979,272,0,0.934,0.054,v115,4,NA,NA,FALSE
+trust,Length,metric,inv_data3_v115_comp_len_metric.out,1673.096,289,0,0.941,0.05,v115,4,0.006999999999999895,FALSE,FALSE
+trust,Length,scalar,inv_data3_v115_comp_len_scalar.out,1526.458,323,0,0.949,0.044,v115,4,0.008000000000000007,FALSE,FALSE
+trust,Mode design,config,inv_data3_v115_comp_mode_config.out,2430.497,272,0,0.909,0.086,v115,4,NA,NA,FALSE
+trust,Mode design,metric,inv_data3_v115_comp_mode_metric.out,2187.848,289,0,0.92,0.078,v115,4,0.01100000000000001,FALSE,FALSE
+trust,Mode design,scalar,inv_data3_v115_comp_mode_scalar.out,2015.204,323,0,0.929,0.07,v115,4,0.009000000000000008,FALSE,FALSE
+trust_pl,Length,config,inv_data3_v32_comp_len_config.out,446.216,20,0,0.985,0.137,v32,4,NA,NA,FALSE
+trust_pl,Length,metric,inv_data3_v32_comp_len_metric.out,383.351,25,0,0.987,0.112,v32,4,0.0020000000000000018,FALSE,FALSE
+trust_pl,Length,scalar,inv_data3_v32_comp_len_scalar.out,333.235,35,0,0.99,0.087,v32,4,0.0030000000000000027,FALSE,FALSE
+trust_pl,Mode design,config,inv_data3_v32_comp_mode_config.out,534.704,20,0,0.985,0.154,v32,4,NA,NA,FALSE
+trust_pl,Mode design,metric,inv_data3_v32_comp_mode_metric.out,457.098,25,0,0.987,0.126,v32,4,0.0020000000000000018,FALSE,FALSE
+trust_pl,Mode design,scalar,inv_data3_v32_comp_mode_scalar.out,527.103,35,0,0.985,0.114,v32,4,-0.0020000000000000018,FALSE,FALSE
+work,Length,config,inv_data3_v46_comp_len_config.out,34.621,10,1e-4,0.97,0.038,v46,5,NA,NA,FALSE
+work,Length,metric,inv_data3_v46_comp_len_metric.out,36.928,14,8e-4,0.972,0.031,v46,5,0.0020000000000000018,FALSE,TRUE
+work,Length,scalar,inv_data3_v46_comp_len_scalar.out,54.375,19,0,0.956,0.033,v46,5,-0.016000000000000014,TRUE,FALSE
+work,Mode design,config,inv_data3_v46_comp_mode_config.out,29.635,10,0.001,0.98,0.043,v46,5,NA,NA,FALSE
+work,Mode design,metric,inv_data3_v46_comp_mode_metric.out,34.312,14,0.0019,0.979,0.037,v46,5,-0.0010000000000000009,FALSE,TRUE
+work,Mode design,scalar,inv_data3_v46_comp_mode_scalar.out,53.793,19,0,0.964,0.041,v46,5,-0.015000000000000013,TRUE,FALSE

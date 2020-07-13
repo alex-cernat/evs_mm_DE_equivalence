@@ -39,6 +39,9 @@ sig_parameters <- read_csv("../data/clean/sig_parameters.csv")
 inv_data3 <- read_rds("../data/clean/evs_clean2.rds" )
 
 
+fit_eq <- fit_eq %>% 
+  mutate_if(is.numeric, round, 2)
+
 
 
 knitr::opts_chunk$set(echo = F)
@@ -77,8 +80,9 @@ To improve fit some of the initial models were changed:
 Here are the overall fit for the scales we are interested:
 
 ```{r}
-DT::datatable(cfa_fit) %>% 
-  DT::formatRound(columns = c(colnames(cfa_fit)), digits = 2)
+DT::datatable(cfa_fit %>% 
+  mutate_if(is.numeric, round, 2)
+) 
 
 ```
 
@@ -112,15 +116,13 @@ Two models had issues during equivalence.
 Here are the overall model fits for all the models we test. We use a difference in CFI lower than -0.01 as an indicator that the model is significantly worse.
 
 ```{r}
-DT::datatable(fit_eq) %>% 
-  DT::formatRound(columns = c(colnames(fit_eq)), digits = 2)
+DT::datatable(fit_eq) 
 ```
 
 We can look just at the models that are significant:
 
 ```{r}
-DT::datatable(filter(fit_eq, sig_CFI == T)) %>% 
-  DT::formatRound(columns = c(colnames(fit_eq)), digits = 2)
+DT::datatable(filter(fit_eq, sig_CFI == T))
 ```
 
 We can look at a summary by group and type of model. We see that a few models have differences in the loadings and some more had differences in the intercepts.
@@ -146,21 +148,21 @@ fit_eq_small <- fit_eq %>%
 # type of comparison
 count(fit_eq_small, sig_CFI, model) %>%
   group_by(sig_CFI) %>% 
-  mutate(prop = n/sum(n)) %>% 
+  mutate(prop = round(n/sum(n), 2)) %>% 
   kable()
 chisq.test(fit_eq_small$sig_CFI, fit_eq_small$model)
 
 # type of comparison
 count(fit_eq_small, sig_CFI, group) %>%
   group_by(sig_CFI) %>% 
-  mutate(prop = n/sum(n)) %>% 
+  mutate(prop = round(n/sum(n), 2)) %>% 
   kable()
 chisq.test(fit_eq_small$sig_CFI, fit_eq_small$group)
 
 
 count(fit_eq_small, sig_CFI, cat) %>%
   group_by(sig_CFI) %>% 
-  mutate(prop = n/sum(n)) %>% 
+  mutate(prop = round(n/sum(n), 2)) %>% 
   kable()
 chisq.test(fit_eq_small$sig_CFI, fit_eq_small$cat)
 
@@ -174,9 +176,8 @@ We can have a look at the parameters that appear to be significantly different. 
 
 ```{r}
 sig_parameters %>% 
-  mutate(dif = est_2 - est_1) %>% 
-  DT::datatable() %>% 
-  DT::formatRound(columns = c(colnames(sig_parameters), "dif"), digits = 2)
+  mutate(dif = round(est_2 - est_1, 2)) %>% 
+  DT::datatable() 
 ```
 
 
