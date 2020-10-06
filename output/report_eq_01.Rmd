@@ -174,6 +174,10 @@ chisq.test(fit_eq_small$sig_CFI, fit_eq_small$cat)
 
 We can have a look at the parameters that appear to be significantly different. I haven't had the chance to go through each one and see what it means substantively but maybe that's something we might need to do.
 
+
+Mixed mode (mode): 1 = single mode, 2 = mixed mode
+Long (len): 1 = full, 2 = short
+
 ```{r}
 sig_parameters %>% 
   mutate(dif = round(est_2 - est_1, 2)) %>% 
