@@ -10,3 +10,10 @@ Mplus Run Models.log
 *.dat
 *.dgm
 *.dgm
+*.bbl
+*.aux
+*.log
+*.blg
+*.gz
+*.docx
+*.rds

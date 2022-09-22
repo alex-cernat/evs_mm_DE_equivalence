@@ -1,0 +1,98 @@
+\documentclass[convert={density=300,size=1080x800,outext=.png}]{standalone}
+
+
+
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{graphics}
+
+\tikzstyle{every picture}+=[font=\sffamily]
+
+\usetikzlibrary{calc,intersections, arrows,backgrounds, shapes,snakes, matrix}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+\begin{document}
+
+
+\tikzstyle{true}=[circle,draw=black,thick,inner sep=0pt, minimum size=20mm]
+\tikzstyle{obs}=[rectangle,draw=black,thick,inner sep=0pt, minimum size=13mm]
+\tikzstyle{err}=[circle,draw=black,thick,inner sep=0pt, minimum size=9mm]
+\tikzstyle{pre}=[<-,shorten <=1pt,>=stealth', thick]
+\tikzstyle{post}=[->,shorten >=1pt,>=stealth', thick]
+\tikzstyle{corr}=[<->, shorten <=1pt,>=stealth', thick]
+
+\begin{tikzpicture}[scale=1.3]
+
+\node (D1) at (2, -0.5) [obs, draw = white] {Single mode};
+
+\node (T2) at ( 2,-1.5) [true] {$T_{SM}$};
+\node (O1) at ( -1,-5) [obs] {$y_{1}$};
+\node[above left = 3pt, at=(O1.north)] (int1) {$\tau_{11}$};
+\node (O2) at ( 1,-5) [obs] {$y_{2}$};
+\node[above left = 3pt, at=(O2.north)] (int2) {$\tau_{21}$};
+\node (O3) at ( 3,-5) [obs] {$y_{3}$};
+\node[above right = 3pt, at=(O3.north)] (int3) {$\tau_{31}$};
+\node (O4) at ( 5,-5) [obs] {$y_{4}$};
+\node[above right = 3pt, at=(O4.north)] (int4) {$\tau_{41}$};
+
+
+\node (E1) at ( -0.5,-6.5) [err] {$\epsilon_{11}$};
+\node (E2) at ( 1.5,-6.5) [err] {$\epsilon_{21}$};
+\node (E3) at ( 3.5,-6.5) [err] {$\epsilon_{31}$};
+\node (E4) at ( 5.5,-6.5) [err] {$\epsilon_{41}$};
+
+\draw[post] (T2) to node[pos = 0.5, left]  {1} (O1.north);
+\draw[post] (T2) to node[pos = 0.5, left]  {$\lambda_{21}$} (O2.north);
+\draw[post] (T2) to node[pos = 0.5, left]  {$\lambda_{31}$} (O3.north);
+\draw[post] (T2) to node[pos = 0.5, left]  {$\lambda_{41}$} (O4.north);
+
+\draw[post] (E1) to (O1.south);
+\draw[post] (E2) to (O2.south);
+\draw[post] (E3) to (O3.south);
+\draw[post] (E4) to (O4.south);
+
+\node (D1) at (12, -0.5) [obs, draw = white] {Mixed mode};
+
+\node (T22) at ( 12,-1.5) [true] {$T_{MM}$};
+\node (O12) at ( 9,-5) [obs] {$y_{1}$};
+\node[above left = 3pt, at=(O12.north)] (int4) {$\tau_{12}$};
+\node (O22) at ( 11,-5) [obs] {$y_{2}$};
+\node[above left = 3pt, at=(O22.north)] (int5) {$\tau_{22}$};
+\node (O32) at ( 13,-5) [obs] {$y_{3}$};
+\node[above right = 3pt, at=(O32.north)] (int6) {$\tau_{32}$};
+\node (O42) at ( 15,-5) [obs] {$y_{4}$};
+\node[above right = 3pt, at=(O42.north)] (int7) {$\tau_{42}$};
+
+
+
+\node (E12) at ( 9.5,-6.5) [err] {$\epsilon_{12}$};
+\node (E22) at ( 11.5,-6.5) [err] {$\epsilon_{22}$};
+\node (E32) at ( 13.5,-6.5) [err] {$\epsilon_{32}$};
+\node (E42) at ( 15.5,-6.5) [err] {$\epsilon_{42}$};
+
+
+\draw[post] (T22) to node[pos = 0.5, left]  {1} (O12.north);
+\draw[post] (T22) to node[pos = 0.5, left]  {$\lambda_{22}$} (O22.north);
+\draw[post] (T22) to node[pos = 0.5, left]  {$\lambda_{32}$} (O32.north);
+\draw[post] (T22) to node[pos = 0.5, left]  {$\lambda_{42}$} (O42.north);
+
+\draw[post] (E12) to (O12.south);
+\draw[post] (E22) to (O22.south);
+\draw[post] (E32) to (O32.south);
+\draw[post] (E42) to (O42.south);
+
+
+
+
+
+
+
+\end{tikzpicture}
+
+
+\end{document}

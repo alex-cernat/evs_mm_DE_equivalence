@@ -7,11 +7,7 @@ rm(list = ls())
 
 # use local packages on work machine
 if (Sys.getenv("USERNAME") == "msassac6") {.libPaths(c(
-  paste0(
-    "C:/Users/",
-    Sys.getenv("USERNAME"),
-    "/Dropbox (The University of Manchester)/R/package"
-  ),
+  paste0("D:/r/packages/"),
   .libPaths()[-1]
 ))}
 
@@ -63,6 +59,9 @@ za7500 <- read_dta("./data/raw/ZA7500_v3-0-0.dta")
 za7502 <- read_dta("./data/raw/ZA7502_v1-0-0.dta")
 evs_clean <- read_dta("./data/clean/ger_evs_data.dta")
 
+
+
+
 # kick out people with that break off (5320 cases)
 evs <- evs_clean %>%
   filter(break_off == 0)
@@ -99,7 +98,12 @@ inv_data <- select(evs, id_cocas, vars_int, vars_scales$variables)
 
 # code all missings
 inv_data2 <- inv_data %>%
-  mutate_all(~ ifelse(. < 0, NA, .))
+  mutate_all(~ ifelse(. < 0, NA, .)) %>%
+  # code 0 for democracy as 0 is missing in mixed mode
+  mutate_at(vars(v133:v141),
+            ~ifelse(. == 0, NA, .))
+
+
 
 # take attributes from old data
 for (i in 1:ncol(inv_data)) {
@@ -109,7 +113,7 @@ for (i in 1:ncol(inv_data)) {
 # look at data
 scales <- unique(vars_scales$Topic[!is.na(vars_scales$Topic)])
 
-# function to do fast desccriptives by scale
+# function to do fast descriptive by scale
 scale_explore <- function(scale) {
   vars_explore <- vars_scales$variables[vars_scales$Topic == scale]
   vars_explore <- vars_explore[!is.na(vars_explore)]
@@ -128,7 +132,7 @@ make_cfa <- function(scale) {
   vars_explore <- vars_scales$variables[vars_scales$Topic %in% scale]
   cat <- vars_scales$scale[vars_scales$variables == vars_explore[1]] %>%
     as.numeric() < 5
-  mplus_cfa(inv_data3, vars_explore, categorical = cat, weights = weight)
+  mplus_cfa(inv_data3, vars_explore, categorical = cat, weights = F)
 }
 
 # make models
@@ -137,7 +141,7 @@ map(scales, make_cfa)
 
 # changes to original models ----------------------------------------------
 
-# from importance we excluded: v1, v5, v6 due to the low correlaiton with the
+# from importance we excluded: v1, v5, v6 due to the low correlation with the
 # rest of the variables
 
 # based on the fit redo the norms scale in 2:

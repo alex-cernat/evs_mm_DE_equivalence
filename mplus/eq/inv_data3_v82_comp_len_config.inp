@@ -23,11 +23,11 @@ TITLE: Your title goes here
  
  GROUPING IS comp_len (0=full 1=short);
 
-WEIGHT IS weight; 
+!WEIGHT IS weight; 
  
  Analysis: 
 
-                ESTIMATOR = MLR;
+                ESTIMATOR = ML;
 Model: 
 
 

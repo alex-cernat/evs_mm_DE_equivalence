@@ -1,6 +1,6 @@
 Mplus VERSION 8
 MUTHEN & MUTHEN
-07/06/2020   8:27 AM
+12/14/2020   3:03 PM
 
 INPUT INSTRUCTIONS
 
@@ -49,7 +49,7 @@ INPUT INSTRUCTIONS
 *** WARNING
   Data set contains cases with missing on all variables.
   These cases were not included in the analysis.
-  Number of cases with missing on all variables:  1766
+  Number of cases with missing on all variables:  1769
    1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
 
 
@@ -59,7 +59,7 @@ Your title goes here
 SUMMARY OF ANALYSIS
 
 Number of groups                                                 1
-Number of observations                                        3650
+Number of observations                                        3647
 
 Number of dependent variables                                    4
 Number of independent variables                                  0
@@ -104,10 +104,10 @@ Minimum covariance coverage value   0.100
            Covariance Coverage
               V134          V137          V139          V140
               ________      ________      ________      ________
- V134           0.961
- V137           0.924         0.948
- V139           0.938         0.925         0.972
- V140           0.935         0.922         0.942         0.964
+ V134           0.928
+ V137           0.883         0.918
+ V139           0.903         0.894         0.969
+ V140           0.895         0.887         0.919         0.942
 
 
 SAMPLE STATISTICS
@@ -119,28 +119,28 @@ SAMPLE STATISTICS
            Means
               V134          V137          V139          V140
               ________      ________      ________      ________
-                1.657         2.401         5.464         2.544
+                1.717         2.480         5.480         2.603
 
 
            Covariances
               V134          V137          V139          V140
               ________      ________      ________      ________
- V134           2.830
- V137           1.222         5.916
- V139           0.544         0.967         9.958
- V140           1.232         1.682         1.095         5.630
+ V134           2.833
+ V137           1.208         5.923
+ V139           0.509         0.936         9.896
+ V140           1.268         1.688         1.046         5.613
 
 
            Correlations
               V134          V137          V139          V140
               ________      ________      ________      ________
  V134           1.000
- V137           0.299         1.000
- V139           0.103         0.126         1.000
- V140           0.309         0.291         0.146         1.000
+ V137           0.295         1.000
+ V139           0.096         0.122         1.000
+ V140           0.318         0.293         0.140         1.000
 
 
-     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -31449.875
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -30749.610
 
 
 UNIVARIATE SAMPLE STATISTICS
@@ -151,14 +151,14 @@ UNIVARIATE SAMPLE STATISTICS
          Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
         Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
 
-     V134                  1.649       2.971       0.000    3.45%       1.000      1.000      1.000
-            3506.000       2.822       9.429      10.000    1.20%       1.000      2.000
-     V137                  2.389       1.732       0.000    3.18%       1.000      1.000      1.000
-            3459.000       5.895       2.075      10.000    3.21%       1.000      4.000
-     V139                  5.465      -0.013       0.000    0.31%       2.000      5.000      5.000
-            3546.000       9.959      -1.319      10.000   16.24%       7.000      9.000
-     V140                  2.530       1.487       0.000    2.33%       1.000      1.000      1.000
-            3517.000       5.600       1.334      10.000    2.27%       2.000      5.000
+     V134                  1.708       3.005       1.000   76.16%       1.000      1.000      1.000
+            3385.000       2.822       9.410      10.000    1.24%       1.000      2.000
+     V137                  2.467       1.723       1.000   61.03%       1.000      1.000      1.000
+            3349.000       5.895       1.982      10.000    3.31%       1.000      4.000
+     V139                  5.482      -0.013       1.000   17.23%       2.000      5.000      5.000
+            3535.000       9.897      -1.320      10.000   16.29%       7.000      9.000
+     V140                  2.590       1.484       1.000   56.48%       1.000      1.000      1.000
+            3435.000       5.577       1.287      10.000    2.33%       2.000      5.000
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
@@ -171,25 +171,25 @@ Number of Free Parameters                       12
 
 Loglikelihood
 
-          H0 Value                      -31452.434
-          H1 Value                      -31449.875
+          H0 Value                      -30752.140
+          H1 Value                      -30749.610
 
 Information Criteria
 
-          Akaike (AIC)                   62928.867
-          Bayesian (BIC)                 63003.297
-          Sample-Size Adjusted BIC       62965.167
+          Akaike (AIC)                   61528.281
+          Bayesian (BIC)                 61602.701
+          Sample-Size Adjusted BIC       61564.571
             (n* = (n + 2) / 24)
 
 Chi-Square Test of Model Fit
 
-          Value                              5.116
+          Value                              5.061
           Degrees of Freedom                     2
-          P-Value                           0.0775
+          P-Value                           0.0796
 
 RMSEA (Root Mean Square Error Of Approximation)
 
-          Estimate                           0.021
+          Estimate                           0.020
           90 Percent C.I.                    0.000  0.044
           Probability RMSEA <= .05           0.985
 
@@ -200,7 +200,7 @@ CFI/TLI
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                            893.010
+          Value                            850.983
           Degrees of Freedom                     6
           P-Value                           0.0000
 
@@ -217,24 +217,24 @@ MODEL RESULTS
 
  F        BY
     V134               1.000      0.000    999.000    999.000
-    V137               1.405      0.092     15.332      0.000
-    V139               0.782      0.086      9.100      0.000
-    V140               1.442      0.095     15.141      0.000
+    V137               1.374      0.092     15.009      0.000
+    V139               0.739      0.086      8.624      0.000
+    V140               1.460      0.098     14.856      0.000
 
  Intercepts
-    V134               1.657      0.028     58.455      0.000
-    V137               2.401      0.041     58.216      0.000
-    V139               5.464      0.053    103.141      0.000
-    V140               2.543      0.040     63.683      0.000
+    V134               1.717      0.029     59.575      0.000
+    V137               2.480      0.042     59.204      0.000
+    V139               5.480      0.053    103.611      0.000
+    V140               2.603      0.040     64.558      0.000
 
  Variances
-    F                  0.851      0.075     11.342      0.000
+    F                  0.862      0.077     11.133      0.000
 
  Residual Variances
-    V134               1.979      0.074     26.781      0.000
-    V137               4.237      0.153     27.742      0.000
-    V139               9.437      0.235     40.229      0.000
-    V140               3.860      0.151     25.570      0.000
+    V134               1.970      0.076     25.985      0.000
+    V137               4.295      0.154     27.809      0.000
+    V139               9.426      0.234     40.279      0.000
+    V140               3.774      0.156     24.194      0.000
 
 
 STANDARDIZED MODEL RESULTS
@@ -246,25 +246,25 @@ STDYX Standardization
                     Estimate       S.E.  Est./S.E.    P-Value
 
  F        BY
-    V134               0.548      0.022     25.057      0.000
-    V137               0.533      0.022     24.301      0.000
-    V139               0.229      0.022     10.402      0.000
-    V140               0.561      0.022     25.035      0.000
+    V134               0.552      0.022     24.604      0.000
+    V137               0.524      0.022     23.453      0.000
+    V139               0.218      0.022      9.786      0.000
+    V140               0.572      0.023     24.841      0.000
 
  Intercepts
-    V134               0.985      0.021     48.040      0.000
-    V137               0.987      0.021     47.796      0.000
-    V139               1.731      0.027     65.217      0.000
-    V140               1.072      0.021     50.808      0.000
+    V134               1.020      0.021     48.372      0.000
+    V137               1.019      0.021     48.067      0.000
+    V139               1.742      0.027     65.264      0.000
+    V140               1.098      0.022     50.992      0.000
 
  Variances
     F                  1.000      0.000    999.000    999.000
 
  Residual Variances
-    V134               0.699      0.024     29.132      0.000
-    V137               0.716      0.023     30.639      0.000
-    V139               0.948      0.010     94.292      0.000
-    V140               0.686      0.025     27.293      0.000
+    V134               0.696      0.025     28.108      0.000
+    V137               0.725      0.023     30.938      0.000
+    V139               0.952      0.010     98.084      0.000
+    V140               0.672      0.026     25.492      0.000
 
 
 R-SQUARE
@@ -272,15 +272,15 @@ R-SQUARE
     Observed                                        Two-Tailed
     Variable        Estimate       S.E.  Est./S.E.    P-Value
 
-    V134               0.301      0.024     12.528      0.000
-    V137               0.284      0.023     12.151      0.000
-    V139               0.052      0.010      5.201      0.000
-    V140               0.314      0.025     12.518      0.000
+    V134               0.304      0.025     12.302      0.000
+    V137               0.275      0.023     11.726      0.000
+    V139               0.048      0.010      4.893      0.000
+    V140               0.328      0.026     12.420      0.000
 
 
 QUALITY OF NUMERICAL RESULTS
 
-     Condition Number for the Information Matrix              0.160E-01
+     Condition Number for the Information Matrix              0.152E-01
        (ratio of smallest to largest eigenvalue)
 
 
@@ -306,9 +306,9 @@ DIAGRAM INFORMATION
   Diagram output
     c:\users\msassac6\dropbox (the university of manchester)\papers\joe s\evs_mm_de_equivalence\mplus\cfa\inv_data3_v134
 
-     Beginning Time:  08:27:07
-        Ending Time:  08:27:08
-       Elapsed Time:  00:00:01
+     Beginning Time:  15:03:45
+        Ending Time:  15:03:45
+       Elapsed Time:  00:00:00
 
 
 
