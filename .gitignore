@@ -20,3 +20,4 @@ Mplus Run Models.log
 *.zip
 paper/
 data/clean/
+output/report_eq_01
