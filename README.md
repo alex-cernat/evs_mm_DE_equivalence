@@ -1,4 +1,5 @@
 # Investigating the impact of mode design on measurement quality
+[![DOI](https://zenodo.org/badge/271279352.svg)](https://zenodo.org/badge/latestdoi/271279352)
 
 This is the code associated with the paper: Cernat, A., Sakshaug, W., J., Christmann, P & Gummer, T. (2022). The Impact of Survey Mode Design and Questionnaire Length on Measurement Quality. Sociological Methods and Research. 
 
