@@ -17,3 +17,6 @@ Mplus Run Models.log
 *.gz
 *.docx
 *.rds
+*.zip
+paper/
+data/clean/

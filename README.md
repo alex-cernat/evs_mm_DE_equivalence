@@ -1,56 +1,30 @@
 # Investigating the impact of mode design on measurement quality
 
-Using an experiment in the European Value Study Germany we do the following comparisons:
-- compare single- vs. mixed-mode designs (full length FTF vs. full length mixed-mode)
-- compare short vs. long questionnaire mixed modes (matrix vs. full length)
+This is the code associated with the paper: Cernat, A., Sakshaug, W., J., Christmann, P & Gummer, T. (2022). The Impact of Survey Mode Design and Questionnaire Length on Measurement Quality. Sociological Methods and Research. 
 
 
-# To do
+# Process
 
-- [x] set-up GitHub (Alex)
-- [x] provide data (Tobias/Pablo)
-- [x] alternative quality indicators (Tobias/Pablo)
-- [x] create weights (Tobias will do the weights)
-- [x] check scales fit and choose for invariance (Alex)
-- [x] check problematic models
-- [x] add corrlation for that one model
-- [x] do the analysis with weight
-- [x] do table where we have differences (Alex)
-- [x] topic, if categorical/topic, if it explains significant models
-- [ ] to add topic and if there is showcards (Pablo)
-- [ ] write intro and lit review (Joe)
-- [ ] write data section (Tobias/Pablo)
-- [ ] write methods quality indicators (Tobias/Pablo)
-- [ ] write methods invariance (Alex)
-- [ ] write up results (Joe)
-- [ ] write conclusions (Joe)
+1. data was initially cleaned in Stata (see "evs_data_preparation_quality_indicators.do" in the scripts subfolder)
+2. overall data quality indicators were also done in in Stata (same script as above) with associated graphs
+3. R was used to efficiently run the factor analysis and equivalence testing for all the scales ("01.master.R" in the scripts subfolder). This created Mplus code (in the mplus folder), estimated the models and then imported them back in R. Helper functions used for that can be found in ("./scripts/functions").
+4. Graphs and tables were saved in the output folder as well as in "./data/clean"
 
-
-
-
-
-
-# To discuss
-
-- I excluded breakoffs but should we exclude partials?        
-
-- what scales to use and the changes made
-- agree on groups, sequance of models and weighting`
 
 # Data used
 
 We started the analysis using two datasets which can be accessed from the GESIS data archive.
 
-- ZA7500_v3-0-0
+- ZA7500_v3-0-0 (https://doi.org/10.4232/1.13899)
 - ZA7502_v1-0-0
 
 # Software
 
-We used a number of softwares:
+We used three different software for this paper:
 
-- Stata 14? for the alternative data quality indicators
-- R 4.0 for data cleaning and batch analysis for invariance testing
-- Mplus 8.3 for equivalence testing
+- Stata 15.1 for the alternative data quality indicators
+- R 4.0 for data cleaning and batch analysis of equivalence testing
+- Mplus 8 for equivalence testing
 
 `R` session info:
 
