@@ -6,7 +6,7 @@ This is the code associated with the paper: Cernat, A., Sakshaug, W., J., Christ
 
 # Process
 
-1. data was initially cleaned in Stata (see "evs_data_preparation_quality_indicators.do" in the scripts subfolder)
+1. data was initially cleaned in Stata (see "2022-07-08_evs_data_quality_indicators.do" in the scripts subfolder)
 2. overall data quality indicators were also done in in Stata (same script as above) with associated graphs
 3. R was used to efficiently run the factor analysis and equivalence testing for all the scales ("01.master.R" in the scripts subfolder). This created Mplus code (in the mplus folder), estimated the models and then imported them back in R. Helper functions used for that can be found in ("./scripts/functions").
 4. Graphs and tables were saved in the output folder as well as in "./data/clean"
@@ -17,13 +17,13 @@ This is the code associated with the paper: Cernat, A., Sakshaug, W., J., Christ
 We started the analysis using two datasets which can be accessed from the GESIS data archive.
 
 - ZA7500_v3-0-0 (https://doi.org/10.4232/1.13899)
-- ZA7502_v1-0-0
+- ZA7502_v1-0-0 (https://doi.org/10.4232/1.13092)
 
 # Software
 
 We used three different software for this paper:
 
-- Stata 15.1 for the alternative data quality indicators
+- Stata 16.1 for the data quality indicators
 - R 4.0 for data cleaning and batch analysis of equivalence testing
 - Mplus 8 for equivalence testing
 
